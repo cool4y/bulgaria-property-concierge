@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEMO — Dynamic Listings (API-driven)</title>
+<!--
+  ⚠️ THIS IS A DEMONSTRATION FILE, NOT A REPLACEMENT FOR properties.html ⚠️
+
+  This shows what a database-driven version of the listings page would look
+  like: no listing data is written into the HTML — every card is fetched
+  from the backend API at load time and rendered with JavaScript.
+
+  Trade-off vs. the real properties.html:
+    ✓ Listings update instantly when you edit them in /admin — no redeploy
+    ✓ Filtering can query the database directly instead of hiding pre-rendered cards
+    ✗ Search engines and AI crawlers that don't execute JavaScript (many don't)
+      see an empty page — this directly reverses a deliberate SEO decision
+      made earlier in this project (see SESSION-HANDOFF-FULL.md, "Crawlability" section)
+
+  A middle ground exists if you want this later: server-side render the HTML
+  (e.g. with a small templating step at build/deploy time, or a framework like
+  Next.js/Astro) so crawlers get real HTML while the admin panel still updates
+  the underlying data. That's a bigger lift than this demo file and not built here.
+-->
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; background: #FAF8F4; color: #0F1B2E; margin: 0; }
+  .banner { background: #B8935A; color: #0F1B2E; text-align: center; padding: .6rem 1rem; font-size: .82rem; font-weight: 600; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  h1 { font-family: Georgia, serif; font-size: 2rem; margin: 0 0 .3rem; }
+  .sub { color: #6B6558; margin-bottom: 2rem; }
+  .filters { display: flex; gap: .6rem; flex-wrap: wrap; margin-bottom: 2rem; }
+  .filters button { padding: .5rem 1rem; border: 1px solid #D8D0BE; background: #fff; cursor: pointer; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+  .filters button.active { background: #0F1B2E; color: #fff; border-color: #0F1B2E; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.75rem; }
+  .card { background: #fff; border: 1px solid #E8E1D3; }
+  .card img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #E8E1D3; }
+  .card-body { padding: 1rem 1.1rem 1.3rem; }
+  .card-loc { font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: #8F6F3E; }
+  .card-title { font-family: Georgia, serif; font-size: 1.15rem; margin: .35rem 0; }
+  .card-meta { font-size: .85rem; color: #6B6558; }
+  .card-price { font-family: Georgia, serif; font-size: 1.1rem; margin-top: .5rem; }
+  .empty, .loading, .error { text-align: center; padding: 3rem 1rem; color: #6B6558; }
+  .error { color: #A8402F; }
+</style>
+</head>
+<body>
+
+<div class="banner">DEMO FILE — shows API-driven listings, not linked from the live site</div>
+
+<div class="wrap">
+  <h1>Available Listings (Dynamic Demo)</h1>
+  <p class="sub">Every card below is fetched from <code>/api/listings</code> at page load — nothing here is written in the HTML.</p>
+
+  <div class="filters">
+    <button class="active" data-category="">All</button>
+    <button data-category="completed">Completed Projects</button>
+    <button data-category="listing">Available Listings</button>
+  </div>
+
+  <div id="grid" class="grid">
+    <div class="loading">Loading listings…</div>
+  </div>
+</div>
+
+<script>
+// Point this at your deployed backend before this demo will show real data.
+const API_BASE = ''; // e.g. 'https://your-backend.up.railway.app'
+
+const gridEl = document.getElementById('grid');
+let currentCategory = '';
+
+async function loadListings() {
+  gridEl.innerHTML = '<div class="loading">Loading listings…</div>';
+  const url = new URL((API_BASE || window.location.origin) + '/api/listings');
+  if (currentCategory) url.searchParams.set('category', currentCategory);
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('Request failed: ' + res.status);
+    const listings = await res.json();
+
+    if (!listings.length) {
+      gridEl.innerHTML = '<div class="empty">No listings match this filter.</div>';
+      return;
+    }
+
+    gridEl.innerHTML = listings.map((l) => `
+      <div class="card">
+        <img src="${escapeAttr(l.imageUrl)}" alt="${escapeAttr(l.imageAlt)}" loading="lazy"/>
+        <div class="card-body">
+          <div class="card-loc">${escapeHtml(l.city)} &middot; ${escapeHtml(l.area)}</div>
+          <div class="card-title">${escapeHtml(l.title)}</div>
+          <div class="card-meta">${l.bedrooms ? l.bedrooms + ' Bed &middot; ' : ''}${escapeHtml(l.type)} &middot; ${escapeHtml(l.status)}</div>
+          ${l.price ? `<div class="card-price">${escapeHtml(l.price)}</div>` : ''}
+        </div>
+      </div>
+    `).join('');
+  } catch (err) {
+    gridEl.innerHTML = `<div class="error">Could not load listings${API_BASE ? '' : ' — set API_BASE at the top of this file first'}.</div>`;
+  }
+}
+
+document.querySelectorAll('.filters button').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach((b) => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentCategory = btn.dataset.category;
+    loadListings();
+  });
+});
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str == null ? '' : String(str);
+  return div.innerHTML;
+}
+function escapeAttr(str) { return escapeHtml(str).replace(/"/g, '&quot;'); }
+
+loadListings();
+</script>
+</body>
+</html>

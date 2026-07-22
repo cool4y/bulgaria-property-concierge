@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Bulgaria Property Concierge</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, sans-serif; background: #F3EFE7; color: #0F1B2E; margin: 0; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+  h1 { font-size: 1.4rem; margin: 0 0 1.5rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 1rem; }
+  .card { background: #FAF8F4; border: 1px solid #E8E1D3; padding: 1.5rem; margin-bottom: 1.5rem; }
+  label { display: block; font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: #6B6558; margin-bottom: .35rem; margin-top: .9rem; }
+  input, select, textarea { width: 100%; padding: .55rem .7rem; border: 1px solid #D8D0BE; background: #fff; font-size: .92rem; font-family: inherit; }
+  textarea { resize: vertical; min-height: 3rem; }
+  button { cursor: pointer; border: 1px solid #0F1B2E; background: #0F1B2E; color: #FAF8F4; padding: .6rem 1.2rem; font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; }
+  button.secondary { background: transparent; color: #0F1B2E; }
+  button.danger { background: #A8402F; border-color: #A8402F; color: #fff; }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+  th, td { text-align: left; padding: .6rem .5rem; border-bottom: 1px solid #E8E1D3; vertical-align: top; }
+  th { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; color: #6B6558; }
+  .row-actions { display: flex; gap: .4rem; }
+  .row-actions button { padding: .3rem .6rem; font-size: .7rem; }
+  .badge { display: inline-block; padding: .15rem .5rem; font-size: .68rem; text-transform: uppercase; letter-spacing: .05em; }
+  .badge.new { background: #B8935A; color: #fff; }
+  .badge.contacted { background: #1B2A44; color: #fff; }
+  .badge.closed { background: #D8D0BE; color: #0F1B2E; }
+  .err { color: #A8402F; font-size: .85rem; margin-top: .5rem; }
+  .msg { color: #2F7A4F; font-size: .85rem; margin-top: .5rem; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+  #app { display: none; }
+  #loginScreen { max-width: 380px; margin: 4rem auto; }
+  .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .logout-btn { background: transparent; border: 1px solid #6B6558; color: #6B6558; padding: .4rem .8rem; font-size: .72rem; }
+  .tabs { display: flex; gap: .5rem; margin-bottom: 1rem; }
+  .tabs button { background: transparent; color: #0F1B2E; border: 1px solid #D8D0BE; }
+  .tabs button.active { background: #0F1B2E; color: #fff; }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+</style>
+</head>
+<body>
+
+<div id="loginScreen" class="wrap">
+  <div class="card">
+    <h1>Admin Login</h1>
+    <label for="loginEmail">Email</label>
+    <input id="loginEmail" type="email" autocomplete="username"/>
+    <label for="loginPassword">Password</label>
+    <input id="loginPassword" type="password" autocomplete="current-password"/>
+    <div style="margin-top:1.2rem;">
+      <button id="loginBtn" onclick="doLogin()">Log in</button>
+    </div>
+    <div id="loginError" class="err"></div>
+  </div>
+</div>
+
+<div id="app" class="wrap">
+  <div class="top-bar">
+    <h1>Bulgaria Property Concierge — Admin</h1>
+    <button class="logout-btn" onclick="logout()">Log out</button>
+  </div>
+
+  <div class="tabs">
+    <button class="active" data-tab="listings" onclick="switchTab('listings')">Listings</button>
+    <button data-tab="contacts" onclick="switchTab('contacts')">Contact Submissions</button>
+  </div>
+
+  <div id="listingsTab" class="tab-panel active">
+    <div class="card">
+      <h2 style="margin-top:0;">Add New Listing</h2>
+      <div class="grid2">
+        <div>
+          <label>Title</label><input id="f_title"/>
+          <label>Category</label>
+          <select id="f_category"><option value="listing">Available Listing</option><option value="completed">Completed Project</option></select>
+          <label>Status (e.g. "For Sale", "Delivered")</label><input id="f_status"/>
+          <label>City</label><input id="f_city"/>
+          <label>Area</label><input id="f_area"/>
+          <label>Type (e.g. Apartment, House, New Build)</label><input id="f_type"/>
+        </div>
+        <div>
+          <label>Bedrooms</label><input id="f_bedrooms" type="number" min="0"/>
+          <label>Tier (Essential / Signature / Bespoke — completed projects only)</label><input id="f_tier"/>
+          <label>Price (display text, e.g. "€245,000")</label><input id="f_price"/>
+          <label>Year (completed projects only)</label><input id="f_year"/>
+          <label><input type="checkbox" id="f_featured" style="width:auto;display:inline-block;"/> Featured on homepage (max 3)</label>
+        </div>
+      </div>
+      <label>Image URL</label><input id="f_imageUrl"/>
+      <label>Image Alt Text</label><input id="f_imageAlt"/>
+      <label>Description</label><textarea id="f_description"></textarea>
+      <div style="margin-top:1.2rem;">
+        <button onclick="createListing()">Add Listing</button>
+      </div>
+      <div id="listingFormMsg"></div>
+    </div>
+
+    <h2>All Listings (<span id="listingCount">0</span>)</h2>
+    <div class="card" style="overflow-x:auto;">
+      <table>
+        <thead><tr><th>Title</th><th>Category</th><th>City</th><th>Price</th><th>Published</th><th>Featured</th><th>Actions</th></tr></thead>
+        <tbody id="listingsBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="contactsTab" class="tab-panel">
+    <h2 style="margin-top:0;">Contact Submissions (<span id="contactCount">0</span>)</h2>
+    <div class="card" style="overflow-x:auto;">
+      <table>
+        <thead><tr><th>Date</th><th>Name</th><th>Contact</th><th>Details</th><th>Status</th></tr></thead>
+        <tbody id="contactsBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = ''; // same-origin; change to your API base URL if the admin panel is hosted separately
+let token = localStorage.getItem('bpc_admin_token') || null;
+
+function authHeaders() {
+  return { 'Authorization': 'Bearer ' + token, 'Content-Type': 'application/json' };
+}
+
+async function doLogin() {
+  const email = document.getElementById('loginEmail').value;
+  const password = document.getElementById('loginPassword').value;
+  const errEl = document.getElementById('loginError');
+  errEl.textContent = '';
+  try {
+    const res = await fetch(API + '/api/admin/login', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+    const data = await res.json();
+    if (!res.ok) { errEl.textContent = data.error || 'Login failed.'; return; }
+    token = data.token;
+    localStorage.setItem('bpc_admin_token', token);
+    showApp();
+  } catch (e) {
+    errEl.textContent = 'Could not reach the server.';
+  }
+}
+
+function logout() {
+  token = null;
+  localStorage.removeItem('bpc_admin_token');
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('loginScreen').style.display = 'block';
+}
+
+function switchTab(name) {
+  document.querySelectorAll('.tabs button').forEach((b) => b.classList.toggle('active', b.dataset.tab === name));
+  document.querySelectorAll('.tab-panel').forEach((p) => p.classList.remove('active'));
+  document.getElementById(name + 'Tab').classList.add('active');
+  if (name === 'contacts') loadContacts();
+}
+
+async function showApp() {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  await loadListings();
+}
+
+async function loadListings() {
+  const res = await fetch(API + '/api/admin/listings', { headers: authHeaders() });
+  if (res.status === 401) return logout();
+  const data = await res.json();
+  document.getElementById('listingCount').textContent = data.length;
+  const body = document.getElementById('listingsBody');
+  body.innerHTML = data.map((l) => `
+    <tr>
+      <td>${escapeHtml(l.title)}</td>
+      <td>${l.category}</td>
+      <td>${escapeHtml(l.city)}</td>
+      <td>${escapeHtml(l.price || '—')}</td>
+      <td>${l.published ? 'Yes' : 'No'}</td>
+      <td>${l.featured ? 'Yes' : 'No'}</td>
+      <td class="row-actions">
+        <button class="secondary" onclick="togglePublished(${l.id}, ${!l.published})">${l.published ? 'Unpublish' : 'Publish'}</button>
+        <button class="danger" onclick="deleteListing(${l.id})">Delete</button>
+      </td>
+    </tr>
+  `).join('');
+}
+
+async function createListing() {
+  const payload = {
+    title: document.getElementById('f_title').value,
+    category: document.getElementById('f_category').value,
+    status: document.getElementById('f_status').value,
+    city: document.getElementById('f_city').value,
+    area: document.getElementById('f_area').value,
+    type: document.getElementById('f_type').value,
+    bedrooms: Number(document.getElementById('f_bedrooms').value || 0),
+    tier: document.getElementById('f_tier').value || null,
+    price: document.getElementById('f_price').value || null,
+    year: document.getElementById('f_year').value || null,
+    imageUrl: document.getElementById('f_imageUrl').value,
+    imageAlt: document.getElementById('f_imageAlt').value,
+    description: document.getElementById('f_description').value || null,
+    featured: document.getElementById('f_featured').checked,
+  };
+  const msgEl = document.getElementById('listingFormMsg');
+  msgEl.className = ''; msgEl.textContent = '';
+  const res = await fetch(API + '/api/admin/listings', { method: 'POST', headers: authHeaders(), body: JSON.stringify(payload) });
+  const data = await res.json();
+  if (!res.ok) {
+    msgEl.className = 'err';
+    msgEl.textContent = data.error || 'Failed to create listing.';
+    return;
+  }
+  msgEl.className = 'msg';
+  msgEl.textContent = 'Listing added.';
+  ['f_title','f_status','f_city','f_area','f_type','f_bedrooms','f_tier','f_price','f_year','f_imageUrl','f_imageAlt','f_description']
+    .forEach((id) => { document.getElementById(id).value = ''; });
+  document.getElementById('f_featured').checked = false;
+  loadListings();
+}
+
+async function togglePublished(id, published) {
+  await fetch(API + '/api/admin/listings/' + id, { method: 'PUT', headers: authHeaders(), body: JSON.stringify({ published }) });
+  loadListings();
+}
+
+async function deleteListing(id) {
+  if (!confirm('Delete this listing? This cannot be undone.')) return;
+  await fetch(API + '/api/admin/listings/' + id, { method: 'DELETE', headers: authHeaders() });
+  loadListings();
+}
+
+async function loadContacts() {
+  const res = await fetch(API + '/api/admin/contacts', { headers: authHeaders() });
+  if (res.status === 401) return logout();
+  const data = await res.json();
+  document.getElementById('contactCount').textContent = data.length;
+  const body = document.getElementById('contactsBody');
+  body.innerHTML = data.map((c) => `
+    <tr>
+      <td>${new Date(c.created_at).toLocaleDateString()}</td>
+      <td>${escapeHtml(c.name)}</td>
+      <td>${escapeHtml(c.email)}<br/>${escapeHtml(c.phone_code)} ${escapeHtml(c.phone)}</td>
+      <td style="max-width:280px;">
+        ${escapeHtml(c.apartment_type)} · ${escapeHtml(c.investment_goal)}<br/>
+        ${escapeHtml(c.purchase_timeline)} · ${escapeHtml(c.budget)}<br/>
+        ${escapeHtml(c.finish_tier)}
+        ${c.message ? '<br/><em>' + escapeHtml(c.message) + '</em>' : ''}
+      </td>
+      <td>
+        <select onchange="updateContactStatus(${c.id}, this.value)">
+          <option value="new" ${c.status === 'new' ? 'selected' : ''}>New</option>
+          <option value="contacted" ${c.status === 'contacted' ? 'selected' : ''}>Contacted</option>
+          <option value="closed" ${c.status === 'closed' ? 'selected' : ''}>Closed</option>
+        </select>
+      </td>
+    </tr>
+  `).join('');
+}
+
+async function updateContactStatus(id, status) {
+  await fetch(API + '/api/admin/contacts/' + id, { method: 'PATCH', headers: authHeaders(), body: JSON.stringify({ status }) });
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str == null ? '' : String(str);
+  return div.innerHTML;
+}
+
+if (token) showApp();
+</script>
+</body>
+</html>

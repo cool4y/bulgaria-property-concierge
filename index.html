@@ -1147,7 +1147,7 @@
           <div class="eyebrow text-gold-dark">Get in Touch</div>
           <h3 class="font-serif text-2xl text-navy leading-tight mt-3">Request a private consultation.</h3>
 
-          <form action="mailto:hello@bpc.bg" method="post" enctype="text/plain" class="mt-8 space-y-5">
+          <form id="contactForm" class="mt-8 space-y-5">
             <div>
               <label class="eyebrow text-navy font-semibold block mb-2" for="f-name">Full name</label>
               <input id="f-name" name="name" type="text" required
@@ -1298,11 +1298,12 @@
                 placeholder="Tell us about your goals..."></textarea>
             </div>
 
-            <button type="submit"
+            <button type="submit" id="contactSubmitBtn"
               class="w-full mt-2 group inline-flex items-center justify-center gap-2.5 bg-navy text-ivory hover:bg-gold hover:text-navy px-6 py-4 text-[.78rem] tracking-[.12em] uppercase font-medium transition-all duration-500 ease-lux border border-navy hover:border-gold">
-              <span>Request Consultation</span>
+              <span id="contactSubmitLabel">Request Consultation</span>
               <span class="inline-block transition-transform duration-500 ease-lux group-hover:translate-x-1">→</span>
             </button>
+            <div id="contactFormMsg" class="text-[.85rem] text-center" role="status" aria-live="polite"></div>
           </form>
 
           <div class="mt-6 pt-6 border-t border-stone-100 text-center">
@@ -1486,6 +1487,71 @@ if (prefersReducedMotion) {
     });
   }, { threshold: 0.6 });
   countEls.forEach((el) => countIo.observe(el));
+}
+
+/* ─────────────────────────────────────────────────────────
+   Contact form → backend API
+   Set API_BASE to your deployed backend's URL once it's live
+   (e.g. Railway/Render give you something like
+   "https://bpc-backend.up.railway.app"). Leave empty only if
+   this HTML is ever served from the same origin as the API. */
+const API_BASE = ''; // ← replace with your backend URL, e.g. 'https://your-backend.up.railway.app'
+
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  const submitBtn = document.getElementById('contactSubmitBtn');
+  const submitLabel = document.getElementById('contactSubmitLabel');
+  const originalLabel = submitLabel.textContent;
+  const statusEl = document.getElementById('contactFormMsg');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const payload = {
+      name: document.getElementById('f-name').value,
+      email: document.getElementById('f-email').value,
+      phoneCode: document.getElementById('f-phone-code').value,
+      phone: document.getElementById('f-phone').value,
+      apartmentType: document.getElementById('f-apt-type').value,
+      investmentGoal: document.getElementById('f-goal').value,
+      purchaseTimeline: document.getElementById('f-timeline').value,
+      budget: document.getElementById('f-budget').value,
+      finishTier: document.getElementById('f-finish').value,
+      message: document.getElementById('f-msg').value,
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '.5';
+    submitBtn.style.cursor = 'not-allowed';
+    submitLabel.textContent = 'Sending…';
+    statusEl.textContent = '';
+    statusEl.style.color = '';
+
+    try {
+      const res = await fetch(API_BASE + '/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Something went wrong. Please try again.');
+      }
+
+      statusEl.textContent = "Thank you — we've received your request and will be in touch within 24 hours.";
+      statusEl.style.color = '#2F7A4F';
+      contactForm.reset();
+    } catch (err) {
+      statusEl.textContent = err.message || 'Could not send your request. Please try again or message us directly.';
+      statusEl.style.color = '#A8402F';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '';
+      submitBtn.style.cursor = '';
+      submitLabel.textContent = originalLabel;
+    }
+  });
 }
 
 /* Services, Process steps, and Project card content now all live directly in static HTML (crawlable without JS execution). */
