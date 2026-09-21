@@ -204,17 +204,14 @@
   .header-actions { display:flex; align-items:center; gap:1.25rem; }
   .lang-switch { display:inline-flex; align-items:center; gap:.55rem; }
   .lang-btn {
-    position:relative; width:2.5rem; height:1.7rem; padding:0; border:0; border-radius:.2rem; cursor:pointer;
-    font:inherit; font-size:.66rem; font-weight:700; letter-spacing:.1em; line-height:1; color:#fff;
-    text-shadow:0 1px 2px rgba(0,0,0,.75);
+    position:relative; width:2.4rem; height:1.6rem; padding:0; border:0; border-radius:.2rem; cursor:pointer;
     background-size:cover; background-position:center;
     box-shadow:inset 0 0 0 1px rgba(15,27,46,.3);
     filter:saturate(.7) brightness(.92);
     transition:box-shadow .3s, filter .3s;
   }
-  /* a dark veil over each flag keeps the white EN / BG label readable */
-  .lang-btn[data-lang="en"] { background-image:linear-gradient(rgba(10,20,35,.42),rgba(10,20,35,.42)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url%28%23s%29'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url%28%23t%29' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
-  .lang-btn[data-lang="bg"] { background-image:linear-gradient(rgba(10,20,35,.2),rgba(10,20,35,.2)), linear-gradient(#fff 33.34%, #00966E 33.34% 66.67%, #D62612 66.67%); }
+  .lang-btn[data-lang="en"] { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url%28%23s%29'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url%28%23t%29' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
+  .lang-btn[data-lang="bg"] { background-image:linear-gradient(#fff 33.34%, #00966E 33.34% 66.67%, #D62612 66.67%); }
   .lang-btn::before { content:''; position:absolute; inset:-.6rem -.25rem; }   /* larger tap target than the flag itself */
   .lang-btn:hover { filter:none; }
   .lang-btn[aria-pressed="true"] { filter:none; box-shadow:0 0 0 2px #FAF8F4, 0 0 0 3.5px #B8935A; }
@@ -244,7 +241,7 @@
     .hdr-logo .font-serif { font-size:1rem; }
     .hdr-logo .eyebrow { font-size:.62rem; letter-spacing:.08em; }
     .header-actions { gap:.3rem; }
-    .lang-btn { width:2.2rem; height:1.5rem; font-size:.6rem; }
+    .lang-btn { width:2.2rem; height:1.5rem; }
     .hdr-menu-btn { width:2.25rem; height:2.25rem; }
   }
   @media (min-width: 1280px) {
@@ -376,8 +373,8 @@
 
     <div class="header-actions">
       <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="language">
-        <button type="button" class="lang-btn" data-lang="en" lang="en" data-no-i18n aria-pressed="true" title="English">EN</button>
-        <button type="button" class="lang-btn" data-lang="bg" lang="bg" data-no-i18n aria-pressed="false" title="Български">BG</button>
+        <button type="button" class="lang-btn" data-lang="en" lang="en" data-no-i18n aria-pressed="true" title="English" aria-label="English"></button>
+        <button type="button" class="lang-btn" data-lang="bg" lang="bg" data-no-i18n aria-pressed="false" title="Български" aria-label="Български"></button>
       </div>
       <a data-i18n="book-consultation" href="#contact" class="hdr-cta group items-center bg-gold text-navy hover:bg-gold-dark hover:text-ivory border border-gold uppercase font-medium transition-all duration-500 ease-lux">
       Book Consultation
