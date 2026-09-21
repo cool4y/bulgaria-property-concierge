@@ -3,8 +3,23 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Properties in Bulgaria | Completed Projects &amp; Listings | Bulgaria Property Concierge</title>
-<meta name="description" content="See our completed projects with real results, and browse move-in ready and off-plan properties for sale in Sofia, Varna, Plovdiv, Bansko and Sozopol." />
+<script>
+/* Language, decided before first paint: ?lang= in the URL, else the saved choice, else the browser language.
+   Bulgarian visitors get the page hidden (html.i18n-loading) until js/i18n.js has swapped the text in,
+   so English never flashes. Keep the rule in sync with detect() in js/i18n.js. */
+(function () {
+  try {
+    var d = document.documentElement, q = new URLSearchParams(location.search).get('lang'), s = localStorage.getItem('bpc_lang');
+    var l = q === 'bg' || q === 'en' ? q : s === 'bg' || s === 'en' ? s : /^bg/i.test(navigator.language || '') ? 'bg' : 'en';
+    d.setAttribute('data-lang', l);
+    if (l === 'bg') { d.classList.add('i18n-loading'); setTimeout(function () { d.classList.remove('i18n-loading'); }, 2500); }
+  } catch (e) {}
+})();
+</script>
+<script src="js/i18n-bg.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<title data-i18n="meta-title-properties">Properties in Bulgaria | Completed Projects &amp; Listings | Bulgaria Property Concierge</title>
+<meta name="description" data-i18n-content="meta-description-properties" content="See our completed projects with real results, and browse move-in ready and off-plan properties for sale in Sofia, Varna, Plovdiv, Bansko and Sozopol." />
 <meta name="keywords" content="property for sale Bulgaria, Sofia apartments for sale, Bansko property, Varna real estate, Bulgaria new build, buy apartment Bulgaria, real estate case studies Bulgaria" />
 <link rel="canonical" href="https://www.bulgariapropertyconcierge.com/properties.html" />
 <meta name="robots" content="index, follow" />
@@ -26,7 +41,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400..600;1,400..600&display=swap" rel="stylesheet">
 
 <style>*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:Inter,system-ui,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.\!visible{visibility:visible!important}.visible{visibility:visible}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0}.inset-x-0{left:0;right:0}.-bottom-6{bottom:-1.5rem}.-right-6{right:-1.5rem}.-top-3{top:-.75rem}.-top-3\.5{top:-.875rem}.bottom-4{bottom:1rem}.bottom-8{bottom:2rem}.left-1{left:.25rem}.left-1\/2{left:50%}.left-4{left:1rem}.left-\[8\.3\%\]{left:8.3%}.right-4{right:1rem}.right-\[8\.3\%\]{right:8.3%}.top-0{top:0}.top-4{top:1rem}.top-8{top:2rem}.z-10{z-index:10}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.col-span-full{grid-column:1/-1}.-my-3{margin-top:-.75rem;margin-bottom:-.75rem}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.mx-8{margin-left:2rem;margin-right:2rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-10{margin-bottom:2.5rem}.mb-12{margin-bottom:3rem}.mb-14{margin-bottom:3.5rem}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-\[\.25em\]{margin-right:.25em}.mt-0{margin-top:0}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-14{margin-top:3.5rem}.mt-16{margin-top:4rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.inline{display:inline}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.hidden{display:none}.aspect-\[4\/3\]{aspect-ratio:4/3}.aspect-\[4\/5\]{aspect-ratio:4/5}.h-10{height:2.5rem}.h-11{height:2.75rem}.h-12{height:3rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-32{height:8rem}.h-8{height:2rem}.h-full{height:100%}.h-px{height:1px}.max-h-full{max-height:100%}.min-h-\[100svh\]{min-height:100svh}.w-0{width:0}.w-10{width:2.5rem}.w-11{width:2.75rem}.w-14{width:3.5rem}.w-16{width:4rem}.w-28{width:7rem}.w-32{width:8rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-full{width:100%}.w-px{width:1px}.min-w-\[140px\]{min-width:140px}.min-w-\[160px\]{min-width:160px}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-4xl{max-width:56rem}.max-w-\[11rem\]{max-width:11rem}.max-w-container{max-width:80rem}.max-w-full{max-width:100%}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grow{flex-grow:1}.-translate-x-1{--tw-translate-x:-0.25rem}.-translate-x-1,.-translate-x-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-x-1\/2{--tw-translate-x:-50%}.translate-x-1{--tw-translate-x:0.25rem}.translate-x-1,.translate-y-0{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.translate-y-0{--tw-translate-y:0px}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.resize-none{resize:none}.resize{resize:both}.appearance-none{-webkit-appearance:none;-moz-appearance:none;appearance:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-12{gap:3rem}.gap-14{gap:3.5rem}.gap-2{gap:.5rem}.gap-2\.5{gap:.625rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.gap-5{gap:1.25rem}.gap-6{gap:1.5rem}.gap-7{gap:1.75rem}.gap-8{gap:2rem}.gap-x-16{-moz-column-gap:4rem;column-gap:4rem}.gap-x-6{-moz-column-gap:1.5rem;column-gap:1.5rem}.gap-x-8{-moz-column-gap:2rem;column-gap:2rem}.gap-y-10{row-gap:2.5rem}.gap-y-12{row-gap:3rem}.gap-y-6{row-gap:1.5rem}.gap-y-8{row-gap:2rem}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-5>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.whitespace-nowrap{white-space:nowrap}.rounded-full{border-radius:9999px}.border{border-width:1px}.border-2{border-width:2px}.border-y{border-top-width:1px}.border-b,.border-y{border-bottom-width:1px}.border-t{border-top-width:1px}.border-gold{--tw-border-opacity:1;border-color:rgb(184 147 90/var(--tw-border-opacity,1))}.border-gold\/30{border-color:rgba(184,147,90,.3)}.border-ivory{--tw-border-opacity:1;border-color:rgb(250 248 244/var(--tw-border-opacity,1))}.border-ivory\/25{border-color:hsla(40,37%,97%,.25)}.border-ivory\/30{border-color:hsla(40,37%,97%,.3)}.border-navy{--tw-border-opacity:1;border-color:rgb(15 27 46/var(--tw-border-opacity,1))}.border-navy-light{--tw-border-opacity:1;border-color:rgb(27 42 68/var(--tw-border-opacity,1))}.border-stone-100{--tw-border-opacity:1;border-color:rgb(232 227 216/var(--tw-border-opacity,1))}.border-stone-200{--tw-border-opacity:1;border-color:rgb(211 203 187/var(--tw-border-opacity,1))}.bg-beige{--tw-bg-opacity:1;background-color:rgb(232 225 211/var(--tw-bg-opacity,1))}.bg-cream{--tw-bg-opacity:1;background-color:rgb(243 239 231/var(--tw-bg-opacity,1))}.bg-gold{--tw-bg-opacity:1;background-color:rgb(184 147 90/var(--tw-bg-opacity,1))}.bg-gold\/40{background-color:rgba(184,147,90,.4)}.bg-gold\/60{background-color:rgba(184,147,90,.6)}.bg-ivory{--tw-bg-opacity:1;background-color:rgb(250 248 244/var(--tw-bg-opacity,1))}.bg-ivory\/70{background-color:hsla(40,37%,97%,.7)}.bg-ivory\/95{background-color:hsla(40,37%,97%,.95)}.bg-navy{--tw-bg-opacity:1;background-color:rgb(15 27 46/var(--tw-bg-opacity,1))}.bg-navy\/90{background-color:rgba(15,27,46,.9)}.bg-stone-200{--tw-bg-opacity:1;background-color:rgb(211 203 187/var(--tw-bg-opacity,1))}.bg-stone-300{--tw-bg-opacity:1;background-color:rgb(181 170 149/var(--tw-bg-opacity,1))}.bg-transparent{background-color:transparent}.bg-gradient-to-b{background-image:linear-gradient(to bottom,var(--tw-gradient-stops))}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.bg-gradient-to-t{background-image:linear-gradient(to top,var(--tw-gradient-stops))}.from-ivory{--tw-gradient-from:#faf8f4 var(--tw-gradient-from-position);--tw-gradient-to:hsla(40,37%,97%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-ivory\/70{--tw-gradient-from:hsla(40,37%,97%,.7) var(--tw-gradient-from-position);--tw-gradient-to:hsla(40,37%,97%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-navy{--tw-gradient-from:#0f1b2e var(--tw-gradient-from-position);--tw-gradient-to:rgba(15,27,46,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-stone-400{--tw-gradient-from:#8b816d var(--tw-gradient-from-position);--tw-gradient-to:hsla(40,12%,49%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.via-ivory{--tw-gradient-to:hsla(40,37%,97%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#faf8f4 var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-ivory\/20{--tw-gradient-to:hsla(40,37%,97%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),hsla(40,37%,97%,.2) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-ivory\/55{--tw-gradient-to:hsla(40,37%,97%,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),hsla(40,37%,97%,.55) var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-navy{--tw-gradient-to:rgba(15,27,46,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),#0f1b2e var(--tw-gradient-via-position),var(--tw-gradient-to)}.via-navy\/85{--tw-gradient-to:rgba(15,27,46,0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),rgba(15,27,46,.85) var(--tw-gradient-via-position),var(--tw-gradient-to)}.to-navy{--tw-gradient-to:#0f1b2e var(--tw-gradient-to-position)}.to-navy\/60{--tw-gradient-to:rgba(15,27,46,.6) var(--tw-gradient-to-position)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-contain{-o-object-fit:contain;object-fit:contain}.object-cover{-o-object-fit:cover;object-fit:cover}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-2\.5{padding-left:.625rem;padding-right:.625rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-7{padding-left:1.75rem;padding-right:1.75rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-1\.5{padding-top:.375rem;padding-bottom:.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-2\.5{padding-top:.625rem;padding-bottom:.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-24{padding-top:6rem;padding-bottom:6rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-3\.5{padding-top:.875rem;padding-bottom:.875rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-7{padding-top:1.75rem;padding-bottom:1.75rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-16{padding-bottom:4rem}.pb-24{padding-bottom:6rem}.pb-7{padding-bottom:1.75rem}.pl-1{padding-left:.25rem}.pr-10{padding-right:2.5rem}.pr-4{padding-right:1rem}.pr-8{padding-right:2rem}.pt-10{padding-top:2.5rem}.pt-4{padding-top:1rem}.pt-40{padding-top:10rem}.pt-5{padding-top:1.25rem}.pt-6{padding-top:1.5rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.font-serif{font-family:Fraunces,Georgia,serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-6xl{font-size:3.75rem;line-height:1}.text-\[\.65rem\]{font-size:.65rem}.text-\[\.68rem\]{font-size:.68rem}.text-\[\.72rem\]{font-size:.72rem}.text-\[\.78rem\]{font-size:.78rem}.text-\[\.82rem\]{font-size:.82rem}.text-\[\.83rem\]{font-size:.83rem}.text-\[\.85rem\]{font-size:.85rem}.text-\[\.88rem\]{font-size:.88rem}.text-\[\.92rem\]{font-size:.92rem}.text-\[\.95rem\]{font-size:.95rem}.text-\[\.9rem\]{font-size:.9rem}.text-lg{font-size:1.125rem}.text-lg,.text-xl{line-height:1.75rem}.text-xl{font-size:1.25rem}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.normal-case{text-transform:none}.italic{font-style:italic}.leading-\[1\.05\]{line-height:1.05}.leading-\[1\.35\]{line-height:1.35}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[\.08em\]{letter-spacing:.08em}.tracking-\[\.12em\]{letter-spacing:.12em}.tracking-\[\.14em\]{letter-spacing:.14em}.tracking-normal{letter-spacing:0}.tracking-wide{letter-spacing:.025em}.text-gold{--tw-text-opacity:1;color:rgb(184 147 90/var(--tw-text-opacity,1))}.text-gold-dark{--tw-text-opacity:1;color:rgb(143 111 62/var(--tw-text-opacity,1))}.text-gold-light{--tw-text-opacity:1;color:rgb(217 190 138/var(--tw-text-opacity,1))}.text-gold\/50{color:rgba(184,147,90,.5)}.text-ivory{--tw-text-opacity:1;color:rgb(250 248 244/var(--tw-text-opacity,1))}.text-navy{--tw-text-opacity:1;color:rgb(15 27 46/var(--tw-text-opacity,1))}.text-stone-200{--tw-text-opacity:1;color:rgb(211 203 187/var(--tw-text-opacity,1))}.text-stone-200\/50{color:hsla(40,21%,78%,.5)}.text-stone-200\/60{color:hsla(40,21%,78%,.6)}.text-stone-200\/70{color:hsla(40,21%,78%,.7)}.text-stone-300{--tw-text-opacity:1;color:rgb(181 170 149/var(--tw-text-opacity,1))}.text-stone-400{--tw-text-opacity:1;color:rgb(139 129 109/var(--tw-text-opacity,1))}.text-stone-500{--tw-text-opacity:1;color:rgb(107 101 88/var(--tw-text-opacity,1))}.text-stone-600{--tw-text-opacity:1;color:rgb(74 70 61/var(--tw-text-opacity,1))}.underline{text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-0{opacity:0}.opacity-25{opacity:.25}.opacity-50{opacity:.5}.opacity-60{opacity:.6}.shadow-\[0_10px_30px_-10px_rgba\(15\2c 27\2c 46\2c 0\.35\)\]{--tw-shadow:0 10px 30px -10px rgba(15,27,46,.35);--tw-shadow-colored:0 10px 30px -10px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_25px_60px_-25px_rgba\(184\2c 147\2c 90\2c 0\.45\)\]{--tw-shadow:0 25px 60px -25px rgba(184,147,90,.45);--tw-shadow-colored:0 25px 60px -25px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-\[0_30px_80px_-30px_rgba\(0\2c 0\2c 0\2c 0\.5\)\]{--tw-shadow:0 30px 80px -30px rgba(0,0,0,.5);--tw-shadow-colored:0 30px 80px -30px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-1,.ring-4{box-shadow:var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 #0000)}.ring-4{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color)}.ring-gold{--tw-ring-opacity:1;--tw-ring-color:rgb(184 147 90/var(--tw-ring-opacity,1))}.ring-gold\/30{--tw-ring-color:rgba(184,147,90,.3)}.ring-ivory{--tw-ring-opacity:1;--tw-ring-color:rgb(250 248 244/var(--tw-ring-opacity,1))}.blur{--tw-blur:blur(8px)}.blur,.grayscale{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.grayscale{--tw-grayscale:grayscale(100%)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px)}.backdrop-blur-sm,.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-colors{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-500{transition-duration:.5s}.duration-700{transition-duration:.7s}.duration-\[1200ms\]{transition-duration:1.2s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.placeholder\:text-stone-300::-moz-placeholder{--tw-text-opacity:1;color:rgb(181 170 149/var(--tw-text-opacity,1))}.placeholder\:text-stone-300::placeholder{--tw-text-opacity:1;color:rgb(181 170 149/var(--tw-text-opacity,1))}.hover\:border-gold:hover{--tw-border-opacity:1;border-color:rgb(184 147 90/var(--tw-border-opacity,1))}.hover\:border-gold-light:hover{--tw-border-opacity:1;border-color:rgb(217 190 138/var(--tw-border-opacity,1))}.hover\:bg-gold:hover{--tw-bg-opacity:1;background-color:rgb(184 147 90/var(--tw-bg-opacity,1))}.hover\:bg-gold-dark:hover{--tw-bg-opacity:1;background-color:rgb(143 111 62/var(--tw-bg-opacity,1))}.hover\:bg-ivory:hover{--tw-bg-opacity:1;background-color:rgb(250 248 244/var(--tw-bg-opacity,1))}.hover\:bg-navy-light:hover{--tw-bg-opacity:1;background-color:rgb(27 42 68/var(--tw-bg-opacity,1))}.hover\:bg-stone-400:hover{--tw-bg-opacity:1;background-color:rgb(139 129 109/var(--tw-bg-opacity,1))}.hover\:text-gold-dark:hover{--tw-text-opacity:1;color:rgb(143 111 62/var(--tw-text-opacity,1))}.hover\:text-gold-light:hover{--tw-text-opacity:1;color:rgb(217 190 138/var(--tw-text-opacity,1))}.hover\:text-ivory:hover{--tw-text-opacity:1;color:rgb(250 248 244/var(--tw-text-opacity,1))}.hover\:text-navy:hover{--tw-text-opacity:1;color:rgb(15 27 46/var(--tw-text-opacity,1))}.hover\:opacity-100:hover{opacity:1}.hover\:grayscale-0:hover{--tw-grayscale:grayscale(0);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.focus\:border-gold:focus{--tw-border-opacity:1;border-color:rgb(184 147 90/var(--tw-border-opacity,1))}.group:hover .group-hover\:w-4{width:1rem}.group:hover .group-hover\:-translate-y-1{--tw-translate-y:-0.25rem}.group:hover .group-hover\:-translate-y-1,.group:hover .group-hover\:translate-x-1{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem}.group:hover .group-hover\:translate-x-1\.5{--tw-translate-x:0.375rem}.group:hover .group-hover\:scale-\[1\.06\],.group:hover .group-hover\:translate-x-1\.5{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-\[1\.06\]{--tw-scale-x:1.06;--tw-scale-y:1.06}.group:hover .group-hover\:text-gold-dark{--tw-text-opacity:1;color:rgb(143 111 62/var(--tw-text-opacity,1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width:640px){.sm\:-my-3{margin-top:-.75rem;margin-bottom:-.75rem}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.sm\:flex-row{flex-direction:row}.sm\:gap-5{gap:1.25rem}.sm\:border-r{border-right-width:1px}}@media (min-width:768px){.md\:col-span-4{grid-column:span 4/span 4}.md\:col-span-8{grid-column:span 8/span 8}.md\:block{display:block}.md\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.md\:flex-row{flex-direction:row}.md\:p-10{padding:2.5rem}.md\:px-10{padding-left:2.5rem;padding-right:2.5rem}.md\:py-20{padding-top:5rem;padding-bottom:5rem}.md\:py-32{padding-top:8rem;padding-bottom:8rem}.md\:pb-20{padding-bottom:5rem}.md\:pb-28{padding-bottom:7rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-7xl{font-size:4.5rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}@media (min-width:1024px){.lg\:order-1{order:1}.lg\:order-2{order:2}.lg\:col-span-4{grid-column:span 4/span 4}.lg\:col-span-5{grid-column:span 5/span 5}.lg\:col-span-6{grid-column:span 6/span 6}.lg\:col-span-7{grid-column:span 7/span 7}.lg\:col-span-8{grid-column:span 8/span 8}.lg\:mt-20{margin-top:5rem}.lg\:block{display:block}.lg\:flex{display:flex}.lg\:inline-flex{display:inline-flex}.lg\:hidden{display:none}.lg\:grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}.lg\:flex-row{flex-direction:row}.lg\:items-end{align-items:flex-end}.lg\:justify-between{justify-content:space-between}.lg\:gap-16{gap:4rem}.lg\:pt-6{padding-top:1.5rem}.lg\:text-left{text-align:left}}</style>
 
@@ -34,7 +49,7 @@
   html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
   body { background:#FAF8F4; color:#0F1B2E; font-family: Inter, system-ui, sans-serif; }
   ::selection { background:#B8935A; color:#0F1B2E; }
-  .font-serif { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto; }
+  .font-serif { font-family: "Fraunces", "Lora", Georgia, serif; font-optical-sizing: auto; } /* Lora supplies the Cyrillic glyphs Fraunces lacks */
   .eyebrow { font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; font-weight:500; }
   .display-sm { font-size: clamp(2.25rem, 4vw, 3rem); line-height:1.05; letter-spacing:-.015em; }
   .section-y  { padding-top: clamp(5rem, 10vw, 9rem); padding-bottom: clamp(5rem, 10vw, 9rem); }
@@ -105,6 +120,61 @@
                 radial-gradient(circle at 85% 50%, rgba(184,147,90,.08), transparent 45%);
     pointer-events:none;
   }
+
+  /* ── Language switcher: two flag buttons (EN = United Kingdom, BG = Bulgaria) ─────────────── */
+  .header-actions { display:flex; align-items:center; gap:1.25rem; }
+  .lang-switch { display:inline-flex; align-items:center; gap:.55rem; }
+  .lang-btn {
+    position:relative; width:2.5rem; height:1.7rem; padding:0; border:0; border-radius:.2rem; cursor:pointer;
+    font:inherit; font-size:.66rem; font-weight:700; letter-spacing:.1em; line-height:1; color:#fff;
+    text-shadow:0 1px 2px rgba(0,0,0,.75);
+    background-size:cover; background-position:center;
+    box-shadow:inset 0 0 0 1px rgba(15,27,46,.3);
+    filter:saturate(.7) brightness(.92);
+    transition:box-shadow .3s, filter .3s;
+  }
+  /* a dark veil over each flag keeps the white EN / BG label readable */
+  .lang-btn[data-lang="en"] { background-image:linear-gradient(rgba(10,20,35,.42),rgba(10,20,35,.42)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url%28%23s%29'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url%28%23t%29' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
+  .lang-btn[data-lang="bg"] { background-image:linear-gradient(rgba(10,20,35,.2),rgba(10,20,35,.2)), linear-gradient(#fff 33.34%, #00966E 33.34% 66.67%, #D62612 66.67%); }
+  .lang-btn::before { content:''; position:absolute; inset:-.6rem -.25rem; }   /* larger tap target than the flag itself */
+  .lang-btn:hover { filter:none; }
+  .lang-btn[aria-pressed="true"] { filter:none; box-shadow:0 0 0 2px #FAF8F4, 0 0 0 3.5px #B8935A; }
+  .lang-btn:focus-visible { outline:2px solid #0F1B2E; outline-offset:4px; }
+  @media (max-width: 1279px) {
+    .header-actions { gap:.5rem; }
+  }
+  /* Bulgarian visitors: page stays hidden until the text has been swapped in (see the <head> snippet) */
+  html.i18n-loading body { visibility:hidden; }
+
+  /* ── Header: full navigation from 1280px up; below that the menu button takes over ───────────
+     Nothing in the header may wrap: the button and nav labels stay on one line and compact. */
+  .hdr-logo { flex:none; white-space:nowrap; }
+  .hdr-nav { display:none; flex:none; gap:1.1rem; white-space:nowrap; }
+  .hdr-nav a { font-size:.8rem; letter-spacing:.1em; }
+  .hdr-cta { display:none; flex:none; align-items:center; gap:0; padding:.7rem 1.15rem; font-size:.74rem; letter-spacing:.12em; line-height:1; white-space:nowrap; }
+  .hdr-cta > span { margin-left:0; }                     /* hover arrow: no resting gap, so the label sits centred */
+  .hdr-cta:hover > span { margin-left:.5rem; }
+  @media (max-width: 479px) {
+    #site-header > div { gap:.5rem; }
+    .hdr-logo .font-serif { font-size:1rem; }
+    .hdr-logo .eyebrow { font-size:.62rem; letter-spacing:.08em; }
+    .header-actions { gap:.3rem; }
+    .lang-btn { width:2.2rem; height:1.5rem; font-size:.6rem; }
+    .hdr-menu-btn { width:2.25rem; height:2.25rem; }
+  }
+  @media (min-width: 1280px) {
+    .hdr-nav { display:flex; }
+    .hdr-cta { display:inline-flex; }
+    .hdr-menu-btn, .mobile-menu { display:none; }
+  }
+
+  /* Mobile / tablet menu (dropdown under the header) */
+  .mobile-menu { max-height:0; overflow:hidden; background:#FAF8F4; border-top:1px solid #E7E5E4; transition:max-height .5s cubic-bezier(.22,1,.36,1); }
+  .mobile-menu.open { max-height:32rem; }
+  .mobile-menu nav { max-width:80rem; margin:0 auto; padding:.5rem 1.5rem; display:flex; flex-direction:column; }
+  .mobile-menu nav a { padding:.9rem 0; border-bottom:1px solid #F5F5F4; font-size:.85rem; letter-spacing:.1em; text-transform:uppercase; color:#57534E; transition:color .3s; }
+  .mobile-menu nav a:hover { color:#8F6F3E; }
+  .mobile-menu nav a.menu-cta { margin:1rem 0 1.25rem; padding:.9rem 1.5rem; border:0; background:#B8935A; color:#0F1B2E; text-align:center; font-weight:500; font-size:.78rem; letter-spacing:.12em; }
 </style>
 <!-- Structured data: helps search engines and AI answer engines understand this page's place in the site and its content -->
 <script type="application/ld+json">
@@ -142,30 +212,52 @@
 <!-- ─── HEADER ─────────────────────────────── -->
 <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-lux py-4 header-scrolled">
   <div class="max-w-container mx-auto px-6 md:px-10 flex items-center justify-between gap-6">
-    <a href="index.html" class="flex items-center gap-3">
+    <a href="index.html" class="hdr-logo flex items-center gap-3">
       <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
         <rect x="4" y="12" width="14" height="24" fill="#B8935A"/>
         <rect x="22" y="6" width="14" height="30" fill="#0F1B2E"/>
       </svg>
-      <span class="font-serif text-lg tracking-wide text-navy leading-none">
+      <span class="font-serif text-lg tracking-wide text-navy leading-none" data-no-i18n>
         Bulgaria<br/><span class="eyebrow text-stone-500">Property Concierge</span>
       </span>
     </a>
 
-    <nav class="hidden lg:flex items-center gap-7" aria-label="Main navigation">
-      <a class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#why-bulgaria">Why Bulgaria</a>
-      <a class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#services">Services</a>
-      <a class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#how-it-works">Process</a>
-      <a class="navlink active text-[.82rem] tracking-[.12em] uppercase text-stone-600" href="properties.html">Properties</a>
-      <a class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#why-us">Why Us</a>
-      <a class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#faq">FAQ</a>
-      <a class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#journal">Journal</a>
+    <nav data-i18n-aria-label="main-navigation" class="hdr-nav items-center" aria-label="Main navigation">
+      <a data-i18n="why-bulgaria" class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#why-bulgaria">Why Bulgaria</a>
+      <a data-i18n="services" class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#services">Services</a>
+      <a data-i18n="process" class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#how-it-works">Process</a>
+      <a data-i18n="properties" class="navlink active text-[.82rem] tracking-[.12em] uppercase text-stone-600" href="properties.html">Properties</a>
+      <a data-i18n="why-us" class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#why-us">Why Us</a>
+      <a data-i18n="faq" class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#faq">FAQ</a>
+      <a data-i18n="journal" class="navlink text-[.82rem] tracking-[.12em] uppercase text-stone-600 hover:text-navy" href="index.html#journal">Journal</a>
     </nav>
 
-    <a href="index.html#contact" class="hidden lg:inline-flex group items-center gap-2.5 bg-gold text-navy hover:bg-gold-dark hover:text-ivory border border-gold px-6 py-3.5 text-[.78rem] tracking-[.12em] uppercase font-medium transition-all duration-500 ease-lux">
-      Book Consultation
-      <span class="inline-block w-0 overflow-hidden opacity-0 group-hover:w-4 group-hover:opacity-100 transition-all duration-500 ease-lux">→</span>
-    </a>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="language">
+        <button type="button" class="lang-btn" data-lang="en" lang="en" data-no-i18n aria-pressed="true" title="English">EN</button>
+        <button type="button" class="lang-btn" data-lang="bg" lang="bg" data-no-i18n aria-pressed="false" title="Български">BG</button>
+      </div>
+      <a data-i18n="book-consultation" href="index.html#contact" class="hdr-cta group items-center bg-gold text-navy hover:bg-gold-dark hover:text-ivory border border-gold uppercase font-medium transition-all duration-500 ease-lux">
+        Book Consultation
+        <span class="inline-block w-0 overflow-hidden opacity-0 group-hover:w-4 group-hover:opacity-100 transition-all duration-500 ease-lux">→</span>
+      </a>
+      <button id="menuBtn" type="button" data-i18n-aria-label="open-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" class="hdr-menu-btn inline-flex items-center justify-center w-10 h-10 text-navy">
+        <svg id="menuIconOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></svg>
+        <svg id="menuIconClose" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" class="hidden"><path d="M5 5l14 14"/><path d="M19 5 5 19"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="mobile-menu">
+    <nav data-i18n-aria-label="mobile-navigation" aria-label="Mobile navigation">
+      <a data-i18n="process" href="index.html#how-it-works">Process</a>
+      <a data-i18n="services" href="index.html#services">Services</a>
+      <a data-i18n="properties" href="properties.html">Properties</a>
+      <a data-i18n="why-us" href="index.html#why-us">Why Us</a>
+      <a data-i18n="why-bulgaria" href="index.html#why-bulgaria">Why Bulgaria</a>
+      <a data-i18n="faq" href="index.html#faq">FAQ</a>
+      <a data-i18n="journal" href="index.html#journal">Journal</a>
+      <a data-i18n="book-consultation" href="index.html#contact" class="menu-cta">Book Consultation</a>
+    </nav>
   </div>
 </header>
 
@@ -176,10 +268,10 @@
   <div class="max-w-container mx-auto px-6 md:px-10">
     <div class="reveal flex items-center gap-4 eyebrow text-gold-dark mb-6">
       <span class="h-px w-10 bg-gold"></span>
-      <span>Properties</span>
+      <span data-i18n="properties">Properties</span>
     </div>
-    <h1 class="reveal delay-1 font-serif display-sm text-navy font-medium max-w-2xl">Exclusive access. Flawless execution.</h1>
-    <p class="reveal delay-2 mt-6 text-stone-600 text-lg leading-relaxed max-w-2xl">
+    <h1 data-i18n="exclusive-access-flawless-execution" class="reveal delay-1 font-serif display-sm text-navy font-medium max-w-2xl">Exclusive access. Flawless execution.</h1>
+    <p data-i18n="browse-completed-projects-with-real-results" class="reveal delay-2 mt-6 text-stone-600 text-lg leading-relaxed max-w-2xl">
       Browse completed projects with real results, or properties currently available to purchase — investment, residential, or vacation, every one delivered to the same exacting standard.
     </p>
   </div>
@@ -191,35 +283,35 @@
 
     <!-- Category filter -->
     <div class="reveal flex flex-wrap items-center gap-3 mb-6">
-      <button class="purpose-pill active" data-category="all">All Properties</button>
-      <button class="purpose-pill" data-category="completed">Completed Projects</button>
-      <button class="purpose-pill" data-category="available">Available Listings</button>
+      <button data-i18n="all-properties" class="purpose-pill active" data-category="all">All Properties</button>
+      <button data-i18n="completed-projects" class="purpose-pill" data-category="completed">Completed Projects</button>
+      <button data-i18n="available-listings" class="purpose-pill" data-category="available">Available Listings</button>
     </div>
 
     <!-- Sub-filters (apply to listings; completed projects are unaffected by these) -->
     <div class="flex flex-wrap gap-4 mb-6">
       <div>
-        <label class="block eyebrow text-stone-500 mb-2">City</label>
+        <label data-i18n="city" class="block eyebrow text-stone-500 mb-2">City</label>
         <select id="filterCity" class="lux min-w-[160px]">
-          <option value="all">All Cities</option>
-          <option>Sofia</option><option>Plovdiv</option><option>Varna</option><option>Bansko</option><option>Sozopol</option>
+          <option data-i18n="all-cities" value="all">All Cities</option>
+          <option data-i18n="sofia-2" value="Sofia">Sofia</option><option data-i18n="plovdiv" value="Plovdiv">Plovdiv</option><option data-i18n="varna" value="Varna">Varna</option><option data-i18n="bansko" value="Bansko">Bansko</option><option data-i18n="sozopol" value="Sozopol">Sozopol</option>
         </select>
       </div>
       <div>
-        <label class="block eyebrow text-stone-500 mb-2">Type</label>
+        <label data-i18n="type" class="block eyebrow text-stone-500 mb-2">Type</label>
         <select id="filterType" class="lux min-w-[160px]">
-          <option value="all">All Types</option>
-          <option>Residential</option><option>Commercial</option><option>Vacation Rental</option><option>New Build</option>
+          <option data-i18n="all-types" value="all">All Types</option>
+          <option data-i18n="residential" value="Residential">Residential</option><option data-i18n="commercial" value="Commercial">Commercial</option><option data-i18n="vacation-rental" value="Vacation Rental">Vacation Rental</option><option data-i18n="new-build" value="New Build">New Build</option>
         </select>
       </div>
       <div>
-        <label class="block eyebrow text-stone-500 mb-2">Bedrooms</label>
+        <label data-i18n="bedrooms" class="block eyebrow text-stone-500 mb-2">Bedrooms</label>
         <select id="filterBeds" class="lux min-w-[140px]">
-          <option value="all">Any</option>
-          <option value="1">1 Bed</option>
-          <option value="2">2 Bed</option>
-          <option value="3">3 Bed</option>
-          <option value="4">4+ Bed</option>
+          <option data-i18n="any" value="all">Any</option>
+          <option data-i18n="1-bed" value="1">1 Bed</option>
+          <option data-i18n="2-bed" value="2">2 Bed</option>
+          <option data-i18n="3-bed" value="3">3 Bed</option>
+          <option data-i18n="4-bed" value="4">4+ Bed</option>
         </select>
       </div>
     </div>
@@ -230,15 +322,15 @@
 <article class="reveal lift project-card group flex flex-col" data-purpose="Investment" data-category="completed">
         <a href="#" class="block">
           <div class="relative aspect-[4/5] overflow-hidden mb-6 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=70" alt="Apartment in Sofia Centre — Sofia · Centre · 2024" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Essential</div>
-          <div class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
+            <img data-i18n-alt="apartment-in-sofia-centre-sofia-centre" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=70" alt="Apartment in Sofia Centre — Sofia · Centre · 2024" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="essential" class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Essential</div>
+          <div data-i18n="delivered" class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
           </div>
-          <div class="eyebrow text-gold-dark">Sofia · Centre · 2024</div>
-          <h4 class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Apartment in Sofia Centre</h4>
-          <p class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">A compact city-centre apartment, finished and tenanted within weeks of handover.</p>
-          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd class="font-serif text-lg text-navy">€135k</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd class="font-serif text-lg text-navy">3 mo</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Yield</dt><dd class="font-serif text-lg text-gold-dark">7.6%</dd></div></dl>
-          <div class="card-cta mt-4">Read Case Study
+          <div data-i18n="sofia-centre-2024" class="eyebrow text-gold-dark">Sofia · Centre · 2024</div>
+          <h4 data-i18n="apartment-in-sofia-centre" class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Apartment in Sofia Centre</h4>
+          <p data-i18n="a-compact-city-centre-apartment-finished" class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">A compact city-centre apartment, finished and tenanted within weeks of handover.</p>
+          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt data-i18n="price" class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd data-i18n="135k" class="font-serif text-lg text-navy">€135k</dd></div><div><dt data-i18n="timeline" class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd data-i18n="3-mo" class="font-serif text-lg text-navy">3 mo</dd></div><div><dt data-i18n="yield" class="eyebrow text-stone-400 text-[.68rem]">Yield</dt><dd class="font-serif text-lg text-gold-dark">7.6%</dd></div></dl>
+          <div data-i18n="read-case-study" class="card-cta mt-4">Read Case Study
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -246,15 +338,15 @@
 <article class="reveal lift delay-2 project-card group flex flex-col" data-purpose="Investment" data-category="completed">
         <a href="#" class="block">
           <div class="relative aspect-[4/5] overflow-hidden mb-6 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=70" alt="Sea-View Loft in Varna — Varna · Sea Garden · 2024" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Signature</div>
-          <div class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
+            <img data-i18n-alt="sea-view-loft-in-varna-varna" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=70" alt="Sea-View Loft in Varna — Varna · Sea Garden · 2024" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="signature" class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Signature</div>
+          <div data-i18n="delivered" class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
           </div>
-          <div class="eyebrow text-gold-dark">Varna · Sea Garden · 2024</div>
-          <h4 class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Sea-View Loft in Varna</h4>
-          <p class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">A coastal loft with sweeping sea views, furnished for premium seasonal rental.</p>
-          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd class="font-serif text-lg text-navy">€110k</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd class="font-serif text-lg text-navy">3.5 mo</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Yield</dt><dd class="font-serif text-lg text-gold-dark">8.9%</dd></div></dl>
-          <div class="card-cta mt-4">Read Case Study
+          <div data-i18n="varna-sea-garden-2024" class="eyebrow text-gold-dark">Varna · Sea Garden · 2024</div>
+          <h4 data-i18n="sea-view-loft-in-varna" class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Sea-View Loft in Varna</h4>
+          <p data-i18n="a-coastal-loft-with-sweeping-sea" class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">A coastal loft with sweeping sea views, furnished for premium seasonal rental.</p>
+          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt data-i18n="price" class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd data-i18n="110k" class="font-serif text-lg text-navy">€110k</dd></div><div><dt data-i18n="timeline" class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd data-i18n="3-5-mo" class="font-serif text-lg text-navy">3.5 mo</dd></div><div><dt data-i18n="yield" class="eyebrow text-stone-400 text-[.68rem]">Yield</dt><dd class="font-serif text-lg text-gold-dark">8.9%</dd></div></dl>
+          <div data-i18n="read-case-study" class="card-cta mt-4">Read Case Study
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -262,15 +354,15 @@
 <article class="reveal lift delay-3 project-card group flex flex-col" data-purpose="Investment" data-category="completed">
         <a href="#" class="block">
           <div class="relative aspect-[4/5] overflow-hidden mb-6 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&w=800&q=70" alt="Alpine Chalet in Bansko — Bansko · Alpine · 2023" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Essential</div>
-          <div class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
+            <img data-i18n-alt="alpine-chalet-in-bansko-bansko-alpine" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&w=800&q=70" alt="Alpine Chalet in Bansko — Bansko · Alpine · 2023" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="essential" class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Essential</div>
+          <div data-i18n="delivered" class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
           </div>
-          <div class="eyebrow text-gold-dark">Bansko · Alpine · 2023</div>
-          <h4 class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Alpine Chalet in Bansko</h4>
-          <p class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">Ski-in ski-out apartment, efficiently finished for peak-season rental income.</p>
-          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd class="font-serif text-lg text-navy">€85k</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd class="font-serif text-lg text-navy">2.5 mo</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Yield</dt><dd class="font-serif text-lg text-gold-dark">9.5%</dd></div></dl>
-          <div class="card-cta mt-4">Read Case Study
+          <div data-i18n="bansko-alpine-2023" class="eyebrow text-gold-dark">Bansko · Alpine · 2023</div>
+          <h4 data-i18n="alpine-chalet-in-bansko" class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Alpine Chalet in Bansko</h4>
+          <p data-i18n="ski-in-ski-out-apartment-efficiently" class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">Ski-in ski-out apartment, efficiently finished for peak-season rental income.</p>
+          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt data-i18n="price" class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd data-i18n="85k" class="font-serif text-lg text-navy">€85k</dd></div><div><dt data-i18n="timeline" class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd data-i18n="2-5-mo" class="font-serif text-lg text-navy">2.5 mo</dd></div><div><dt data-i18n="yield" class="eyebrow text-stone-400 text-[.68rem]">Yield</dt><dd class="font-serif text-lg text-gold-dark">9.5%</dd></div></dl>
+          <div data-i18n="read-case-study" class="card-cta mt-4">Read Case Study
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -278,15 +370,15 @@
 <article class="reveal lift project-card group flex flex-col" data-purpose="Residence" data-category="completed">
         <a href="#" class="block">
           <div class="relative aspect-[4/5] overflow-hidden mb-6 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=70" alt="Old Town Family Home — Plovdiv · Old Town · 2023" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Signature</div>
-          <div class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
+            <img data-i18n-alt="old-town-family-home-plovdiv-old" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=70" alt="Old Town Family Home — Plovdiv · Old Town · 2023" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="signature" class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Signature</div>
+          <div data-i18n="delivered" class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
           </div>
-          <div class="eyebrow text-gold-dark">Plovdiv · Old Town · 2023</div>
-          <h4 class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Old Town Family Home</h4>
-          <p class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">Two-bedroom apartment finished and furnished for a family relocating from abroad.</p>
-          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd class="font-serif text-lg text-navy">€165k</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd class="font-serif text-lg text-navy">4 mo</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Bedrooms</dt><dd class="font-serif text-lg text-navy">3</dd></div></dl>
-          <div class="card-cta mt-4">Read Case Study
+          <div data-i18n="plovdiv-old-town-2023" class="eyebrow text-gold-dark">Plovdiv · Old Town · 2023</div>
+          <h4 data-i18n="old-town-family-home" class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Old Town Family Home</h4>
+          <p data-i18n="two-bedroom-apartment-finished-and-furnished" class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">Two-bedroom apartment finished and furnished for a family relocating from abroad.</p>
+          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt data-i18n="price" class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd data-i18n="165k" class="font-serif text-lg text-navy">€165k</dd></div><div><dt data-i18n="timeline" class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd data-i18n="4-mo" class="font-serif text-lg text-navy">4 mo</dd></div><div><dt data-i18n="bedrooms" class="eyebrow text-stone-400 text-[.68rem]">Bedrooms</dt><dd class="font-serif text-lg text-navy">3</dd></div></dl>
+          <div data-i18n="read-case-study" class="card-cta mt-4">Read Case Study
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -294,15 +386,15 @@
 <article class="reveal lift delay-2 project-card group flex flex-col" data-purpose="Residence" data-category="completed">
         <a href="#" class="block">
           <div class="relative aspect-[4/5] overflow-hidden mb-6 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=70" alt="Black Sea Villa — Sozopol · Coastal · 2024" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Bespoke</div>
-          <div class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
+            <img data-i18n-alt="black-sea-villa-sozopol-coastal-2024" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=70" alt="Black Sea Villa — Sozopol · Coastal · 2024" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="bespoke" class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Bespoke</div>
+          <div data-i18n="delivered" class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
           </div>
-          <div class="eyebrow text-gold-dark">Sozopol · Coastal · 2024</div>
-          <h4 class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Black Sea Villa</h4>
-          <p class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">A four-bedroom seafront villa, restored and furnished as a private family retreat.</p>
-          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd class="font-serif text-lg text-navy">€245k</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd class="font-serif text-lg text-navy">7 mo</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Bedrooms</dt><dd class="font-serif text-lg text-navy">4</dd></div></dl>
-          <div class="card-cta mt-4">Read Case Study
+          <div data-i18n="sozopol-coastal-2024" class="eyebrow text-gold-dark">Sozopol · Coastal · 2024</div>
+          <h4 data-i18n="black-sea-villa" class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Black Sea Villa</h4>
+          <p data-i18n="a-four-bedroom-seafront-villa-restored" class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">A four-bedroom seafront villa, restored and furnished as a private family retreat.</p>
+          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt data-i18n="price" class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd data-i18n="245k" class="font-serif text-lg text-navy">€245k</dd></div><div><dt data-i18n="timeline" class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd data-i18n="7-mo" class="font-serif text-lg text-navy">7 mo</dd></div><div><dt data-i18n="bedrooms" class="eyebrow text-stone-400 text-[.68rem]">Bedrooms</dt><dd class="font-serif text-lg text-navy">4</dd></div></dl>
+          <div data-i18n="read-case-study" class="card-cta mt-4">Read Case Study
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -310,15 +402,15 @@
 <article class="reveal lift delay-3 project-card group flex flex-col" data-purpose="Investment" data-category="completed">
         <a href="#" class="block">
           <div class="relative aspect-[4/5] overflow-hidden mb-6 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=70" alt="Boutique Office in Lozenets — Sofia · Lozenets · 2023" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Signature</div>
-          <div class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
+            <img data-i18n-alt="boutique-office-in-lozenets-sofia-lozenets" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=70" alt="Boutique Office in Lozenets — Sofia · Lozenets · 2023" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="signature" class="absolute top-4 left-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">Signature</div>
+          <div data-i18n="delivered" class="absolute top-4 right-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Delivered</div>
           </div>
-          <div class="eyebrow text-gold-dark">Sofia · Lozenets · 2023</div>
-          <h4 class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Boutique Office in Lozenets</h4>
-          <p class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">A boutique office fit-out, delivered turnkey and leased within a month.</p>
-          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd class="font-serif text-lg text-navy">€320k</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd class="font-serif text-lg text-navy">3 mo</dd></div><div><dt class="eyebrow text-stone-400 text-[.68rem]">Yield</dt><dd class="font-serif text-lg text-gold-dark">7.9%</dd></div></dl>
-          <div class="card-cta mt-4">Read Case Study
+          <div data-i18n="sofia-lozenets-2023" class="eyebrow text-gold-dark">Sofia · Lozenets · 2023</div>
+          <h4 data-i18n="boutique-office-in-lozenets" class="mt-3 font-serif text-2xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Boutique Office in Lozenets</h4>
+          <p data-i18n="a-boutique-office-fit-out-delivered" class="mt-3 text-stone-500 text-[.92rem] leading-relaxed">A boutique office fit-out, delivered turnkey and leased within a month.</p>
+          <dl class="mt-5 grid grid-cols-3 gap-2 pt-5 border-t border-stone-100"><div><dt data-i18n="price" class="eyebrow text-stone-400 text-[.68rem]">Price</dt><dd data-i18n="320k" class="font-serif text-lg text-navy">€320k</dd></div><div><dt data-i18n="timeline" class="eyebrow text-stone-400 text-[.68rem]">Timeline</dt><dd data-i18n="3-mo" class="font-serif text-lg text-navy">3 mo</dd></div><div><dt data-i18n="yield" class="eyebrow text-stone-400 text-[.68rem]">Yield</dt><dd class="font-serif text-lg text-gold-dark">7.9%</dd></div></dl>
+          <div data-i18n="read-case-study" class="card-cta mt-4">Read Case Study
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -326,16 +418,16 @@
 <article class="reveal lift listing-card group flex flex-col" data-city="Sofia" data-type="New Build" data-purpose="Investment" data-beds="2" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=70" alt="Two-Bed New-Build for sale — Sofia · Lozenets" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">New Build</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="two-bed-new-build-for-sale" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=70" alt="Two-Bed New-Build for sale — Sofia · Lozenets" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="new-build" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">New Build</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€142,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Sofia · Lozenets</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Two-Bed New-Build</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">2 Bed · 78 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Under Construction · Delivery Q4 2026</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="sofia-lozenets" class="eyebrow text-gold-dark">Sofia · Lozenets</div>
+          <h4 data-i18n="two-bed-new-build" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Two-Bed New-Build</h4>
+          <div data-i18n="2-bed-78-m" class="mt-2 text-stone-500 text-[.88rem]">2 Bed · 78 m²</div>
+          <div data-i18n="under-construction-delivery-q4-2026" class="mt-1 text-stone-400 text-[.82rem]">Under Construction · Delivery Q4 2026</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -343,16 +435,16 @@
       <article class="reveal lift delay-2 listing-card group flex flex-col" data-city="Sofia" data-type="Residential" data-purpose="Investment" data-beds="1" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=70" alt="Renovated City Apartment for sale — Sofia · Centre" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Residential</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="renovated-city-apartment-for-sale-sofia" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=70" alt="Renovated City Apartment for sale — Sofia · Centre" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="residential" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Residential</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€118,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Sofia · Centre</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Renovated City Apartment</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">1 Bed · 52 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="sofia-centre" class="eyebrow text-gold-dark">Sofia · Centre</div>
+          <h4 data-i18n="renovated-city-apartment" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Renovated City Apartment</h4>
+          <div data-i18n="1-bed-52-m" class="mt-2 text-stone-500 text-[.88rem]">1 Bed · 52 m²</div>
+          <div data-i18n="move-in-ready" class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -360,16 +452,16 @@
       <article class="reveal lift delay-3 listing-card group flex flex-col" data-city="Varna" data-type="Vacation Rental" data-purpose="Investment" data-beds="2" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=70" alt="Sea-View Apartment for sale — Varna · Sea Garden" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Vacation Rental</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="sea-view-apartment-for-sale-varna" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=800&q=70" alt="Sea-View Apartment for sale — Varna · Sea Garden" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="vacation-rental" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Vacation Rental</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€96,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Varna · Sea Garden</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Sea-View Apartment</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">2 Bed · 68 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="varna-sea-garden" class="eyebrow text-gold-dark">Varna · Sea Garden</div>
+          <h4 data-i18n="sea-view-apartment" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Sea-View Apartment</h4>
+          <div data-i18n="2-bed-68-m" class="mt-2 text-stone-500 text-[.88rem]">2 Bed · 68 m²</div>
+          <div data-i18n="move-in-ready" class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -377,16 +469,16 @@
       <article class="reveal lift listing-card group flex flex-col" data-city="Bansko" data-type="Vacation Rental" data-purpose="Residence" data-beds="1" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&w=800&q=70" alt="Ski-In Ski-Out Chalet for sale — Bansko · Alpine" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Vacation Rental</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="ski-in-ski-out-chalet-for" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&w=800&q=70" alt="Ski-In Ski-Out Chalet for sale — Bansko · Alpine" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="vacation-rental" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Vacation Rental</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€89,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Bansko · Alpine</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Ski-In Ski-Out Chalet</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">1 Bed · 45 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="bansko-alpine" class="eyebrow text-gold-dark">Bansko · Alpine</div>
+          <h4 data-i18n="ski-in-ski-out-chalet" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Ski-In Ski-Out Chalet</h4>
+          <div data-i18n="1-bed-45-m" class="mt-2 text-stone-500 text-[.88rem]">1 Bed · 45 m²</div>
+          <div data-i18n="move-in-ready" class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -394,16 +486,16 @@
       <article class="reveal lift delay-2 listing-card group flex flex-col" data-city="Plovdiv" data-type="Residential" data-purpose="Residence" data-beds="3" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=70" alt="Old Town Family Townhouse for sale — Plovdiv · Old Town" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Residential</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="old-town-family-townhouse-for-sale" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=70" alt="Old Town Family Townhouse for sale — Plovdiv · Old Town" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="residential" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Residential</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€175,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Plovdiv · Old Town</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Old Town Family Townhouse</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">3 Bed · 140 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="plovdiv-old-town" class="eyebrow text-gold-dark">Plovdiv · Old Town</div>
+          <h4 data-i18n="old-town-family-townhouse" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Old Town Family Townhouse</h4>
+          <div data-i18n="3-bed-140-m" class="mt-2 text-stone-500 text-[.88rem]">3 Bed · 140 m²</div>
+          <div data-i18n="move-in-ready" class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -411,16 +503,16 @@
       <article class="reveal lift delay-3 listing-card group flex flex-col" data-city="Sozopol" data-type="New Build" data-purpose="Residence" data-beds="4" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=70" alt="Coastal Villa, Off-Plan for sale — Sozopol · Coastal" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">New Build</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="coastal-villa-off-plan-for-sale" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=70" alt="Coastal Villa, Off-Plan for sale — Sozopol · Coastal" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="new-build" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">New Build</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€280,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Sozopol · Coastal</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Coastal Villa, Off-Plan</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">4 Bed · 220 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Off-Plan · Delivery Q2 2027</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="sozopol-coastal" class="eyebrow text-gold-dark">Sozopol · Coastal</div>
+          <h4 data-i18n="coastal-villa-off-plan" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Coastal Villa, Off-Plan</h4>
+          <div data-i18n="4-bed-220-m" class="mt-2 text-stone-500 text-[.88rem]">4 Bed · 220 m²</div>
+          <div data-i18n="off-plan-delivery-q2-2027" class="mt-1 text-stone-400 text-[.82rem]">Off-Plan · Delivery Q2 2027</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -428,16 +520,16 @@
       <article class="reveal lift listing-card group flex flex-col" data-city="Sofia" data-type="Commercial" data-purpose="Investment" data-beds="0" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=70" alt="Boutique Office Space for sale — Sofia · Lozenets" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Commercial</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="boutique-office-space-for-sale-sofia" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=70" alt="Boutique Office Space for sale — Sofia · Lozenets" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="commercial" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Commercial</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€295,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Sofia · Lozenets</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Boutique Office Space</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">Office · 180 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="sofia-lozenets" class="eyebrow text-gold-dark">Sofia · Lozenets</div>
+          <h4 data-i18n="boutique-office-space" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Boutique Office Space</h4>
+          <div data-i18n="office-180-m" class="mt-2 text-stone-500 text-[.88rem]">Office · 180 m²</div>
+          <div data-i18n="move-in-ready" class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -445,16 +537,16 @@
       <article class="reveal lift delay-2 listing-card group flex flex-col" data-city="Sofia" data-type="New Build" data-purpose="Residence" data-beds="3" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=70" alt="New-Build Penthouse for sale — Sofia · Ivan Vazov" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">New Build</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="new-build-penthouse-for-sale-sofia" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=70" alt="New-Build Penthouse for sale — Sofia · Ivan Vazov" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="new-build" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">New Build</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€225,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Sofia · Ivan Vazov</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">New-Build Penthouse</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">3 Bed · 130 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Under Construction · Delivery Q1 2027</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="sofia-ivan-vazov" class="eyebrow text-gold-dark">Sofia · Ivan Vazov</div>
+          <h4 data-i18n="new-build-penthouse" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">New-Build Penthouse</h4>
+          <div data-i18n="3-bed-130-m" class="mt-2 text-stone-500 text-[.88rem]">3 Bed · 130 m²</div>
+          <div data-i18n="under-construction-delivery-q1-2027" class="mt-1 text-stone-400 text-[.82rem]">Under Construction · Delivery Q1 2027</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
@@ -462,21 +554,21 @@
       <article class="reveal lift delay-3 listing-card group flex flex-col" data-city="Bansko" data-type="Vacation Rental" data-purpose="Investment" data-beds="1" data-category="available">
         <a href="index.html#contact" class="block">
           <div class="relative aspect-[4/3] overflow-hidden mb-5 bg-beige">
-            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=70" alt="Mountain-View Apartment for sale — Bansko · Alpine" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
-            <div class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Vacation Rental</div>
-            <div class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
+            <img data-i18n-alt="mountain-view-apartment-for-sale-bansko" loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=70" alt="Mountain-View Apartment for sale — Bansko · Alpine" class="w-full h-full object-cover transition-transform duration-[1200ms] ease-lux group-hover:scale-[1.06]"/>
+            <div data-i18n="vacation-rental" class="absolute top-4 left-4 bg-navy/90 backdrop-blur-sm px-2.5 py-1 eyebrow text-gold-light">Vacation Rental</div>
+            <div data-i18n="for-sale" class="absolute top-4 right-4 bg-ivory/95 backdrop-blur-sm px-2.5 py-1 eyebrow text-navy">For Sale</div>
             <div class="absolute bottom-4 right-4 bg-ivory/95 backdrop-blur-sm px-3 py-1.5 font-serif text-lg text-navy">€72,000</div>
           </div>
-          <div class="eyebrow text-gold-dark">Bansko · Alpine</div>
-          <h4 class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Mountain-View Apartment</h4>
-          <div class="mt-2 text-stone-500 text-[.88rem]">1 Bed · 40 m²</div>
-          <div class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
-          <div class="card-cta mt-3">Enquire
+          <div data-i18n="bansko-alpine" class="eyebrow text-gold-dark">Bansko · Alpine</div>
+          <h4 data-i18n="mountain-view-apartment" class="mt-2 font-serif text-xl text-navy leading-tight group-hover:text-gold-dark transition-colors duration-500">Mountain-View Apartment</h4>
+          <div data-i18n="1-bed-40-m" class="mt-2 text-stone-500 text-[.88rem]">1 Bed · 40 m²</div>
+          <div data-i18n="move-in-ready" class="mt-1 text-stone-400 text-[.82rem]">Move-in Ready</div>
+          <div data-i18n="enquire" class="card-cta mt-3">Enquire
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M5 12h14"/><path d="m13 5 7 7-7 7"/></svg>
           </div>
         </a>
       </article>
-      <p id="noListingsMsg" hidden class="col-span-full text-center text-stone-500 py-16">No properties match this filter. <a href="index.html#contact" class="underline text-gold-dark">Tell us what you need</a> and we'll source it.</p>
+      <p data-i18n="no-properties-match-this-filter-tell" data-i18n-html id="noListingsMsg" hidden class="col-span-full text-center text-stone-500 py-16">No properties match this filter. <a href="index.html#contact" class="underline text-gold-dark">Tell us what you need</a> and we'll source it.</p>
     </div>
   </div>
 </section>
@@ -485,20 +577,20 @@
   <div class="max-w-container mx-auto px-6 md:px-10 py-16 md:py-20">
     <div class="relative flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
       <div class="max-w-xl">
-        <div class="reveal eyebrow text-gold-light">Don't see the right fit?</div>
-        <h3 class="reveal delay-1 font-serif text-2xl md:text-3xl mt-3 leading-tight">
+        <div data-i18n="don-t-see-the-right-fit" class="reveal eyebrow text-gold-light">Don't see the right fit?</div>
+        <h3 data-i18n="most-of-what-we-source-never" class="reveal delay-1 font-serif text-2xl md:text-3xl mt-3 leading-tight">
           Most of what we source never makes it to a public listing.
         </h3>
-        <p class="reveal delay-2 mt-3 text-stone-200/70 text-[.95rem] leading-relaxed">
+        <p data-i18n="tell-us-your-budget-and-goals" class="reveal delay-2 mt-3 text-stone-200/70 text-[.95rem] leading-relaxed">
           Tell us your budget and goals — we'll go find it, on-market or off.
         </p>
       </div>
       <div class="reveal delay-3 flex flex-col sm:flex-row gap-3 shrink-0">
-        <a href="index.html#contact" class="group inline-flex items-center justify-center gap-2.5 bg-gold text-navy hover:bg-gold-dark hover:text-ivory px-7 py-4 text-[.78rem] tracking-[.12em] uppercase font-medium transition-all duration-500 ease-lux border border-gold">
+        <a data-i18n="tell-us-what-you-need" href="index.html#contact" class="group inline-flex items-center justify-center gap-2.5 bg-gold text-navy hover:bg-gold-dark hover:text-ivory px-7 py-4 text-[.78rem] tracking-[.12em] uppercase font-medium transition-all duration-500 ease-lux border border-gold">
           Tell Us What You Need
           <span class="inline-block transition-transform duration-500 ease-lux group-hover:translate-x-1">→</span>
         </a>
-        <a href="viber://chat?number=%2B359881234567" class="inline-flex items-center justify-center gap-2.5 border border-ivory/30 hover:border-gold-light text-ivory px-7 py-4 text-[.78rem] tracking-[.12em] uppercase font-medium transition-all duration-500 ease-lux">
+        <a data-i18n="viber" href="viber://chat?number=%2B359881234567" class="inline-flex items-center justify-center gap-2.5 border border-ivory/30 hover:border-gold-light text-ivory px-7 py-4 text-[.78rem] tracking-[.12em] uppercase font-medium transition-all duration-500 ease-lux">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-4 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 9.5c.8-.8 1.6-.3 1.9.3.3.6-.2 1.1.2 1.7.4.6 1.1.2 1.7.6.6.4 1 1.1.2 1.9"/></svg>
           Viber
         </a>
@@ -518,78 +610,81 @@
             <rect x="4" y="12" width="14" height="24" fill="#B8935A"/>
             <rect x="22" y="6" width="14" height="30" fill="#FAF8F4"/>
           </svg>
-          <span class="font-serif text-lg tracking-wide leading-none">
+          <span class="font-serif text-lg tracking-wide leading-none" data-no-i18n>
             Bulgaria<br/><span class="eyebrow text-gold-light">Property Concierge</span>
           </span>
         </div>
-        <p class="mt-6 text-stone-200/60 leading-relaxed max-w-sm text-[.95rem]">
+        <p data-i18n="boutique-investment-and-relocation-for-international" class="mt-6 text-stone-200/60 leading-relaxed max-w-sm text-[.95rem]">
           Boutique investment and relocation for international clients in Bulgaria.
         </p>
         <div class="mt-8 space-y-2 text-[.9rem] text-stone-200/70">
-          <div>Sofia, Bulgaria</div>
+          <div data-i18n="sofia-bulgaria">Sofia, Bulgaria</div>
           <div><a class="hover:text-gold-light transition-colors" href="tel:+35988234567">+359 88 234 5678</a></div>
-          <div><a class="hover:text-gold-light transition-colors" href="mailto:hello@bpc.bg">hello@bpc.bg</a></div>
+          <div><a data-i18n="hello-bpc-bg" class="hover:text-gold-light transition-colors" href="mailto:hello@bpc.bg">hello@bpc.bg</a></div>
         </div>
         <div class="mt-6 flex gap-5 eyebrow">
-          <a class="text-stone-200/70 hover:text-gold-light" href="viber://chat?number=%2B359881234567">Viber</a>
-          <a class="text-stone-200/70 hover:text-gold-light" href="#">Instagram</a>
-          <a class="text-stone-200/70 hover:text-gold-light" href="#">LinkedIn</a>
+          <a data-i18n="viber" class="text-stone-200/70 hover:text-gold-light" href="viber://chat?number=%2B359881234567">Viber</a>
+          <a data-i18n="instagram" class="text-stone-200/70 hover:text-gold-light" href="#">Instagram</a>
+          <a data-i18n="linkedin" class="text-stone-200/70 hover:text-gold-light" href="#">LinkedIn</a>
         </div>
       </div>
       <div class="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
         <div>
-          <h4 class="eyebrow text-gold-light mb-5">Services</h4>
+          <h4 data-i18n="services" class="eyebrow text-gold-light mb-5">Services</h4>
           <ul class="space-y-3">
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#services">Residential</a></li>
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#services">Commercial</a></li>
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#services">Investment Consulting</a></li>
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#services">Rental Management</a></li>
+            <li><a data-i18n="residential" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#services">Residential</a></li>
+            <li><a data-i18n="commercial" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#services">Commercial</a></li>
+            <li><a data-i18n="investment-consulting" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#services">Investment Consulting</a></li>
+            <li><a data-i18n="rental-management" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#services">Rental Management</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="eyebrow text-gold-light mb-5">Company</h4>
+          <h4 data-i18n="company" class="eyebrow text-gold-light mb-5">Company</h4>
           <ul class="space-y-3">
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html">About</a></li>
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#how-it-works">Process</a></li>
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="properties.html">Properties</a></li>
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#contact">Contact</a></li>
+            <li><a data-i18n="about" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html">About</a></li>
+            <li><a data-i18n="process" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#how-it-works">Process</a></li>
+            <li><a data-i18n="properties" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="properties.html">Properties</a></li>
+            <li><a data-i18n="contact" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#contact">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="eyebrow text-gold-light mb-5">Resources</h4>
+          <h4 data-i18n="resources" class="eyebrow text-gold-light mb-5">Resources</h4>
           <ul class="space-y-3">
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#journal">Market Reports</a></li>
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#journal">Investor Guide</a></li>
-            <li><a class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#journal">Relocation Guide</a></li>
+            <li><a data-i18n="market-reports" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#journal">Market Reports</a></li>
+            <li><a data-i18n="investor-guide" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#journal">Investor Guide</a></li>
+            <li><a data-i18n="relocation-guide" class="text-[.92rem] text-stone-200/70 hover:text-ivory transition-colors" href="index.html#journal">Relocation Guide</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="mt-16 pt-8 border-t border-navy-light flex flex-col md:flex-row items-center justify-between gap-4 text-[.82rem] text-stone-200/50">
-      <span>© 2026 Bulgaria Property Concierge. All rights reserved.</span>
+      <span data-i18n="2026-bulgaria-property-concierge-all-rights">© 2026 Bulgaria Property Concierge. All rights reserved.</span>
       <ul class="flex gap-6">
-        <li><a href="#" class="hover:text-ivory transition-colors">Privacy Policy</a></li>
-        <li><a href="#" class="hover:text-ivory transition-colors">Terms &amp; Conditions</a></li>
+        <li><a data-i18n="privacy-policy" href="#" class="hover:text-ivory transition-colors">Privacy Policy</a></li>
+        <li><a data-i18n="terms-and-conditions" href="#" class="hover:text-ivory transition-colors">Terms &amp; Conditions</a></li>
       </ul>
     </div>
   </div>
 </footer>
 
-<a href="viber://chat?number=%2B359881234567" class="fab" aria-label="Chat on Viber">
+<a data-i18n-aria-label="chat-on-viber" href="viber://chat?number=%2B359881234567" class="fab" aria-label="Chat on Viber">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-4 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 9.5c.8-.8 1.6-.3 1.9.3.3.6-.2 1.1.2 1.7.4.6 1.1.2 1.7.6.6.4 1 1.1.2 1.9"/></svg>
 </a>
 
 <div id="mobileCtaBar" class="mobile-cta-bar">
-  <a href="index.html#contact" class="flex-1 inline-flex items-center justify-center gap-2 bg-gold text-navy px-4 py-3 text-[.72rem] tracking-[.14em] uppercase font-medium">
+  <a data-i18n="book-consultation" href="index.html#contact" class="flex-1 inline-flex items-center justify-center gap-2 bg-gold text-navy px-4 py-3 text-[.72rem] tracking-[.14em] uppercase font-medium">
     Book Consultation
   </a>
-  <a href="viber://chat?number=%2B359881234567" aria-label="Chat on Viber" class="shrink-0 inline-flex items-center justify-center w-11 h-11 border border-ivory/25 text-ivory">
+  <a data-i18n-aria-label="chat-on-viber" href="viber://chat?number=%2B359881234567" aria-label="Chat on Viber" class="shrink-0 inline-flex items-center justify-center w-11 h-11 border border-ivory/25 text-ivory">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-4 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 9.5c.8-.8 1.6-.3 1.9.3.3.6-.2 1.1.2 1.7.4.6 1.1.2 1.7.6.6.4 1 1.1.2 1.9"/></svg>
   </a>
 </div>
 
 <!-- ═══════════════ SCRIPTS ═══════════════ -->
 <script>
+/* Text produced by scripts goes through tr(key, english) so it follows the language switch. */
+const tr = (key, english) => (window.i18n ? window.i18n.t(key, english) : english);
+
 const io = new IntersectionObserver((entries) => {
   entries.forEach((e) => e.isIntersecting && e.target.classList.add('in'));
 }, { rootMargin: '-40px' });
@@ -597,6 +692,26 @@ document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
 // Header on listings.html stays permanently in its solid "scrolled" state (set via class on the element)
 // since this page has no full-bleed hero image for it to sit transparently over.
+
+/* Mobile / tablet menu */
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const menuIconOpen = document.getElementById('menuIconOpen');
+const menuIconClose = document.getElementById('menuIconClose');
+function closeMobileMenu() {
+  mobileMenu.classList.remove('open');
+  menuIconOpen.classList.remove('hidden');
+  menuIconClose.classList.add('hidden');
+  menuBtn.setAttribute('aria-expanded', 'false');
+}
+menuBtn.addEventListener('click', () => {
+  const isOpen = mobileMenu.classList.toggle('open');
+  menuIconOpen.classList.toggle('hidden', isOpen);
+  menuIconClose.classList.toggle('hidden', !isOpen);
+  menuBtn.setAttribute('aria-expanded', String(isOpen));
+});
+mobileMenu.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMobileMenu));
+window.addEventListener('resize', () => { if (window.innerWidth >= 1280) closeMobileMenu(); });
 
 const mobileCtaBar = document.getElementById('mobileCtaBar');
 window.addEventListener('scroll', () => {
@@ -631,10 +746,12 @@ function applyFilters() {
     if (visible) visibleCount++;
   });
 
-  countEl.textContent = `${visibleCount} ${visibleCount === 1 ? 'property' : 'properties'}`;
+  countEl.textContent = (visibleCount === 1 ? tr('count-one', '{n} property') : tr('count-many', '{n} properties'))
+    .replace('{n}', visibleCount);
   if (noListingsMsg) noListingsMsg.hidden = visibleCount > 0;
 }
 applyFilters();
+document.addEventListener('bpc:languagechange', applyFilters);
 
 document.getElementById('filterCity').addEventListener('change', applyFilters);
 document.getElementById('filterType').addEventListener('change', applyFilters);

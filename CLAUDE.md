@@ -19,6 +19,9 @@ Boutique full-cycle property investment & relocation service, Sofia, Bulgaria. T
 index.html              — homepage (was preview.html, renamed for GitHub Pages)
 properties.html          — listings/properties browse page
 backend/                — Express + PostgreSQL API (see backend/README.md)
+js/i18n.js, js/i18n-bg.js — EN/BG language switcher and the Bulgarian dictionary (see Languages below)
+tools/i18n_tool.py      — tags new text for translation and checks the dictionary
+images/                 — photos and partner logos (real files; only the hero photo is inline base64)
 ```
 
 ## Frontend architecture
@@ -49,6 +52,21 @@ backend/                — Express + PostgreSQL API (see backend/README.md)
 - **Section header pattern**: every major section uses a centered `eyebrow-lg` (flanking gold hairlines + number + label, e.g. `<span>02</span><span class="h-px w-8 bg-gold/60"></span><span>Full-Cycle Service</span>`) → centered `display-sm` `<h2>` → centered supporting paragraph. Match this if adding new sections.
 
 - **JS**: single `<script>` block near the end of `<body>` (plus two `<script type="application/ld+json">` blocks for SEO schema markup, don't confuse these when counting `<script>` tags). Contains: mobile menu toggle, header scroll-shadow, sticky mobile CTA bar, hero/CTA parallax (respects `prefers-reduced-motion`), stats count-up animation, tier photo sliders, contact form submit handler, VIP CTA pre-fill.
+
+## Languages (EN / BG)
+
+Both pages are bilingual. The English text in the HTML is the source of truth; Bulgarian is applied in the browser, instantly, with no reload.
+
+- **Switcher**: two flag buttons (EN = UK flag, BG = Bulgarian flag) in the header, next to the button. `js/i18n.js` remembers the choice (localStorage), honours `?lang=bg` / `?lang=en`, and gives Bulgarian browsers Bulgarian on a first visit. A small inline snippet in each `<head>` hides the page for Bulgarian visitors until the text is swapped, so English never flashes.
+- **Dictionary**: `js/i18n-bg.js`, `"key": "Bulgarian"`, each entry preceded by a `// EN:` comment with the English original. Elements carry `data-i18n="key"` (`data-i18n-html` when the text contains inline markup; `data-i18n-alt` / `-title` / `-placeholder` / `-aria-label` / `-content` for attributes; `data-no-i18n` to opt out, e.g. the logo).
+- **After changing or adding English text** in a page: `python tools/i18n_tool.py tag` (tags the new text and adds empty dictionary entries), translate the empty entries, then `python tools/i18n_tool.py check` (must report 0 untagged / 0 untranslated). `python tools/i18n_tool.py import file.json` bulk-fills translations. The tool never re-serialises the HTML, it only inserts attributes.
+- **Text produced by JavaScript** (form messages, the "N properties" counter, the VIP prefill) goes through `tr('key', 'English')`, declared at the top of each page's inline script. The tool finds these calls too.
+- **`<select>` options keep English `value`s** (the tool adds them): the contact form posts them to the backend and the properties filters compare against them. Never let them become Bulgarian.
+- **Hero headline** (`data-i18n-words`) is rebuilt word by word from the translated sentence, so the fade-in animation still works.
+- **Typography**: Fraunces has no Cyrillic glyphs, so Lora follows it in the `.font-serif` stack and supplies the Bulgarian headings (the page declares `lang="bg"`, which switches on the proper Bulgarian letterforms). `tidy()` in `js/i18n.js` joins one- and two-letter words to the next word so they never dangle at a line end. Bulgarian runs ~20% longer than English: check header, buttons and headings at 390px and 1280px after adding text.
+- **Header**: full navigation from 1280px up, the menu button below that; nothing in the header may wrap. `properties.html` has its own copy of the menu.
+- **Known trade-off**: Bulgarian is client-side only, so search engines index the English text. If Bulgarian search traffic matters, add real `/bg/` pages with `hreflang` (the dictionary can generate them).
+- The pages and images are also previewed by opening them from a folder, so the files need `js/` and `images/` next to `index.html`.
 
 ## Content notes
 
