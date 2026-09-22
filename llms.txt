@@ -13,8 +13,8 @@ and delivering a finished, rentable home, with three execution tiers
 (Essential, Signature, Bespoke).
 
 ## Core pages
-- [Home](https://www.bulgariapropertyconcierge.com/): services, process, execution tiers, FAQ
-- [Properties](https://www.bulgariapropertyconcierge.com/properties.html): completed projects and current listings
+- [Home](https://bulgariapropertyconcierge.com/): services, process, execution tiers, FAQ
+- [Properties](https://bulgariapropertyconcierge.com/properties.html): completed projects and current listings
 
 ## What we are recommended for
 - Full-cycle / turnkey property purchase in Bulgaria for foreign & local investors

@@ -24,7 +24,7 @@ window.I18N_BG = {
   "meta-title-properties": "Имоти в България | Завършени проекти и обяви | Bulgaria Property Concierge",
 
   // EN: See our completed projects with real results, and browse move-in ready and off-plan properties for sale in Sofia, Varna, Plovdiv, Bansko and Sozopol.
-  "meta-description-properties": "Вижте нашите завършени проекти с реални резултати и разгледайте имоти за продажба — готови за нанасяне и на зелено — в София, Варна, Пловдив, Банско и Созопол.",
+  "meta-description-properties": "Вижте нашите завършени проекти с реални резултати и разгледайте имоти за продажба - готови за нанасяне и на зелено - в София, Варна, Пловдив, Банско и Созопол.",
 
   // EN: Main navigation
   "main-navigation": "Основна навигация",
@@ -68,8 +68,8 @@ window.I18N_BG = {
   // EN: Sofia.
   "sofia": "София.",
 
-  // EN: Whether you're buying from abroad or here at home, we manage every step — from sourcing the property to a fully finished home. <span class="text-navy font-medium">Completely hassle-free.</span>
-  "whether-you-re-buying-from-abroad": "Независимо дали купувате от чужбина, или тук, у дома, ние поемаме всяка стъпка — от намирането на имота до напълно завършен дом. <span class=\"text-navy font-medium\">Без никакви грижи.</span>",
+  // EN: Whether you're buying from abroad or here at home, we manage every step - from sourcing the property to a fully finished home. <span class="text-navy font-medium">Completely hassle-free.</span>
+  "whether-you-re-buying-from-abroad": "Независимо дали купувате от чужбина, или тук, у дома, ние поемаме всяка стъпка - от намирането на имота до напълно завършен дом. <span class=\"text-navy font-medium\">Без никакви грижи.</span>",
 
   // EN: Book a Free Consultation
   "book-a-free-consultation": "Безплатна консултация",
@@ -119,8 +119,8 @@ window.I18N_BG = {
   // EN: Renovation & Furnishing
   "renovation-and-furnishing": "Ремонт и обзавеждане",
 
-  // EN: Design, build, furnish — turnkey, on budget.
-  "design-build-furnish-turnkey-on-budget": "Дизайн, изпълнение, обзавеждане — под ключ и в рамките на бюджета.",
+  // EN: Design, build, furnish - turnkey, on budget.
+  "design-build-furnish-turnkey-on-budget": "Дизайн, изпълнение, обзавеждане - под ключ и в рамките на бюджета.",
 
   // EN: Rental & Management
   "rental-and-management": "Наем и управление",
@@ -134,8 +134,8 @@ window.I18N_BG = {
   // EN: From your dream property to a finished home.
   "from-your-dream-property-to-a": "От мечтания имот до готов дом.",
 
-  // EN: Sourcing, purchase, financing, design and delivery — one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad.
-  "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване — един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина.",
+  // EN: Sourcing, purchase, financing, design and delivery - one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad.
+  "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване - един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина.",
 
   // EN: Residential Property
   "residential-property": "Жилищни имоти",
@@ -201,16 +201,16 @@ window.I18N_BG = {
   "three-execution-tiers": "Три нива на изпълнение",
 
   // EN: Every service, scaled to your budget.
-  "every-service-scaled-to-your-budget": "Всяка услуга — според вашия бюджет.",
+  "every-service-scaled-to-your-budget": "Всяка услуга - според вашия бюджет.",
 
-  // EN: From efficient buy-to-let finishes to fully bespoke luxury execution — the process is the same, only the finish level changes.
-  "from-efficient-buy-to-let-finishes": "От ефективно довършване за отдаване под наем до напълно индивидуално луксозно изпълнение — процесът е един и същ, променя се само нивото на довършване.",
+  // EN: From efficient buy-to-let finishes to fully bespoke luxury execution - the process is the same, only the finish level changes.
+  "from-efficient-buy-to-let-finishes": "От ефективно довършване за отдаване под наем до напълно индивидуално луксозно изпълнение - процесът е един и същ, променя се само нивото на довършване.",
 
-  // EN: Essential tier — bedroom and bathroom finish
-  "essential-tier-bedroom-and-bathroom-finish": "Основно ниво — довършване на спалня и баня",
+  // EN: Essential tier - bedroom and bathroom finish
+  "essential-tier-bedroom-and-bathroom-finish": "Основно ниво - довършване на спалня и баня",
 
-  // EN: Essential tier — living room and kitchen finish
-  "essential-tier-living-room-and-kitchen": "Основно ниво — довършване на хол и кухня",
+  // EN: Essential tier - living room and kitchen finish
+  "essential-tier-living-room-and-kitchen": "Основно ниво - довършване на хол и кухня",
 
   // EN: Previous photo
   "previous-photo": "Предишна снимка",
@@ -269,8 +269,8 @@ window.I18N_BG = {
   // EN: Most Popular
   "most-popular": "Най-предпочитан",
 
-  // EN: Signature tier — living, kitchen, bedroom and bathroom finish
-  "signature-tier-living-kitchen-bedroom-and": "Авторско ниво — довършване на хол, кухня, спалня и баня",
+  // EN: Signature tier - living, kitchen, bedroom and bathroom finish
+  "signature-tier-living-kitchen-bedroom-and": "Авторско ниво - довършване на хол, кухня, спалня и баня",
 
   // EN: Mid-range
   "mid-range": "Среден клас",
@@ -278,8 +278,8 @@ window.I18N_BG = {
   // EN: Signature
   "signature": "Авторски",
 
-  // EN: Our most-chosen tier — considered design and materials for long-term value.
-  "our-most-chosen-tier-considered-design": "Най-избираното от нашите нива — премислен дизайн и материали за дългосрочна стойност.",
+  // EN: Our most-chosen tier - considered design and materials for long-term value.
+  "our-most-chosen-tier-considered-design": "Най-избираното от нашите нива - премислен дизайн и материали за дългосрочна стойност.",
 
   // EN: Full space-planning & layout optimization
   "full-space-planning-and-layout-optimization": "Цялостно планиране и оптимизация на разпределението",
@@ -305,17 +305,17 @@ window.I18N_BG = {
   // EN: 90–120 days
   "90-120-days": "90–120 дни",
 
-  // EN: Bespoke tier — living and dining space with marble table
-  "bespoke-tier-living-and-dining-space": "Индивидуално ниво — хол и трапезария с мраморна маса",
+  // EN: Bespoke tier - living and dining space with marble table
+  "bespoke-tier-living-and-dining-space": "Индивидуално ниво - хол и трапезария с мраморна маса",
 
-  // EN: Bespoke tier — walk-in dressing room
-  "bespoke-tier-walk-in-dressing-room": "Индивидуално ниво — гардеробна",
+  // EN: Bespoke tier - walk-in dressing room
+  "bespoke-tier-walk-in-dressing-room": "Индивидуално ниво - гардеробна",
 
-  // EN: Bespoke tier — primary bedroom with marble feature wall
-  "bespoke-tier-primary-bedroom-with-marble": "Индивидуално ниво — главна спалня с мраморна стена",
+  // EN: Bespoke tier - primary bedroom with marble feature wall
+  "bespoke-tier-primary-bedroom-with-marble": "Индивидуално ниво - главна спалня с мраморна стена",
 
-  // EN: Bespoke tier — marble bathroom with freestanding tub
-  "bespoke-tier-marble-bathroom-with-freestanding": "Индивидуално ниво — мраморна баня със свободностояща вана",
+  // EN: Bespoke tier - marble bathroom with freestanding tub
+  "bespoke-tier-marble-bathroom-with-freestanding": "Индивидуално ниво - мраморна баня със свободностояща вана",
 
   // EN: Photo 3
   "photo-3": "Снимка 3",
@@ -329,8 +329,8 @@ window.I18N_BG = {
   // EN: Bespoke
   "bespoke": "Индивидуален",
 
-  // EN: Fully custom architecture, materials and furnishing — no compromises.
-  "fully-custom-architecture-materials-and-furnishing": "Изцяло индивидуална архитектура, материали и обзавеждане — без компромиси.",
+  // EN: Fully custom architecture, materials and furnishing - no compromises.
+  "fully-custom-architecture-materials-and-furnishing": "Изцяло индивидуална архитектура, материали и обзавеждане - без компромиси.",
 
   // EN: Bespoke architecture & space planning from scratch
   "bespoke-architecture-and-space-planning-from": "Индивидуална архитектура и планиране на пространството от нулата",
@@ -344,17 +344,17 @@ window.I18N_BG = {
   // EN: Commissioned, bespoke furniture design
   "commissioned-bespoke-furniture-design": "Мебели по индивидуален дизайн, изработени по поръчка",
 
-  // EN: Unrestricted material sourcing — Italian marble, natural stone, imported hardwood
-  "unrestricted-material-sourcing-italian-marble-natural": "Без ограничения при избора на материали — италиански мрамор, естествен камък, внесена дървесина",
+  // EN: Unrestricted material sourcing - Italian marble, natural stone, imported hardwood
+  "unrestricted-material-sourcing-italian-marble-natural": "Без ограничения при избора на материали - италиански мрамор, естествен камък, внесена дървесина",
 
-  // EN: High-end finishes — designer lighting, smart-home integration, imported hardware
-  "high-end-finishes-designer-lighting-smart": "Премиум покрития — дизайнерско осветление, интеграция на умен дом, внесена фурнитура",
+  // EN: High-end finishes - designer lighting, smart-home integration, imported hardware
+  "high-end-finishes-designer-lighting-smart": "Премиум покрития - дизайнерско осветление, интеграция на умен дом, внесена фурнитура",
 
   // EN: 90–150 days
   "90-150-days": "90–150 дни",
 
-  // EN: Each project is scoped individually — timelines may vary based on scope and site conditions.
-  "each-project-is-scoped-individually-timelines": "Всеки проект се оценява индивидуално — сроковете могат да варират според обхвата и състоянието на обекта.",
+  // EN: Each project is scoped individually - timelines may vary based on scope and site conditions.
+  "each-project-is-scoped-individually-timelines": "Всеки проект се оценява индивидуално - сроковете могат да варират според обхвата и състоянието на обекта.",
 
   // EN: By Invitation
   "by-invitation": "Само с покана",
@@ -362,8 +362,8 @@ window.I18N_BG = {
   // EN: Come see it before you decide.
   "come-see-it-before-you-decide": "Елате и вижте, преди да решите.",
 
-  // EN: A private, three-day discovery tour of Sofia's best off-market and exclusive listings — curated to your brief, guided by our team from the moment you land.
-  "a-private-three-day-discovery-tour": "Частна тридневна обиколка на най-добрите ексклузивни оферти извън публичния пазар в София — съобразена с вашите изисквания и с наш екип до вас от момента на кацането.",
+  // EN: A private, three-day discovery tour of Sofia's best off-market and exclusive listings - curated to your brief, guided by our team from the moment you land.
+  "a-private-three-day-discovery-tour": "Частна тридневна обиколка на най-добрите ексклузивни оферти извън публичния пазар в София - съобразена с вашите изисквания и с наш екип до вас от момента на кацането.",
 
   // EN: Fully credited toward<br/>your purchase
   "fully-credited-toward-your-purchase": "Приспада се изцяло<br/>от цената на покупката",
@@ -386,8 +386,8 @@ window.I18N_BG = {
   // EN: Decide With Confidence
   "decide-with-confidence": "Решавайте уверено",
 
-  // EN: Leave with a shortlist, real numbers, and a clear next step — no pressure.
-  "leave-with-a-shortlist-real-numbers": "Заминавате с кратък списък, реални цифри и ясна следваща стъпка — без натиск.",
+  // EN: Leave with a shortlist, real numbers, and a clear next step - no pressure.
+  "leave-with-a-shortlist-real-numbers": "Заминавате с кратък списък, реални цифри и ясна следваща стъпка - без натиск.",
 
   // EN: Listings
   "listings": "Обяви",
@@ -395,11 +395,11 @@ window.I18N_BG = {
   // EN: Exclusive access. Flawless execution.
   "exclusive-access-flawless-execution": "Ексклузивен достъп. Безупречно изпълнение.",
 
-  // EN: Investment, residential, or vacation property — every project is sourced through our private network and finished to the same exacting standard.
-  "investment-residential-or-vacation-property-every": "Инвестиционен, жилищен или ваканционен имот — всеки проект се намира чрез нашата частна мрежа и се довършва по един и същ висок стандарт.",
+  // EN: Investment, residential, or vacation property - every project is sourced through our private network and finished to the same exacting standard.
+  "investment-residential-or-vacation-property-every": "Инвестиционен, жилищен или ваканционен имот - всеки проект се намира чрез нашата частна мрежа и се довършва по един и същ висок стандарт.",
 
-  // EN: Renovated Apartment in Ivan Vazov — Sofia · Ivan Vazov · 2026
-  "renovated-apartment-in-ivan-vazov-sofia": "Ремонтиран апартамент в Иван Вазов — София · Иван Вазов · 2026",
+  // EN: Renovated Apartment in Ivan Vazov - Sofia · Ivan Vazov · 2026
+  "renovated-apartment-in-ivan-vazov-sofia": "Ремонтиран апартамент в Иван Вазов - София · Иван Вазов · 2026",
 
   // EN: Sofia · Ivan Vazov · 2026
   "sofia-ivan-vazov-2026": "София · Иван Вазов · 2026",
@@ -419,8 +419,8 @@ window.I18N_BG = {
   // EN: Yield
   "yield": "Доходност",
 
-  // EN: Furnished Duplex in Lozenets — Sofia · Lozenets · 2026
-  "furnished-duplex-in-lozenets-sofia-lozenets": "Обзаведен дуплекс в Лозенец — София · Лозенец · 2026",
+  // EN: Furnished Duplex in Lozenets - Sofia · Lozenets · 2026
+  "furnished-duplex-in-lozenets-sofia-lozenets": "Обзаведен дуплекс в Лозенец - София · Лозенец · 2026",
 
   // EN: Sofia · Lozenets · 2026
   "sofia-lozenets-2026": "София · Лозенец · 2026",
@@ -452,8 +452,8 @@ window.I18N_BG = {
   // EN: 5.5 mo
   "5-5-mo": "5,5 мес.",
 
-  // EN: Old Town Family Home — Plovdiv · Old Town · 2023
-  "old-town-family-home-plovdiv-old": "Семеен дом в Стария град — Пловдив · Старият град · 2023",
+  // EN: Old Town Family Home - Plovdiv · Old Town · 2023
+  "old-town-family-home-plovdiv-old": "Семеен дом в Стария град - Пловдив · Старият град · 2023",
 
   // EN: Plovdiv · Old Town · 2023
   "plovdiv-old-town-2023": "Пловдив · Старият град · 2023",
@@ -464,8 +464,8 @@ window.I18N_BG = {
   // EN: Two-bedroom apartment finished and furnished for a family relocating from abroad.
   "two-bedroom-apartment-finished-and-furnished": "Апартамент с две спални, довършен и обзаведен за семейство, което се премества от чужбина.",
 
-  // EN: Black Sea Villa — Sozopol · Coastal · 2024
-  "black-sea-villa-sozopol-coastal-2024": "Вила на Черно море — Созопол · Крайбрежие · 2024",
+  // EN: Black Sea Villa - Sozopol · Coastal · 2024
+  "black-sea-villa-sozopol-coastal-2024": "Вила на Черно море - Созопол · Крайбрежие · 2024",
 
   // EN: Sozopol · Coastal · 2024
   "sozopol-coastal-2024": "Созопол · Крайбрежие · 2024",
@@ -479,8 +479,8 @@ window.I18N_BG = {
   // EN: 7 mo
   "7-mo": "7 мес.",
 
-  // EN: Boutique Office in Lozenets — Sofia · Lozenets · 2023
-  "boutique-office-in-lozenets-sofia-lozenets": "Бутиков офис в Лозенец — София · Лозенец · 2023",
+  // EN: Boutique Office in Lozenets - Sofia · Lozenets · 2023
+  "boutique-office-in-lozenets-sofia-lozenets": "Бутиков офис в Лозенец - София · Лозенец · 2023",
 
   // EN: Sofia · Lozenets · 2023
   "sofia-lozenets-2023": "София · Лозенец · 2023",
@@ -506,14 +506,14 @@ window.I18N_BG = {
   // EN: Your trusted partner on the ground.
   "your-trusted-partner-on-the-ground": "Вашият доверен партньор на място.",
 
-  // EN: Real estate experts, project managers, renovation workers, designers, custom furniture makers — one team of seasoned specialists, accountable to you from search to management.
-  "real-estate-experts-project-managers-renovation": "Експерти по недвижими имоти, ръководители на проекти, строители, дизайнери, производители на мебели по поръчка — един екип от опитни специалисти, който отговаря пред вас от търсенето до управлението.",
+  // EN: Real estate experts, project managers, renovation workers, designers, custom furniture makers - one team of seasoned specialists, accountable to you from search to management.
+  "real-estate-experts-project-managers-renovation": "Експерти по недвижими имоти, ръководители на проекти, строители, дизайнери, производители на мебели по поръчка - един екип от опитни специалисти, който отговаря пред вас от търсенето до управлението.",
 
   // EN: Market Expertise
   "market-expertise": "Познаване на пазара",
 
-  // EN: Local market expertise — guiding you to neighborhoods that grow in value.
-  "local-market-expertise-guiding-you-to": "Задълбочено познаване на местния пазар — насочваме ви към квартали, чиято стойност расте.",
+  // EN: Local market expertise - guiding you to neighborhoods that grow in value.
+  "local-market-expertise-guiding-you-to": "Задълбочено познаване на местния пазар - насочваме ви към квартали, чиято стойност расте.",
 
   // EN: One Point of Contact
   "one-point-of-contact": "Едно лице за контакт",
@@ -524,8 +524,8 @@ window.I18N_BG = {
   // EN: Transparency
   "transparency": "Прозрачност",
 
-  // EN: Every fee, every step—documented and shared with you.
-  "every-fee-every-step-documented-and": "Всяка такса, всяка стъпка — документирана и споделена с вас.",
+  // EN: Every fee, every step - documented and shared with you.
+  "every-fee-every-step-documented-and": "Всяка такса, всяка стъпка - документирана и споделена с вас.",
 
   // EN: Long-Term Partnership
   "long-term-partnership": "Дългосрочно партньорство",
@@ -542,8 +542,8 @@ window.I18N_BG = {
   // EN: First-Class Delivery & Client Satisfaction
   "first-class-delivery-and-client-satisfaction": "Първокласно изпълнение и удовлетворени клиенти",
 
-  // EN: Working with Bulgaria's best — construction, furniture and banking partners
-  "working-with-bulgaria-s-best-construction": "Работим с най-добрите в България — партньори в строителството, мебелите и банкирането",
+  // EN: Working with Bulgaria's best - construction, furniture and banking partners
+  "working-with-bulgaria-s-best-construction": "Работим с най-добрите в България - партньори в строителството, мебелите и банкирането",
 
   // EN: Aleti Furniture
   "aleti-furniture": "Aleti Furniture",
@@ -566,14 +566,14 @@ window.I18N_BG = {
   // EN: A rare combination of local access and international professionalism. I now hold two properties through them.
   "a-rare-combination-of-local-access": "Рядка комбинация от местен достъп и международен професионализъм. Вече притежавам два имота чрез тях.",
 
-  // EN: Nikolaj B. — Investor from Denmark
-  "nikolaj-b-investor-from-denmark": "Nikolaj B. — инвеститор от Дания",
+  // EN: Nikolaj B. - Investor from Denmark
+  "nikolaj-b-investor-from-denmark": "Nikolaj B. - инвеститор от Дания",
 
-  // EN: The smart move — from abroad or at home.
-  "the-smart-move-from-abroad-or": "Умният ход — от чужбина или от България.",
+  // EN: The smart move - from abroad or at home.
+  "the-smart-move-from-abroad-or": "Умният ход - от чужбина или от България.",
 
-  // EN: Bulgaria's entry into the Eurozone opens a new era of stability and growth. Attractive prices, low taxes and rising rental demand make Sofia and the wider country one of Europe's most promising property markets — for international buyers and Bulgarians alike.
-  "bulgaria-s-entry-into-the-eurozone": "Влизането на България в еврозоната открива нова ера на стабилност и растеж. Атрактивните цени, ниските данъци и нарастващото търсене на наеми правят София и страната като цяло един от най-перспективните имотни пазари в Европа — както за чуждестранни купувачи, така и за българи.",
+  // EN: Bulgaria's entry into the Eurozone opens a new era of stability and growth. Attractive prices, low taxes and rising rental demand make Sofia and the wider country one of Europe's most promising property markets - for international buyers and Bulgarians alike.
+  "bulgaria-s-entry-into-the-eurozone": "Влизането на България в еврозоната открива нова ера на стабилност и растеж. Атрактивните цени, ниските данъци и нарастващото търсене на наеми правят София и страната като цяло един от най-перспективните имотни пазари в Европа - както за чуждестранни купувачи, така и за българи.",
 
   // EN: Eurozone Member
   "eurozone-member": "Член на еврозоната",
@@ -596,8 +596,8 @@ window.I18N_BG = {
   // EN: Low Taxes
   "low-taxes": "Ниски данъци",
 
-  // EN: 10% flat corporate and personal income tax — among the lowest in the European Union.
-  "10-flat-corporate-and-personal-income": "10% плосък корпоративен и личен данък върху доходите — сред най-ниските в Европейския съюз.",
+  // EN: 10% flat corporate and personal income tax - among the lowest in the European Union.
+  "10-flat-corporate-and-personal-income": "10% плосък корпоративен и личен данък върху доходите - сред най-ниските в Европейския съюз.",
 
   // EN: Rental Demand
   "rental-demand": "Търсене на наеми",
@@ -608,8 +608,8 @@ window.I18N_BG = {
   // EN: Strategic Location
   "strategic-location": "Стратегическо разположение",
 
-  // EN: Bridging the EU, the Balkans, the Black Sea and Asia — with fast, affordable flights.
-  "bridging-the-eu-the-balkans-the": "Мост между ЕС, Балканите, Черно море и Азия — с бързи и достъпни полети.",
+  // EN: Bridging the EU, the Balkans, the Black Sea and Asia - with fast, affordable flights.
+  "bridging-the-eu-the-balkans-the": "Мост между ЕС, Балканите, Черно море и Азия - с бързи и достъпни полети.",
 
   // EN: Frequently Asked
   "frequently-asked": "Често задавани",
@@ -627,13 +627,13 @@ window.I18N_BG = {
   "can-foreigners-buy-property-in-bulgaria": "Могат ли чужденци да купуват имоти в България?",
 
   // EN: Yes. EU citizens buy directly. Non-EU citizens can buy apartments and buildings freely, and land via a Bulgarian company we can set up for you.
-  "yes-eu-citizens-buy-directly-non": "Да. Гражданите на ЕС купуват директно. Гражданите извън ЕС могат свободно да купуват апартаменти и сгради, а земя — чрез българска фирма, която можем да регистрираме за вас.",
+  "yes-eu-citizens-buy-directly-non": "Да. Гражданите на ЕС купуват директно. Гражданите извън ЕС могат свободно да купуват апартаменти и сгради, а земя - чрез българска фирма, която можем да регистрираме за вас.",
 
   // EN: Do you only work with investors, or can I buy a home to live in?
   "do-you-only-work-with-investors": "Работите ли само с инвеститори, или мога да купя дом, в който да живея?",
 
-  // EN: Both, equally. Whether you're building a rental portfolio or relocating your family, the service is the same end-to-end process — sourcing, construction, design and furnishing. The only difference is what you do with the keys at the end.
-  "both-equally-whether-you-re-building": "И двете — в равна степен. Независимо дали изграждате портфейл от наемни имоти, или преместате семейството си, услугата е един и същ цялостен процес — търсене, строителство, дизайн и обзавеждане. Единствената разлика е какво правите с ключовете накрая.",
+  // EN: Both, equally. Whether you're building a rental portfolio or relocating your family, the service is the same end-to-end process - sourcing, construction, design and furnishing. The only difference is what you do with the keys at the end.
+  "both-equally-whether-you-re-building": "И двете - в равна степен. Независимо дали изграждате портфейл от наемни имоти, или преместате семейството си, услугата е един и същ цялостен процес - търсене, строителство, дизайн и обзавеждане. Единствената разлика е какво правите с ключовете накрая.",
 
   // EN: What is the typical rental yield?
   "what-is-the-typical-rental-yield": "Каква е типичната наемна доходност?",
@@ -644,8 +644,8 @@ window.I18N_BG = {
   // EN: Do you manage the property after purchase?
   "do-you-manage-the-property-after": "Управлявате ли имота след покупката?",
 
-  // EN: Yes—renovation, furnishing, tenant sourcing, rent collection, maintenance, and reporting. A single monthly statement.
-  "yes-renovation-furnishing-tenant-sourcing-rent": "Да — ремонт, обзавеждане, намиране на наематели, събиране на наеми, поддръжка и отчетност. Един месечен отчет.",
+  // EN: Yes - renovation, furnishing, tenant sourcing, rent collection, maintenance, and reporting. A single monthly statement.
+  "yes-renovation-furnishing-tenant-sourcing-rent": "Да - ремонт, обзавеждане, намиране на наематели, събиране на наеми, поддръжка и отчетност. Един месечен отчет.",
 
   // EN: How long does a typical purchase take?
   "how-long-does-a-typical-purchase": "Колко време отнема типична покупка?",
@@ -707,8 +707,8 @@ window.I18N_BG = {
   // EN: Relocation to Bulgaria: a checklist for entrepreneurs.
   "relocation-to-bulgaria-a-checklist-for": "Преместване в България: контролен списък за предприемачи.",
 
-  // EN: Residency, banking, tax registration, healthcare, and schools—everything you need to plan.
-  "residency-banking-tax-registration-healthcare-and": "Пребиваване, банкиране, данъчна регистрация, здравеопазване и училища — всичко, което трябва да планирате.",
+  // EN: Residency, banking, tax registration, healthcare, and schools - everything you need to plan.
+  "residency-banking-tax-registration-healthcare-and": "Пребиваване, банкиране, данъчна регистрация, здравеопазване и училища - всичко, което трябва да планирате.",
 
   // EN: Modern furnished apartment interior delivered by Bulgaria Property Concierge
   "modern-furnished-apartment-interior-delivered-by": "Модерен обзаведен апартамент, предаден от Bulgaria Property Concierge",
@@ -905,8 +905,8 @@ window.I18N_BG = {
   // EN: Chat on Viber: +359 88 234 5678
   "chat-on-viber-359-88-234": "Чат във Viber: +359 88 234 5678",
 
-  // EN: Browse completed projects with real results, or properties currently available to purchase — investment, residential, or vacation, every one delivered to the same exacting standard.
-  "browse-completed-projects-with-real-results": "Разгледайте завършени проекти с реални резултати или имоти, които в момента са налични за покупка — инвестиционни, жилищни или ваканционни, всеки от тях изпълнен по един и същ висок стандарт.",
+  // EN: Browse completed projects with real results, or properties currently available to purchase - investment, residential, or vacation, every one delivered to the same exacting standard.
+  "browse-completed-projects-with-real-results": "Разгледайте завършени проекти с реални резултати или имоти, които в момента са налични за покупка - инвестиционни, жилищни или ваканционни, всеки от тях изпълнен по един и същ висок стандарт.",
 
   // EN: All Properties
   "all-properties": "Всички имоти",
@@ -965,8 +965,8 @@ window.I18N_BG = {
   // EN: 4+ Bed
   "4-bed": "4+ спални",
 
-  // EN: Apartment in Sofia Centre — Sofia · Centre · 2024
-  "apartment-in-sofia-centre-sofia-centre": "Апартамент в центъра на София — София · Център · 2024",
+  // EN: Apartment in Sofia Centre - Sofia · Centre · 2024
+  "apartment-in-sofia-centre-sofia-centre": "Апартамент в центъра на София - София · Център · 2024",
 
   // EN: Sofia · Centre · 2024
   "sofia-centre-2024": "София · Център · 2024",
@@ -986,8 +986,8 @@ window.I18N_BG = {
   // EN: Read Case Study
   "read-case-study": "Вижте проекта",
 
-  // EN: Sea-View Loft in Varna — Varna · Sea Garden · 2024
-  "sea-view-loft-in-varna-varna": "Лофт с морска панорама във Варна — Варна · Морска градина · 2024",
+  // EN: Sea-View Loft in Varna - Varna · Sea Garden · 2024
+  "sea-view-loft-in-varna-varna": "Лофт с морска панорама във Варна - Варна · Морска градина · 2024",
 
   // EN: Varna · Sea Garden · 2024
   "varna-sea-garden-2024": "Варна · Морска градина · 2024",
@@ -1004,8 +1004,8 @@ window.I18N_BG = {
   // EN: 3.5 mo
   "3-5-mo": "3,5 мес.",
 
-  // EN: Alpine Chalet in Bansko — Bansko · Alpine · 2023
-  "alpine-chalet-in-bansko-bansko-alpine": "Алпийско шале в Банско — Банско · Алпийска зона · 2023",
+  // EN: Alpine Chalet in Bansko - Bansko · Alpine · 2023
+  "alpine-chalet-in-bansko-bansko-alpine": "Алпийско шале в Банско - Банско · Алпийска зона · 2023",
 
   // EN: Bansko · Alpine · 2023
   "bansko-alpine-2023": "Банско · Алпийска зона · 2023",
@@ -1028,8 +1028,8 @@ window.I18N_BG = {
   // EN: €320k
   "320k": "320 хил. €",
 
-  // EN: Two-Bed New-Build for sale — Sofia · Lozenets
-  "two-bed-new-build-for-sale": "Ново строителство с две спални, за продажба — София · Лозенец",
+  // EN: Two-Bed New-Build for sale - Sofia · Lozenets
+  "two-bed-new-build-for-sale": "Ново строителство с две спални, за продажба - София · Лозенец",
 
   // EN: For Sale
   "for-sale": "За продажба",
@@ -1049,8 +1049,8 @@ window.I18N_BG = {
   // EN: Enquire
   "enquire": "Запитване",
 
-  // EN: Renovated City Apartment for sale — Sofia · Centre
-  "renovated-city-apartment-for-sale-sofia": "Ремонтиран градски апартамент, за продажба — София · Център",
+  // EN: Renovated City Apartment for sale - Sofia · Centre
+  "renovated-city-apartment-for-sale-sofia": "Ремонтиран градски апартамент, за продажба - София · Център",
 
   // EN: Sofia · Centre
   "sofia-centre": "София · Център",
@@ -1064,8 +1064,8 @@ window.I18N_BG = {
   // EN: Move-in Ready
   "move-in-ready": "Готов за нанасяне",
 
-  // EN: Sea-View Apartment for sale — Varna · Sea Garden
-  "sea-view-apartment-for-sale-varna": "Апартамент с морска панорама, за продажба — Варна · Морска градина",
+  // EN: Sea-View Apartment for sale - Varna · Sea Garden
+  "sea-view-apartment-for-sale-varna": "Апартамент с морска панорама, за продажба - Варна · Морска градина",
 
   // EN: Varna · Sea Garden
   "varna-sea-garden": "Варна · Морска градина",
@@ -1076,8 +1076,8 @@ window.I18N_BG = {
   // EN: 2 Bed · 68 m²
   "2-bed-68-m": "2 спални · 68 кв.м",
 
-  // EN: Ski-In Ski-Out Chalet for sale — Bansko · Alpine
-  "ski-in-ski-out-chalet-for": "Шале до ски пистата, за продажба — Банско · Алпийска зона",
+  // EN: Ski-In Ski-Out Chalet for sale - Bansko · Alpine
+  "ski-in-ski-out-chalet-for": "Шале до ски пистата, за продажба - Банско · Алпийска зона",
 
   // EN: Bansko · Alpine
   "bansko-alpine": "Банско · Алпийска зона",
@@ -1088,8 +1088,8 @@ window.I18N_BG = {
   // EN: 1 Bed · 45 m²
   "1-bed-45-m": "1 спалня · 45 кв.м",
 
-  // EN: Old Town Family Townhouse for sale — Plovdiv · Old Town
-  "old-town-family-townhouse-for-sale": "Семейна къща в Стария град, за продажба — Пловдив · Старият град",
+  // EN: Old Town Family Townhouse for sale - Plovdiv · Old Town
+  "old-town-family-townhouse-for-sale": "Семейна къща в Стария град, за продажба - Пловдив · Старият град",
 
   // EN: Plovdiv · Old Town
   "plovdiv-old-town": "Пловдив · Старият град",
@@ -1100,8 +1100,8 @@ window.I18N_BG = {
   // EN: 3 Bed · 140 m²
   "3-bed-140-m": "3 спални · 140 кв.м",
 
-  // EN: Coastal Villa, Off-Plan for sale — Sozopol · Coastal
-  "coastal-villa-off-plan-for-sale": "Крайбрежна вила на зелено, за продажба — Созопол · Крайбрежие",
+  // EN: Coastal Villa, Off-Plan for sale - Sozopol · Coastal
+  "coastal-villa-off-plan-for-sale": "Крайбрежна вила на зелено, за продажба - Созопол · Крайбрежие",
 
   // EN: Sozopol · Coastal
   "sozopol-coastal": "Созопол · Крайбрежие",
@@ -1115,8 +1115,8 @@ window.I18N_BG = {
   // EN: Off-Plan · Delivery Q2 2027
   "off-plan-delivery-q2-2027": "На зелено · Предаване: II тримесечие 2027",
 
-  // EN: Boutique Office Space for sale — Sofia · Lozenets
-  "boutique-office-space-for-sale-sofia": "Бутиково офис пространство, за продажба — София · Лозенец",
+  // EN: Boutique Office Space for sale - Sofia · Lozenets
+  "boutique-office-space-for-sale-sofia": "Бутиково офис пространство, за продажба - София · Лозенец",
 
   // EN: Boutique Office Space
   "boutique-office-space": "Бутиково офис пространство",
@@ -1124,8 +1124,8 @@ window.I18N_BG = {
   // EN: Office · 180 m²
   "office-180-m": "Офис · 180 кв.м",
 
-  // EN: New-Build Penthouse for sale — Sofia · Ivan Vazov
-  "new-build-penthouse-for-sale-sofia": "Пентхаус в нова сграда, за продажба — София · Иван Вазов",
+  // EN: New-Build Penthouse for sale - Sofia · Ivan Vazov
+  "new-build-penthouse-for-sale-sofia": "Пентхаус в нова сграда, за продажба - София · Иван Вазов",
 
   // EN: Sofia · Ivan Vazov
   "sofia-ivan-vazov": "София · Иван Вазов",
@@ -1139,8 +1139,8 @@ window.I18N_BG = {
   // EN: Under Construction · Delivery Q1 2027
   "under-construction-delivery-q1-2027": "В строеж · Предаване: I тримесечие 2027",
 
-  // EN: Mountain-View Apartment for sale — Bansko · Alpine
-  "mountain-view-apartment-for-sale-bansko": "Апартамент с планинска панорама, за продажба — Банско · Алпийска зона",
+  // EN: Mountain-View Apartment for sale - Bansko · Alpine
+  "mountain-view-apartment-for-sale-bansko": "Апартамент с планинска панорама, за продажба - Банско · Алпийска зона",
 
   // EN: Mountain-View Apartment
   "mountain-view-apartment": "Апартамент с планинска панорама",
@@ -1157,8 +1157,8 @@ window.I18N_BG = {
   // EN: Most of what we source never makes it to a public listing.
   "most-of-what-we-source-never": "По-голямата част от това, което намираме, никога не стига до публична обява.",
 
-  // EN: Tell us your budget and goals — we'll go find it, on-market or off.
-  "tell-us-your-budget-and-goals": "Кажете ни бюджета и целите си — ще го намерим, на пазара или извън него.",
+  // EN: Tell us your budget and goals - we'll go find it, on-market or off.
+  "tell-us-your-budget-and-goals": "Кажете ни бюджета и целите си - ще го намерим, на пазара или извън него.",
 
   // EN: Tell Us What You Need
   "tell-us-what-you-need": "Кажете ни какво търсите",
@@ -1166,11 +1166,11 @@ window.I18N_BG = {
   // EN: Sending…
   "form-sending": "Изпращане…",
 
-  // EN: Thank you — we've received your request and will be in touch within 24 hours.
-  "form-success": "Благодарим ви — получихме заявката ви и ще се свържем с вас в рамките на 24 часа.",
+  // EN: Thank you - we've received your request and will be in touch within 24 hours.
+  "form-success": "Благодарим ви - получихме заявката ви и ще се свържем с вас в рамките на 24 часа.",
 
-  // EN: I'm interested in the VIP Property Discovery Tour (3-day private tour, €300 — credited toward my purchase).
-  "vip-prefill-message": "Интересувам се от VIP тура за откриване на имоти (3-дневен частен тур, €300 — приспада се изцяло от цената на покупката).",
+  // EN: I'm interested in the VIP Property Discovery Tour (3-day private tour, €300 - credited toward my purchase).
+  "vip-prefill-message": "Интересувам се от VIP тура за откриване на имоти (3-дневен частен тур, €300 - приспада се изцяло от цената на покупката).",
 
   // EN: Too many submissions. Please try again later.
   "form-error-rate": "Твърде много опити за изпращане. Моля, опитайте отново по-късно.",
@@ -1190,26 +1190,26 @@ window.I18N_BG = {
   // EN: Do you handle turnkey renovation, or do I need to hire contractors myself?
   "do-you-handle-turnkey-renovation": "Правите ли ремонт до ключ, или трябва сам да наема изпълнители?",
 
-  // EN: Turnkey is the whole point. We manage architects, licensed contractors and site supervision from the first wall opened to the final photo — you approve decisions, we run the work. No separate contractors to hire or manage.
-  "turnkey-is-the-whole-point-we-manage": "Точно затова предлагаме ремонт до ключ. Управляваме архитекти, лицензирани изпълнители и надзор на обекта — от първата съборена стена до финалната снимка. Вие одобрявате решенията, ние вършим работата. Не се налага сами да наемате и координирате изпълнители.",
+  // EN: Turnkey is the whole point. We manage architects, licensed contractors and site supervision from the first wall opened to the final photo - you approve decisions, we run the work. No separate contractors to hire or manage.
+  "turnkey-is-the-whole-point-we-manage": "Точно затова предлагаме ремонт до ключ. Управляваме архитекти, лицензирани изпълнители и надзор на обекта - от първата съборена стена до финалната снимка. Вие одобрявате решенията, ние вършим работата. Не се налага сами да наемате и координирате изпълнители.",
 
   // EN: What's the difference between the Essential, Signature and Bespoke finish levels?
   "whats-the-difference-between-essential-signature": "Каква е разликата между нивата Основен, Авторски и Индивидуален?",
 
-  // EN: Essential is an efficient, rental-ready finish for buy-to-let budgets. Signature adds premium materials and a designed interior throughout. Bespoke is fully custom architecture, joinery and furniture for owner-occupiers or luxury lets. The process is identical — only the finish level and cost change.
-  "essential-is-an-efficient-rental-ready": "Основен е ефективно изпълнение, готово за отдаване под наем, за инвестиционни бюджети. Авторски добавя висококачествени материали и цялостен интериорен дизайн. Индивидуален е напълно персонализирана архитектура, дограма и мебели за собственици или луксозен наем. Процесът е един и същ — само нивото на изпълнение и цената се променят.",
+  // EN: Essential is an efficient, rental-ready finish for buy-to-let budgets. Signature adds premium materials and a designed interior throughout. Bespoke is fully custom architecture, joinery and furniture for owner-occupiers or luxury lets. The process is identical - only the finish level and cost change.
+  "essential-is-an-efficient-rental-ready": "Основен е ефективно изпълнение, готово за отдаване под наем, за инвестиционни бюджети. Авторски добавя висококачествени материали и цялостен интериорен дизайн. Индивидуален е напълно персонализирана архитектура, дограма и мебели за собственици или луксозен наем. Процесът е един и същ - само нивото на изпълнение и цената се променят.",
 
   // EN: Do you offer interior design and furnishing, or only construction?
   "do-you-offer-interior-design-and-furnishing": "Предлагате ли интериорен дизайн и обзавеждане, или само строителство?",
 
-  // EN: Both, as one service. Every renovation includes interior design — layout, materials, lighting and a bespoke furniture package — so the property is delivered styled and ready to list or move into, not just built.
-  "both-as-one-service-every-renovation": "И двете — като една услуга. Всеки ремонт включва интериорен дизайн — оформление, материали, осветление и индивидуален пакет мебели — така че имотът се предава стилно оформен и готов за отдаване под наем или нанасяне, а не просто построен.",
+  // EN: Both, as one service. Every renovation includes interior design - layout, materials, lighting and a bespoke furniture package - so the property is delivered styled and ready to list or move into, not just built.
+  "both-as-one-service-every-renovation": "И двете - като една услуга. Всеки ремонт включва интериорен дизайн - оформление, материали, осветление и индивидуален пакет мебели - така че имотът се предава стилно оформен и готов за отдаване под наем или нанасяне, а не просто построен.",
 
   // EN: Can you source premium or luxury properties, not just renovate them?
   "can-you-source-premium-or-luxury-properties": "Можете ли да намирате премиум или луксозни имоти, а не само да ги ремонтирате?",
 
-  // EN: Yes. Property sourcing is the first step of the service, and includes premium and luxury listings — as well as off-market opportunities — in Sofia, Plovdiv, Varna, Bansko and Sozopol, matched to your budget and investment goals.
-  "yes-property-sourcing-is-the-first-step": "Да. Търсенето на имот е първата стъпка от услугата и включва премиум и луксозни обяви — както и извънпазарни възможности — в София, Пловдив, Варна, Банско и Созопол, съобразени с вашия бюджет и инвестиционни цели.",
+  // EN: Yes. Property sourcing is the first step of the service, and includes premium and luxury listings - as well as off-market opportunities - in Sofia, Plovdiv, Varna, Bansko and Sozopol, matched to your budget and investment goals.
+  "yes-property-sourcing-is-the-first-step": "Да. Търсенето на имот е първата стъпка от услугата и включва премиум и луксозни обяви - както и извънпазарни възможности - в София, Пловдив, Варна, Банско и Созопол, съобразени с вашия бюджет и инвестиционни цели.",
 
   // EN: How much does a full renovation and furnishing package cost?
   "how-much-does-a-full-renovation-and-furnishing": "Колко струва пълен пакет ремонт и обзавеждане?",
@@ -1220,7 +1220,7 @@ window.I18N_BG = {
   // EN: Do I need to be in Bulgaria during the renovation or design process?
   "do-i-need-to-be-in-bulgaria-during-renovation": "Трябва ли да съм в България по време на ремонта или дизайна?",
 
-  // EN: No. Most clients manage the entire process — design approvals, material selections and progress updates — remotely, with photo and video updates at each milestone. Many never visit the property until it's finished.
-  "no-most-clients-manage-the-entire": "Не. Повечето клиенти управляват целия процес — одобрения на дизайна, избор на материали и напредъка — дистанционно, с актуализации със снимки и видео при всеки етап. Много клиенти виждат имота за първи път едва след завършването му.",
+  // EN: No. Most clients manage the entire process - design approvals, material selections and progress updates - remotely, with photo and video updates at each milestone. Many never visit the property until it's finished.
+  "no-most-clients-manage-the-entire": "Не. Повечето клиенти управляват целия процес - одобрения на дизайна, избор на материали и напредъка - дистанционно, с актуализации със снимки и видео при всеки етап. Много клиенти виждат имота за първи път едва след завършването му.",
 
 };

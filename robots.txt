@@ -53,4 +53,4 @@ User-agent: meta-externalagent
 Allow: /
 
 # Point every crawler at your sitemap:
-Sitemap: https://www.bulgariapropertyconcierge.com/sitemap.xml
+Sitemap: https://bulgariapropertyconcierge.com/sitemap.xml
