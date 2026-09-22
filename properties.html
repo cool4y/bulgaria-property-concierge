@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0F1B2E" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 <script>
 /* Language, decided before first paint: ?lang= in the URL, else the saved choice, else the browser language.
    Bulgarian visitors get the page hidden (html.i18n-loading) until js/i18n.js has swapped the text in,
@@ -62,7 +65,7 @@
 
   ::-webkit-scrollbar{width:10px;height:10px}
   ::-webkit-scrollbar-track{background:#F3EFE7}
-  ::-webkit-scrollbar-thumb{background:#D3CBBB;border-radius:10px}
+  ::-webkit-scrollbar-thumb{background:#D9BE8A;border-radius:10px}
 
   .navlink { position:relative }
   .navlink::after { content:''; position:absolute; left:0; bottom:-4px; height:1px; width:0; background:#B8935A; transition: width .5s cubic-bezier(.22,1,.36,1) }
@@ -74,7 +77,7 @@
      Tailwind's .flex/.grid utility classes. */
   [hidden] { display: none !important; }
 
-  select.lux { appearance:none; background:#FAF8F4; border:1px solid #E8E3D8; padding:.65rem 2.25rem .65rem 1rem; color:#0F1B2E; font-size:.9rem; cursor:pointer; }
+  select.lux { appearance:none; background:#FAF8F4; border:1px solid #E8E1D3; padding:.65rem 2.25rem .65rem 1rem; color:#0F1B2E; font-size:.9rem; cursor:pointer; }
   select.lux:focus{ outline:none; border-color:#B8935A }
 
   .lift { transition: transform .6s cubic-bezier(.22,1,.36,1), box-shadow .6s cubic-bezier(.22,1,.36,1); }
@@ -83,13 +86,13 @@
 
   .purpose-pill {
     font-size:.78rem; letter-spacing:.06em; padding:.65rem 1.25rem;
-    border:1px solid #D3CBBB; background:transparent; color:#4A463D;
+    border:1px solid #E8E1D3; background:transparent; color:#0F1B2E;
     cursor:pointer; transition: all .4s cubic-bezier(.22,1,.36,1);
   }
   .purpose-pill:hover { border-color:#B8935A; color:#0F1B2E; }
   .purpose-pill.active { background:#0F1B2E; border-color:#0F1B2E; color:#FAF8F4; }
 
-  .header-scrolled { background: rgba(250,248,244,.85); backdrop-filter: blur(10px); border-bottom:1px solid #E8E3D8; padding-top:.75rem; padding-bottom:.75rem; }
+  .header-scrolled { background: rgba(250,248,244,.85); backdrop-filter: blur(10px); border-bottom:1px solid #E8E1D3; padding-top:.75rem; padding-bottom:.75rem; }
 
   .fab { position:fixed; bottom:1.5rem; right:1.5rem; z-index:40; width:3.5rem; height:3.5rem; border-radius:9999px; background:#0F1B2E; color:#D9BE8A; box-shadow: 0 20px 50px -15px rgba(15,27,46,.6); display:flex; align-items:center; justify-content:center; transition: all .5s cubic-bezier(.22,1,.36,1) }
   .fab:hover { background:#B8935A; color:#0F1B2E }
@@ -121,25 +124,9 @@
     pointer-events:none;
   }
 
-  /* ── Language switcher: two flag buttons (EN = United Kingdom, BG = Bulgaria) ─────────────── */
+  /* Header right-hand cluster: language switch + button (+ menu button on small screens). The switch is styled in css/brand.css. */
   .header-actions { display:flex; align-items:center; gap:1.25rem; }
-  .lang-switch { display:inline-flex; align-items:center; gap:.55rem; }
-  .lang-btn {
-    position:relative; width:2.4rem; height:1.6rem; padding:0; border:0; border-radius:.2rem; cursor:pointer;
-    background-size:cover; background-position:center;
-    box-shadow:inset 0 0 0 1px rgba(15,27,46,.3);
-    filter:saturate(.7) brightness(.92);
-    transition:box-shadow .3s, filter .3s;
-  }
-  .lang-btn[data-lang="en"] { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url%28%23s%29'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url%28%23t%29' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
-  .lang-btn[data-lang="bg"] { background-image:linear-gradient(#fff 33.34%, #00966E 33.34% 66.67%, #D62612 66.67%); }
-  .lang-btn::before { content:''; position:absolute; inset:-.6rem -.25rem; }   /* larger tap target than the flag itself */
-  .lang-btn:hover { filter:none; }
-  .lang-btn[aria-pressed="true"] { filter:none; box-shadow:0 0 0 2px #FAF8F4, 0 0 0 3.5px #B8935A; }
-  .lang-btn:focus-visible { outline:2px solid #0F1B2E; outline-offset:4px; }
-  @media (max-width: 1279px) {
-    .header-actions { gap:.5rem; }
-  }
+  @media (max-width: 1279px) { .header-actions { gap:.5rem; } }
   /* Bulgarian visitors: page stays hidden until the text has been swapped in (see the <head> snippet) */
   html.i18n-loading body { visibility:hidden; }
 
@@ -153,10 +140,7 @@
   .hdr-cta:hover > span { margin-left:.5rem; }
   @media (max-width: 479px) {
     #site-header > div { gap:.5rem; }
-    .hdr-logo .font-serif { font-size:1rem; }
-    .hdr-logo .eyebrow { font-size:.62rem; letter-spacing:.08em; }
     .header-actions { gap:.3rem; }
-    .lang-btn { width:2.2rem; height:1.5rem; }
     .hdr-menu-btn { width:2.25rem; height:2.25rem; }
   }
   @media (min-width: 1280px) {
@@ -166,13 +150,14 @@
   }
 
   /* Mobile / tablet menu (dropdown under the header) */
-  .mobile-menu { max-height:0; overflow:hidden; background:#FAF8F4; border-top:1px solid #E7E5E4; transition:max-height .5s cubic-bezier(.22,1,.36,1); }
+  .mobile-menu { max-height:0; overflow:hidden; background:#FAF8F4; border-top:1px solid #E8E1D3; transition:max-height .5s cubic-bezier(.22,1,.36,1); }
   .mobile-menu.open { max-height:32rem; }
   .mobile-menu nav { max-width:80rem; margin:0 auto; padding:.5rem 1.5rem; display:flex; flex-direction:column; }
-  .mobile-menu nav a { padding:.9rem 0; border-bottom:1px solid #F5F5F4; font-size:.85rem; letter-spacing:.1em; text-transform:uppercase; color:#57534E; transition:color .3s; }
+  .mobile-menu nav a { padding:.9rem 0; border-bottom:1px solid #E8E1D3; font-size:.85rem; letter-spacing:.1em; text-transform:uppercase; color:rgb(15 27 46 / .74); transition:color .3s; }
   .mobile-menu nav a:hover { color:#8F6F3E; }
   .mobile-menu nav a.menu-cta { margin:1rem 0 1.25rem; padding:.9rem 1.5rem; border:0; background:#B8935A; color:#0F1B2E; text-align:center; font-weight:500; font-size:.78rem; letter-spacing:.12em; }
 </style>
+<link rel="stylesheet" href="css/brand.css">
 <!-- Structured data: helps search engines and AI answer engines understand this page's place in the site and its content -->
 <script type="application/ld+json">
 {
@@ -209,14 +194,14 @@
 <!-- ─── HEADER ─────────────────────────────── -->
 <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-lux py-4 header-scrolled">
   <div class="max-w-container mx-auto px-6 md:px-10 flex items-center justify-between gap-6">
-    <a href="index.html" class="hdr-logo flex items-center gap-3">
-      <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
-        <rect x="4" y="12" width="14" height="24" fill="#B8935A"/>
-        <rect x="22" y="6" width="14" height="30" fill="#0F1B2E"/>
+    <a href="index.html" class="hdr-logo brand">
+      <svg class="brand-mark" viewBox="6 6 36 40" aria-hidden="true" focusable="false">
+        <path d="M8 44 V22 Q8 8 24 8 Q40 8 40 22 V44" fill="none" stroke="#0F1B2E" stroke-width="1.7"/>
+        <rect x="17.5" y="27" width="5.4" height="14" fill="#B8935A"/>
+        <rect x="25.1" y="21" width="5.4" height="20" fill="#0F1B2E"/>
+        <line x1="14" y1="41.2" x2="34" y2="41.2" stroke="#B8935A" stroke-width="1.7"/>
       </svg>
-      <span class="font-serif text-lg tracking-wide text-navy leading-none" data-no-i18n>
-        Bulgaria<br/><span class="eyebrow text-stone-500">Property Concierge</span>
-      </span>
+      <span class="brand-word" data-no-i18n><span class="brand-name">Bulgaria Property</span><span class="brand-sub">CONCIERGE</span></span>
     </a>
 
     <nav data-i18n-aria-label="main-navigation" class="hdr-nav items-center" aria-label="Main navigation">
@@ -231,8 +216,8 @@
 
     <div class="header-actions">
       <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="language">
-        <button type="button" class="lang-btn" data-lang="en" lang="en" data-no-i18n aria-pressed="true" title="English" aria-label="English"></button>
-        <button type="button" class="lang-btn" data-lang="bg" lang="bg" data-no-i18n aria-pressed="false" title="Български" aria-label="Български"></button>
+        <button type="button" class="lang-btn" data-lang="en" lang="en" data-no-i18n aria-pressed="true" title="English" aria-label="English (EN)">EN</button>
+        <button type="button" class="lang-btn" data-lang="bg" lang="bg" data-no-i18n aria-pressed="false" title="Български" aria-label="Български (BG)">BG</button>
       </div>
       <a data-i18n="book-consultation" href="index.html#contact" class="hdr-cta group items-center bg-gold text-navy hover:bg-gold-dark hover:text-ivory border border-gold uppercase font-medium transition-all duration-500 ease-lux">
         Book Consultation
@@ -264,7 +249,7 @@
 <section class="pt-40 pb-16 md:pb-20 bg-cream border-b border-stone-100">
   <div class="max-w-container mx-auto px-6 md:px-10">
     <div class="reveal flex items-center gap-4 eyebrow text-gold-dark mb-6">
-      <span class="h-px w-10 bg-gold"></span>
+      <span class="hairline"></span>
       <span data-i18n="properties">Properties</span>
     </div>
     <h1 data-i18n="exclusive-access-flawless-execution" class="reveal delay-1 font-serif display-sm text-navy font-medium max-w-2xl">Exclusive access. Flawless execution.</h1>
@@ -602,14 +587,14 @@
   <div class="max-w-container mx-auto px-6 md:px-10 py-20">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
       <div class="md:col-span-4">
-        <div class="flex items-center gap-3">
-          <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
-            <rect x="4" y="12" width="14" height="24" fill="#B8935A"/>
-            <rect x="22" y="6" width="14" height="30" fill="#FAF8F4"/>
-          </svg>
-          <span class="font-serif text-lg tracking-wide leading-none" data-no-i18n>
-            Bulgaria<br/><span class="eyebrow text-gold-light">Property Concierge</span>
-          </span>
+        <div class="brand brand--reversed">
+          <svg class="brand-mark" viewBox="6 6 36 40" aria-hidden="true" focusable="false">
+          <path d="M8 44 V22 Q8 8 24 8 Q40 8 40 22 V44" fill="none" stroke="#FAF8F4" stroke-width="1.7"/>
+          <rect x="17.5" y="27" width="5.4" height="14" fill="#B8935A"/>
+          <rect x="25.1" y="21" width="5.4" height="20" fill="#FAF8F4"/>
+          <line x1="14" y1="41.2" x2="34" y2="41.2" stroke="#D9BE8A" stroke-width="1.7"/>
+            </svg>
+          <span class="brand-word" data-no-i18n><span class="brand-name">Bulgaria Property</span><span class="brand-sub">CONCIERGE</span></span>
         </div>
         <p data-i18n="boutique-investment-and-relocation-for-international" class="mt-6 text-stone-200/60 leading-relaxed max-w-sm text-[.95rem]">
           Boutique investment and relocation for international clients in Bulgaria.

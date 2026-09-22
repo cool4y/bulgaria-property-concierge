@@ -566,8 +566,8 @@ window.I18N_BG = {
   // EN: TrioKitchen
   "triokitchen": "TrioKitchen",
 
-  // EN: A rare combination of local access and international professionalism. I now hold four properties through them.
-  "a-rare-combination-of-local-access": "Рядка комбинация от местен достъп и международен професионализъм. Вече притежавам четири имота чрез тях.",
+  // EN: A rare combination of local access and international professionalism. I now hold two properties through them.
+  "a-rare-combination-of-local-access": "Рядка комбинация от местен достъп и международен професионализъм. Вече притежавам два имота чрез тях.",
 
   // EN: Nikolaj B. — Investor from Denmark
   "nikolaj-b-investor-from-denmark": "Nikolaj B. — инвеститор от Дания",
@@ -1189,5 +1189,41 @@ window.I18N_BG = {
 
   // EN: {n} properties
   "count-many": "{n} имота",
+
+  // EN: Do you handle turnkey renovation, or do I need to hire contractors myself?
+  "do-you-handle-turnkey-renovation": "Правите ли ремонт до ключ, или трябва сам да наема изпълнители?",
+
+  // EN: Turnkey is the whole point. We manage architects, licensed contractors and site supervision from the first wall opened to the final photo — you approve decisions, we run the work. No separate contractors to hire or manage.
+  "turnkey-is-the-whole-point-we-manage": "Точно затова предлагаме ремонт до ключ. Управляваме архитекти, лицензирани изпълнители и надзор на обекта — от първата съборена стена до финалната снимка. Вие одобрявате решенията, ние вършим работата. Не се налага сами да наемате и координирате изпълнители.",
+
+  // EN: What's the difference between the Essential, Signature and Bespoke finish levels?
+  "whats-the-difference-between-essential-signature": "Каква е разликата между нивата Основен, Авторски и Индивидуален?",
+
+  // EN: Essential is an efficient, rental-ready finish for buy-to-let budgets. Signature adds premium materials and a designed interior throughout. Bespoke is fully custom architecture, joinery and furniture for owner-occupiers or luxury lets. The process is identical — only the finish level and cost change.
+  "essential-is-an-efficient-rental-ready": "Основен е ефективно изпълнение, готово за отдаване под наем, за инвестиционни бюджети. Авторски добавя висококачествени материали и цялостен интериорен дизайн. Индивидуален е напълно персонализирана архитектура, дограма и мебели за собственици или луксозен наем. Процесът е един и същ — само нивото на изпълнение и цената се променят.",
+
+  // EN: Do you offer interior design and furnishing, or only construction?
+  "do-you-offer-interior-design-and-furnishing": "Предлагате ли интериорен дизайн и обзавеждане, или само строителство?",
+
+  // EN: Both, as one service. Every renovation includes interior design — layout, materials, lighting and a bespoke furniture package — so the property is delivered styled and ready to list or move into, not just built.
+  "both-as-one-service-every-renovation": "И двете — като една услуга. Всеки ремонт включва интериорен дизайн — оформление, материали, осветление и индивидуален пакет мебели — така че имотът се предава стилно оформен и готов за отдаване под наем или нанасяне, а не просто построен.",
+
+  // EN: Can you source premium or luxury properties, not just renovate them?
+  "can-you-source-premium-or-luxury-properties": "Можете ли да намирате премиум или луксозни имоти, а не само да ги ремонтирате?",
+
+  // EN: Yes. Property sourcing is the first step of the service, and includes premium and luxury listings — as well as off-market opportunities — in Sofia, Plovdiv, Varna, Bansko and Sozopol, matched to your budget and investment goals.
+  "yes-property-sourcing-is-the-first-step": "Да. Търсенето на имот е първата стъпка от услугата и включва премиум и луксозни обяви — както и извънпазарни възможности — в София, Пловдив, Варна, Банско и Созопол, съобразени с вашия бюджет и инвестиционни цели.",
+
+  // EN: How much does a full renovation and furnishing package cost?
+  "how-much-does-a-full-renovation-and-furnishing": "Колко струва пълен пакет ремонт и обзавеждане?",
+
+  // EN: Renovation and furnishing budgets typically range from Essential buy-to-let finishes to fully bespoke luxury execution, scoped to the property and finish level after a walkthrough. Every quote is itemized before work begins, with no hidden costs.
+  "renovation-and-furnishing-budgets-typically": "Бюджетите за ремонт и обзавеждане обикновено варират от изпълнение Основен за инвестиционни имоти до напълно индивидуално луксозно изпълнение, определени спрямо имота и нивото на изпълнение след оглед. Всяка оферта е детайлна преди началото на работата, без скрити разходи.",
+
+  // EN: Do I need to be in Bulgaria during the renovation or design process?
+  "do-i-need-to-be-in-bulgaria-during-renovation": "Трябва ли да съм в България по време на ремонта или дизайна?",
+
+  // EN: No. Most clients manage the entire process — design approvals, material selections and progress updates — remotely, with photo and video updates at each milestone. Many never visit the property until it's finished.
+  "no-most-clients-manage-the-entire": "Не. Повечето клиенти управляват целия процес — одобрения на дизайна, избор на материали и напредъка — дистанционно, с актуализации със снимки и видео при всеки етап. Много клиенти виждат имота за първи път едва след завършването му.",
 
 };

@@ -1,0 +1,105 @@
+/* Bulgaria Property Concierge: brand layer
+   Source of truth: bpc-brand-guidebook.pdf (v1.0, 2026). Loaded AFTER the page styles, so it wins.
+
+   Palette   Navy #0F1B2E · Navy Light #1B2A44 · Gold #B8935A · Gold Dark #8F6F3E · Gold Light #D9BE8A
+             Ivory #FAF8F4 · Cream #F3EFE7 · Beige #E8E1D3          (status only: success #2F7A4F, error #A8402F)
+   Rule      60 / 30 / 10: ivory dominates, navy structures, gold is the accent (never more than ~10% of the area).
+   Type      Fraunces (Latin display) · Lora (Cyrillic display, Fraunces has no Cyrillic) · Inter (all text and UI)
+   Logo      arch over two columns; only on ivory, navy or white; the lockup text is fixed (font and tracking).
+*/
+
+:root {
+  --navy: #0F1B2E;
+  --navy-light: #1B2A44;
+  --gold: #B8935A;
+  --gold-dark: #8F6F3E;
+  --gold-light: #D9BE8A;
+  --ivory: #FAF8F4;
+  --cream: #F3EFE7;
+  --beige: #E8E1D3;
+}
+
+/* ── Neutrals ────────────────────────────────────────────────────────────────
+   The compiled Tailwind CSS uses neutral "stone" greys. The brand has no neutral grey: secondary text is a
+   tint of Navy (on light) or Ivory (on navy), and lines and frames are Beige. */
+.text-stone-600 { color: rgb(15 27 46 / .74); }
+.text-stone-500 { color: rgb(15 27 46 / .64); }
+.text-stone-400 { color: rgb(15 27 46 / .5); }
+.text-stone-300 { color: rgb(15 27 46 / .36); }
+.text-stone-200\/70 { color: rgb(250 248 244 / .7); }
+.text-stone-200\/60 { color: rgb(250 248 244 / .6); }
+.text-stone-200\/50 { color: rgb(250 248 244 / .5); }
+.border-stone-100, .border-stone-200, .border-stone-300 { border-color: var(--beige); }
+.bg-stone-200 { background-color: var(--beige); }
+.from-stone-400 { --tw-gradient-from: rgb(15 27 46 / .4) var(--tw-gradient-from-position); }
+
+/* ── Type details from the guidebook ─────────────────────────────────────────
+   Eyebrows / labels: Inter, capitals, tracking 0.14em. The gold hairline (44px) opens sections and labels. */
+.eyebrow, .eyebrow-lg { letter-spacing: .14em; }
+.hairline { display: block; flex: none; width: 44px; height: 1px; background: var(--gold); }
+
+/* ── Main nav links: dark enough to read at rest, not only on hover (the compiled text-stone-600 is too pale) ── */
+.hdr-nav .navlink { color: rgb(15 27 46 / .88); }
+
+/* ── Hero eyebrow: a thin Ivory backing, so the label reads over the photo instead of fighting its bright spots ── */
+.hero-eyebrow { display: inline-flex; width: fit-content; background: rgb(250 248 244 / .82); padding: .5rem 1rem .5rem .8rem; }
+.hero-eyebrow .hairline { background: var(--gold-dark); }
+
+/* ── Logo: arch over two columns ─────────────────────────────────────────────
+   Markup: <a class="brand"> <svg class="brand-mark">…</svg> <span class="brand-word">…</span> </a>
+   Add .brand--reversed on navy. The wordmark is live Fraunces text, tracked like the guidebook lockup. */
+.brand { display: flex; align-items: center; gap: .85rem; }
+.brand-mark { flex: none; display: block; width: 2.25rem; height: 2.5rem; }
+.brand-word { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; white-space: nowrap; }
+.brand-name {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 400; font-size: 1.3rem; letter-spacing: .005em; color: var(--navy);
+}
+.brand-sub {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 400; font-size: .9rem; letter-spacing: .58em; margin-top: .35rem; color: var(--gold-dark);   /* spans ~88% of the line above, as in the guidebook */
+}
+.brand--reversed .brand-name { color: var(--ivory); }
+.brand--reversed .brand-sub { color: var(--gold-light); }
+@media (max-width: 479px) {
+  .brand { gap: .6rem; }
+  .brand-mark { width: 1.9rem; height: 2.1rem; }
+  .brand-name { font-size: 1.05rem; }
+  .brand-sub { font-size: .72rem; margin-top: .3rem; }
+}
+
+/* ── Language switch: EN | BG in a hairline gold frame; the active language is filled navy ───────────── */
+.lang-switch { display: inline-flex; align-items: stretch; height: 2.25rem; border: 1px solid var(--gold); }
+.lang-btn {
+  min-width: 2.5rem; padding: 0 .55rem 0 calc(.55rem + .14em); border: 0; background: transparent; cursor: pointer;
+  font: 500 .72rem/1 Inter, system-ui, sans-serif; letter-spacing: .14em; color: var(--navy);
+  transition: background-color .3s, color .3s;
+}
+.lang-btn + .lang-btn { border-left: 1px solid var(--gold); }
+.lang-btn:hover { background: var(--cream); }
+.lang-btn[aria-pressed="true"] { background: var(--navy); color: var(--ivory); cursor: default; }
+.lang-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+@media (max-width: 1279px) {
+  .lang-switch { height: 2.5rem; }
+  .lang-btn { min-width: 2.75rem; }
+}
+@media (max-width: 479px) {
+  .lang-switch { height: 2.25rem; }
+  .lang-btn { min-width: 2.2rem; padding: 0 .3rem 0 calc(.3rem + .14em); }
+}
+@media (max-width: 359px) {
+  #site-header > div { padding-left: 1rem; padding-right: 1rem; }
+  .brand-mark { width: 1.6rem; height: 1.8rem; }
+  .brand-name { font-size: .95rem; }
+  .brand-sub { font-size: .64rem; }
+  .lang-btn { min-width: 2rem; }
+}
+
+/* ── Hero stat frame ("10 Years Experience"): sits on the photo, not on a solid card, so the usual Beige
+   line (too close to the hero's ivory wash there) is swapped for a stronger Navy tint, just for this box. ── */
+.stat-frame { border-color: rgb(15 27 46 / .22); }
+
+/* ── Header: a solid Ivory bar, so the navigation stays readable over the hero photo ───────────────────────
+   Navy text on Ivory, a Beige hairline below. It tightens a little once the page scrolls (.header-scrolled is set by the page script). */
+#site-header { background: var(--ivory); border-bottom: 1px solid var(--beige); backdrop-filter: none; padding-top: 1rem; padding-bottom: 1rem; }
+#site-header.header-scrolled { padding-top: .75rem; padding-bottom: .75rem; }

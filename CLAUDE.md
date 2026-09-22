@@ -20,6 +20,8 @@ index.html              — homepage (was preview.html, renamed for GitHub Pages
 properties.html          — listings/properties browse page
 backend/                — Express + PostgreSQL API (see backend/README.md)
 js/i18n.js, js/i18n-bg.js — EN/BG language switcher and the Bulgarian dictionary (see Languages below)
+css/brand.css          — brand layer from the brand guidebook, loaded after the page styles (see Brand below)
+llms.txt, robots.txt, sitemap.xml — AI/search discoverability files at the site root (see SEO / GEO below)
 tools/i18n_tool.py      — tags new text for translation and checks the dictionary
 images/                 — photos and partner logos (real files; only the hero photo is inline base64)
 ```
@@ -47,7 +49,7 @@ images/                 — photos and partner logos (real files; only the hero 
 
 - **Images**: mix of base64-embedded (hero, site-visit, 7 tier photos, 5 partner logos — all as separate `<img>` `src="data:image/...;base64,..."`) and hotlinked Unsplash URLs (most of `properties.html`, some homepage sections). Relative file paths do **not** work when previewing this HTML as a standalone file — only base64 or absolute URLs render correctly in that context. Once actually deployed via GitHub Pages, relative paths *would* work (real server), but nothing currently relies on that.
 
-- **Icon system**: Services, Why Bulgaria, and Why Choose Us sections all share one icon language — a filled gold-tint circle badge (`bg-gold/10`) that inverts to solid gold + ivory icon on `group-hover`, plus a thin gold underline beneath each heading that grows on hover. Process section uses distinct navy numbered circles (numbered steps). Execution Tiers uses distinct gold check-badges (it's a checklist, not a feature list). Keep these visually distinct — they're different UI patterns, not inconsistency to fix.
+- **Icon system**: Services, Why Bulgaria, and Why Choose Us sections all share one icon language — a filled gold-tint circle badge (`bg-gold/10`) that inverts to solid gold + ivory icon on `group-hover`, plus a thin gold underline beneath each heading that grows on hover. Process section uses distinct navy numbered circles (numbered steps). Execution Tiers uses distinct gold check-badges (it's a checklist, not a feature list). Keep these visually distinct — they're different UI patterns, not inconsistency to fix. All headings in this family (`h3`, e.g. "Strategy Call", "Residential Property") share the same weight, `font-medium` — keep new ones consistent.
 
 - **Section header pattern**: every major section uses a centered `eyebrow-lg` (flanking gold hairlines + number + label, e.g. `<span>02</span><span class="h-px w-8 bg-gold/60"></span><span>Full-Cycle Service</span>`) → centered `display-sm` `<h2>` → centered supporting paragraph. Match this if adding new sections.
 
@@ -57,7 +59,7 @@ images/                 — photos and partner logos (real files; only the hero 
 
 Both pages are bilingual. The English text in the HTML is the source of truth; Bulgarian is applied in the browser, instantly, with no reload.
 
-- **Switcher**: two flag buttons (EN = UK flag, BG = Bulgarian flag) in the header, next to the button. `js/i18n.js` remembers the choice (localStorage), honours `?lang=bg` / `?lang=en`, and gives Bulgarian browsers Bulgarian on a first visit. A small inline snippet in each `<head>` hides the page for Bulgarian visitors until the text is swapped, so English never flashes.
+- **Switcher**: an `EN | BG` segmented control in a hairline gold frame (active language filled navy, no flags), in the header next to the button. `js/i18n.js` remembers the choice (localStorage), honours `?lang=bg` / `?lang=en`, and gives Bulgarian browsers Bulgarian on a first visit. A small inline snippet in each `<head>` hides the page for Bulgarian visitors until the text is swapped, so English never flashes.
 - **Dictionary**: `js/i18n-bg.js`, `"key": "Bulgarian"`, each entry preceded by a `// EN:` comment with the English original. Elements carry `data-i18n="key"` (`data-i18n-html` when the text contains inline markup; `data-i18n-alt` / `-title` / `-placeholder` / `-aria-label` / `-content` for attributes; `data-no-i18n` to opt out, e.g. the logo).
 - **After changing or adding English text** in a page: `python tools/i18n_tool.py tag` (tags the new text and adds empty dictionary entries), translate the empty entries, then `python tools/i18n_tool.py check` (must report 0 untagged / 0 untranslated). `python tools/i18n_tool.py import file.json` bulk-fills translations. The tool never re-serialises the HTML, it only inserts attributes.
 - **Text produced by JavaScript** (form messages, the "N properties" counter, the VIP prefill) goes through `tr('key', 'English')`, declared at the top of each page's inline script. The tool finds these calls too.
@@ -66,7 +68,30 @@ Both pages are bilingual. The English text in the HTML is the source of truth; B
 - **Typography**: Fraunces has no Cyrillic glyphs, so Lora follows it in the `.font-serif` stack and supplies the Bulgarian headings (the page declares `lang="bg"`, which switches on the proper Bulgarian letterforms). `tidy()` in `js/i18n.js` joins one- and two-letter words to the next word so they never dangle at a line end. Bulgarian runs ~20% longer than English: check header, buttons and headings at 390px and 1280px after adding text.
 - **Header**: full navigation from 1280px up, the menu button below that; nothing in the header may wrap. `properties.html` has its own copy of the menu.
 - **Known trade-off**: Bulgarian is client-side only, so search engines index the English text. If Bulgarian search traffic matters, add real `/bg/` pages with `hreflang` (the dictionary can generate them).
-- The pages and images are also previewed by opening them from a folder, so the files need `js/` and `images/` next to `index.html`.
+- The pages and images are also previewed by opening them from a folder, so the files need `css/`, `js/` and `images/` next to `index.html`.
+
+## Brand (guidebook v1.0)
+
+The site follows `bpc-brand-guidebook.pdf` (the guidebook and the logo kit, SVG/PNG, live outside the repo in `Desktop\BPC`). `css/brand.css` is the brand layer: it loads after each page's inline styles, so it wins, and it is where new brand rules go (new Tailwind classes would not render, see above).
+
+- **Palette**: Navy `#0F1B2E`, Navy Light `#1B2A44`, Gold `#B8935A`, Gold Dark `#8F6F3E`, Gold Light `#D9BE8A`, Ivory `#FAF8F4`, Cream `#F3EFE7`, Beige `#E8E1D3`; status colours only for states (success `#2F7A4F`, error `#A8402F`). No other hex values. There is no neutral grey: secondary text is a tint of Navy (Ivory on navy) and lines are Beige, which `brand.css` enforces by remapping the compiled `stone-*` classes.
+- **60 / 30 / 10**: Ivory dominates, Navy structures, Gold is the accent (about 10% of any screen).
+- **Type**: Fraunces for Latin display, Lora for Cyrillic display (Fraunces has no Cyrillic), Inter for text and UI. Eyebrows and labels are Inter caps with `.14em` tracking; the gold hairline is `<span class="hairline">` (44px).
+- **Logo**: arch over two columns (`.brand` + inline `svg.brand-mark` + `.brand-word` with `.brand-name` / `.brand-sub`, add `.brand--reversed` on navy). Only on ivory, navy or white; never below 20px; the lockup's font and tracking are fixed, so the wordmark is `data-no-i18n`. Favicon and touch icon: `images/favicon.svg`, `images/apple-touch-icon.png` (from the kit).
+- **Header**: a solid Ivory bar with a Beige hairline (`#site-header` in `brand.css`), on both pages, at the top and when scrolled, so the navigation stays readable over the hero photo. It only tightens its padding on scroll; no transparency or blur.
+- **Hero eyebrow / stat frame**: the label and the "10 Years Experience" box sit directly on the hero photo, where the palette's usual Beige border/backing is too low-contrast. `.hero-eyebrow` gives the label an Ivory backing; `.stat-frame` gives the stat box a stronger Navy-tint border. Both are scoped overrides in `brand.css`, not a change to the Beige rule used everywhere else (cards, dividers on solid backgrounds keep Beige).
+- **Chat buttons** (Viber / WhatsApp): kept the apps' own purple `#7360F2` and green `#25D366` (tried a navy-outline brand treatment; the user asked for the original colours back — don't re-apply the outline).
+- Not covered yet: the admin panel under `backend/public/admin` is not restyled.
+
+## SEO / GEO (AI discoverability)
+
+Three files at the site root, served as-is by GitHub Pages (no build step touches them):
+
+- **`robots.txt`**: explicitly `Allow: /` for every crawler, including the AI ones (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot, meta-externalagent...) — the opposite of a publisher blocking training bots, because this business wants AI assistants to recommend it. Points to `sitemap.xml`.
+- **`sitemap.xml`**: one `<url>` per indexable page (currently `index.html`, `properties.html`) with `hreflang` alternates for `en`/`bg`. Bump `<lastmod>` when a page's content meaningfully changes — add a `<url>` block for every future Journal/blog article (template is commented in the file).
+- **`llms.txt`**: an emerging (unproven) convention some AI crawlers read for a plain-language summary — low-cost, not a substitute for the schema/robots/sitemap work above.
+
+The FAQ section (`#faq` in `index.html`) doubles as a `FAQPage` JSON-LD block in `<head>` (~line 276) — **keep both in sync**: every visible `<details class="faq">` question needs a matching `Question`/`acceptedAnswer` entry (the schema wording can be slightly more formal/complete than the page copy, e.g. naming "Bulgaria Property Concierge" instead of "we"). The canonical domain used throughout (`www.bulgariapropertyconcierge.com`, in `<link rel="canonical">`, OG tags, JSON-LD and now these three files) is still a placeholder — see Known outstanding items.
 
 ## Content notes
 

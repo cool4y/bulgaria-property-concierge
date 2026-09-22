@@ -1,0 +1,56 @@
+# robots.txt  —  bulgariapropertyconcierge.com
+# Strategy: ALLOW everything. You WANT to be crawled — both by search
+# engines and by AI crawlers — so ChatGPT / Claude / Perplexity / Gemini
+# can read, index and recommend you. (Publishers who sell content block
+# training bots; a business that wants referrals does the opposite.)
+
+# ---- Normal search engines ----
+User-agent: *
+Allow: /
+
+# ---- Bing (important: ChatGPT Search retrieves live results via Bing's index) ----
+User-agent: Bingbot
+Allow: /
+
+# ---- OpenAI (ChatGPT) ----
+User-agent: GPTBot          # trains the model → lets it recommend you even with no live search
+Allow: /
+User-agent: OAI-SearchBot   # powers ChatGPT Search results
+Allow: /
+User-agent: ChatGPT-User    # fetches a page when a user asks ChatGPT about a URL
+Allow: /
+
+# ---- Anthropic (Claude) ----
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# ---- Perplexity ----
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# ---- Google Gemini / AI Overviews ----
+User-agent: Google-Extended
+Allow: /
+
+# ---- Apple Intelligence ----
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# ---- Common Crawl (feeds many open models) & Meta AI ----
+User-agent: CCBot
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+
+# Point every crawler at your sitemap:
+Sitemap: https://www.bulgariapropertyconcierge.com/sitemap.xml

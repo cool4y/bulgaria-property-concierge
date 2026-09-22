@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#0F1B2E" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 <script>
 /* Language, decided before first paint: ?lang= in the URL, else the saved choice, else the browser language.
    Bulgarian visitors get the page hidden (html.i18n-loading) until js/i18n.js has swapped the text in,
@@ -100,7 +103,7 @@
   /* Scroll bar */
   ::-webkit-scrollbar{width:10px;height:10px}
   ::-webkit-scrollbar-track{background:#F3EFE7}
-  ::-webkit-scrollbar-thumb{background:#D3CBBB;border-radius:10px}
+  ::-webkit-scrollbar-thumb{background:#D9BE8A;border-radius:10px}
 
   /* Bounce down arrow */
   @keyframes bounceY { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
@@ -119,13 +122,13 @@
   /* (dark-section noise texture removed — no longer used) */
 
   /* Filter select */
-  select.lux { appearance:none; background:#FAF8F4; border:1px solid #E8E3D8; padding:.65rem 2.25rem .65rem 1rem; color:#0F1B2E; font-size:.9rem; cursor:pointer; }
+  select.lux { appearance:none; background:#FAF8F4; border:1px solid #E8E1D3; padding:.65rem 2.25rem .65rem 1rem; color:#0F1B2E; font-size:.9rem; cursor:pointer; }
   select.lux:focus{ outline:none; border-color:#B8935A }
 
   /* Purpose pill toggle */
   .purpose-pill {
     font-size:.78rem; letter-spacing:.06em; padding:.65rem 1.25rem;
-    border:1px solid #D3CBBB; background:transparent; color:#4A463D;
+    border:1px solid #E8E1D3; background:transparent; color:#0F1B2E;
     cursor:pointer; transition: all .4s cubic-bezier(.22,1,.36,1);
   }
   .purpose-pill:hover { border-color:#B8935A; color:#0F1B2E; }
@@ -138,14 +141,14 @@
   /* (before/after slider styles removed — section no longer in use) */
 
   /* FAQ */
-  details.faq { border-bottom: 1px solid #E8E3D8 }
+  details.faq { border-bottom: 1px solid #E8E1D3 }
   details.faq > summary { list-style:none; cursor:pointer; padding: 1.75rem 0; display:flex; justify-content:space-between; align-items:center; gap:1.5rem }
   details.faq > summary::-webkit-details-marker { display:none }
   details.faq .plus { color:#B8935A; transition: transform .5s cubic-bezier(.22,1,.36,1) }
   details.faq[open] .plus { transform: rotate(45deg) }
 
   /* Header scrolled state */
-  .header-scrolled { background: rgba(250,248,244,.85); backdrop-filter: blur(10px); border-bottom:1px solid #E8E3D8; padding-top:.75rem; padding-bottom:.75rem; }
+  .header-scrolled { background: rgba(250,248,244,.85); backdrop-filter: blur(10px); border-bottom:1px solid #E8E1D3; padding-top:.75rem; padding-bottom:.75rem; }
 
   /* Viber fab */
   .fab { position:fixed; bottom:1.5rem; right:1.5rem; z-index:40; width:3.5rem; height:3.5rem; border-radius:9999px; background:#0F1B2E; color:#D9BE8A; box-shadow: 0 20px 50px -15px rgba(15,27,46,.6); display:flex; align-items:center; justify-content:center; transition: all .5s cubic-bezier(.22,1,.36,1) }
@@ -164,7 +167,7 @@
   @media (max-width: 640px) { .vip-tab { top: auto; bottom: 6rem; padding: .85rem .45rem; font-size: .62rem; } }
 
   /* VIP section: layered gradient + soft gold glow instead of a flat navy fill */
-  #vip-tour { background: linear-gradient(135deg, #0F1B2E 0%, #0F1B2E 55%, #16233b 100%); }
+  #vip-tour { background: linear-gradient(135deg, #0F1B2E 0%, #0F1B2E 55%, #1B2A44 100%); }
   #vip-tour .vip-glow {
     position: absolute; inset: 0; pointer-events: none;
     background:
@@ -200,25 +203,9 @@
   .mobile-menu { max-height:0; overflow:hidden; transition: max-height .5s cubic-bezier(.22,1,.36,1); }
   .mobile-menu.open { max-height: 30rem; }
 
-  /* ── Language switcher: two flag buttons (EN = United Kingdom, BG = Bulgaria) ─────────────── */
+  /* Header right-hand cluster: language switch + button (+ menu button on small screens). The switch is styled in css/brand.css. */
   .header-actions { display:flex; align-items:center; gap:1.25rem; }
-  .lang-switch { display:inline-flex; align-items:center; gap:.55rem; }
-  .lang-btn {
-    position:relative; width:2.4rem; height:1.6rem; padding:0; border:0; border-radius:.2rem; cursor:pointer;
-    background-size:cover; background-position:center;
-    box-shadow:inset 0 0 0 1px rgba(15,27,46,.3);
-    filter:saturate(.7) brightness(.92);
-    transition:box-shadow .3s, filter .3s;
-  }
-  .lang-btn[data-lang="en"] { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 30'%3E%3CclipPath id='s'%3E%3Cpath d='M0,0 v30 h60 v-30 z'/%3E%3C/clipPath%3E%3CclipPath id='t'%3E%3Cpath d='M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z'/%3E%3C/clipPath%3E%3Cg clip-path='url%28%23s%29'%3E%3Cpath d='M0,0 v30 h60 v-30 z' fill='%23012169'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' stroke='%23fff' stroke-width='6'/%3E%3Cpath d='M0,0 L60,30 M60,0 L0,30' clip-path='url%28%23t%29' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23fff' stroke-width='10'/%3E%3Cpath d='M30,0 v30 M0,15 h60' stroke='%23C8102E' stroke-width='6'/%3E%3C/g%3E%3C/svg%3E"); }
-  .lang-btn[data-lang="bg"] { background-image:linear-gradient(#fff 33.34%, #00966E 33.34% 66.67%, #D62612 66.67%); }
-  .lang-btn::before { content:''; position:absolute; inset:-.6rem -.25rem; }   /* larger tap target than the flag itself */
-  .lang-btn:hover { filter:none; }
-  .lang-btn[aria-pressed="true"] { filter:none; box-shadow:0 0 0 2px #FAF8F4, 0 0 0 3.5px #B8935A; }
-  .lang-btn:focus-visible { outline:2px solid #0F1B2E; outline-offset:4px; }
-  @media (max-width: 1279px) {
-    .header-actions { gap:.5rem; }
-  }
+  @media (max-width: 1279px) { .header-actions { gap:.5rem; } }
   /* Bulgarian visitors: page stays hidden until the text has been swapped in (see the <head> snippet) */
   html.i18n-loading body { visibility:hidden; }
 
@@ -238,10 +225,7 @@
   .hdr-cta:hover > span { margin-left:.5rem; }
   @media (max-width: 479px) {
     #site-header > div { gap:.5rem; }
-    .hdr-logo .font-serif { font-size:1rem; }
-    .hdr-logo .eyebrow { font-size:.62rem; letter-spacing:.08em; }
     .header-actions { gap:.3rem; }
-    .lang-btn { width:2.2rem; height:1.5rem; }
     .hdr-menu-btn { width:2.25rem; height:2.25rem; }
   }
   @media (min-width: 1280px) {
@@ -250,6 +234,7 @@
     .hdr-menu-btn, .mobile-menu { display:none; }
   }
 </style>
+<link rel="stylesheet" href="css/brand.css">
 <!-- Structured data: helps both classic search engines and AI answer engines (Google AI Overviews, Bing Copilot, Perplexity, etc.) understand and cite this business accurately -->
 <script type="application/ld+json">
 {
@@ -340,6 +325,54 @@
         "@type": "Answer",
         "text": "Total transaction costs are typically 4–5% of the purchase price, covering notary fees, municipal tax, registration and legal fees."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Bulgaria Property Concierge handle turnkey renovation, or do clients need to hire contractors themselves?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Turnkey renovation is the whole point of the service. Bulgaria Property Concierge manages architects, licensed contractors and site supervision from the first wall opened to the final photo — the client approves decisions, the team runs the work. There are no separate contractors to hire or manage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between the Essential, Signature and Bespoke execution tiers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Essential is an efficient, rental-ready finish built for buy-to-let budgets. Signature adds premium materials and a designed interior throughout. Bespoke is fully custom architecture, joinery and furniture for owner-occupiers or luxury lets. The process is identical across all three tiers — only the finish level and cost change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Bulgaria Property Concierge offer interior design and furnishing, or only construction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both, as one service. Every renovation includes interior design — layout, materials, lighting and a bespoke furniture package — so the property is delivered styled and ready to list or move into, not just built."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Bulgaria Property Concierge source premium or luxury properties, not just renovate them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Property sourcing is the first step of the service and includes premium and luxury listings, as well as off-market opportunities, in Sofia, Plovdiv, Varna, Bansko and Sozopol, matched to the client's budget and investment goals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a full renovation and furnishing package cost in Bulgaria?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Renovation and furnishing budgets typically range from Essential buy-to-let finishes to fully bespoke luxury execution, scoped to the property and finish level after a walkthrough. Every quote is itemized before work begins, with no hidden costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do clients need to be in Bulgaria during the renovation or design process?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Most clients manage the entire process — design approvals, material selections and progress updates — remotely, with photo and video updates at each milestone. Many never visit the property until it is finished."
+      }
     }
   ]
 }
@@ -351,14 +384,14 @@
 <!-- ─── HEADER ─────────────────────────────── -->
 <header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-500 ease-lux py-6">
   <div class="max-w-container mx-auto px-6 md:px-10 flex items-center justify-between gap-6">
-    <a href="#" class="hdr-logo flex items-center gap-3">
-      <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
-        <rect x="4" y="12" width="14" height="24" fill="#B8935A"/>
-        <rect x="22" y="6" width="14" height="30" fill="#0F1B2E"/>
+    <a href="#" class="hdr-logo brand">
+      <svg class="brand-mark" viewBox="6 6 36 40" aria-hidden="true" focusable="false">
+        <path d="M8 44 V22 Q8 8 24 8 Q40 8 40 22 V44" fill="none" stroke="#0F1B2E" stroke-width="1.7"/>
+        <rect x="17.5" y="27" width="5.4" height="14" fill="#B8935A"/>
+        <rect x="25.1" y="21" width="5.4" height="20" fill="#0F1B2E"/>
+        <line x1="14" y1="41.2" x2="34" y2="41.2" stroke="#B8935A" stroke-width="1.7"/>
       </svg>
-      <span class="font-serif text-lg tracking-wide text-navy leading-none" data-no-i18n>
-        Bulgaria<br/><span class="eyebrow text-stone-500">Property Concierge</span>
-      </span>
+      <span class="brand-word" data-no-i18n><span class="brand-name">Bulgaria Property</span><span class="brand-sub">CONCIERGE</span></span>
     </a>
 
     <nav data-i18n-aria-label="main-navigation" class="hdr-nav items-center" aria-label="Main navigation">
@@ -373,8 +406,8 @@
 
     <div class="header-actions">
       <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria-label="language">
-        <button type="button" class="lang-btn" data-lang="en" lang="en" data-no-i18n aria-pressed="true" title="English" aria-label="English"></button>
-        <button type="button" class="lang-btn" data-lang="bg" lang="bg" data-no-i18n aria-pressed="false" title="Български" aria-label="Български"></button>
+        <button type="button" class="lang-btn" data-lang="en" lang="en" data-no-i18n aria-pressed="true" title="English" aria-label="English (EN)">EN</button>
+        <button type="button" class="lang-btn" data-lang="bg" lang="bg" data-no-i18n aria-pressed="false" title="Български" aria-label="Български (BG)">BG</button>
       </div>
       <a data-i18n="book-consultation" href="#contact" class="hdr-cta group items-center bg-gold text-navy hover:bg-gold-dark hover:text-ivory border border-gold uppercase font-medium transition-all duration-500 ease-lux">
       Book Consultation
@@ -415,8 +448,8 @@
 
   <div class="relative z-10 w-full max-w-container mx-auto px-6 md:px-10 pb-24 md:pb-28 pt-40">
     <div class="max-w-3xl">
-      <div class="reveal flex items-center gap-4 text-[.85rem] md:text-[.95rem] tracking-[.1em] uppercase font-semibold text-gold-dark mb-6">
-        <span class="h-px w-10 bg-gold"></span>
+      <div class="reveal hero-eyebrow flex items-center gap-4 text-[.85rem] md:text-[.95rem] tracking-[.1em] uppercase font-semibold text-gold-dark mb-6">
+        <span class="hairline"></span>
         <span data-i18n="one-partner-from-sourcing-property-to">One partner. From sourcing property to keys.</span>
       </div>
 
@@ -454,7 +487,7 @@
             Chat on WhatsApp
             <span class="hidden lg:inline-block transition-transform group-hover:translate-x-1">→</span>
           </a>
-          <div class="flex items-center justify-center gap-2 sm:gap-3 w-full min-h-14 px-2 sm:px-4 py-2 border border-stone-300">
+          <div class="flex items-center justify-center gap-2 sm:gap-3 w-full min-h-14 px-2 sm:px-4 py-2 border stat-frame">
             <span class="font-serif text-2xl text-gold-dark leading-none">10</span>
             <span data-i18n="years-experience" data-i18n-html class="text-[.62rem] sm:text-[.72rem] tracking-[.06em] sm:tracking-[.1em] uppercase font-medium text-navy leading-tight text-left">Years<br/>Experience</span>
           </div>
@@ -474,7 +507,7 @@
   <div class="max-w-container mx-auto px-6 md:px-10">
     <div class="text-center max-w-2xl mx-auto mb-16">
       <div class="reveal flex items-center justify-center gap-4 eyebrow-lg text-gold-dark">
-        <span>01</span><span class="h-px w-8 bg-gold/60"></span><span data-i18n="how-it-works">How It Works</span>
+        <span>01</span><span class="hairline"></span><span data-i18n="how-it-works">How It Works</span>
       </div>
       <h2 data-i18n="a-simple-six-step-process" class="reveal delay-1 mt-6 font-serif display-sm text-navy font-normal">A simple six-step process.</h2>
     </div>
@@ -486,7 +519,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/><path d="M2 20a6 6 0 0 1 12 0"/><path d="M16 5a3 3 0 1 1 0 6"/><path d="M22 20a5 5 0 0 0-7-4.6"/></svg>
         </div>
         <div class="mt-4 font-serif text-lg text-gold">01</div>
-        <h3 data-i18n="strategy-call" class="mt-1 font-serif text-lg text-navy leading-tight">Strategy Call</h3>
+        <h3 data-i18n="strategy-call" class="mt-1 font-serif text-lg text-navy leading-tight font-medium">Strategy Call</h3>
         <p data-i18n="we-learn-your-goals-budget-and" class="mt-2 text-stone-500 text-[.83rem] leading-relaxed max-w-[11rem]">We learn your goals, budget, and timeline.</p>
       </div>
       <div class="reveal delay-2 relative flex flex-col items-center text-center" style="z-index:1">
@@ -494,7 +527,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4a7 7 0 1 1 0 14 7 7 0 0 1 0-14z"/><path d="m20 20-3.5-3.5"/></svg>
         </div>
         <div class="mt-4 font-serif text-lg text-gold">02</div>
-        <h3 data-i18n="property-search" class="mt-1 font-serif text-lg text-navy leading-tight">Property Search</h3>
+        <h3 data-i18n="property-search" class="mt-1 font-serif text-lg text-navy leading-tight font-medium">Property Search</h3>
         <p data-i18n="a-curated-shortlist-matched-to-your" class="mt-2 text-stone-500 text-[.83rem] leading-relaxed max-w-[11rem]">A curated shortlist matched to your brief.</p>
       </div>
       <div class="reveal delay-3 relative flex flex-col items-center text-center" style="z-index:1">
@@ -502,7 +535,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M4 7h16"/><path d="M7 7 4 14a3 3 0 0 0 6 0Z"/><path d="M17 7l-3 7a3 3 0 0 0 6 0Z"/></svg>
         </div>
         <div class="mt-4 font-serif text-lg text-gold">03</div>
-        <h3 data-i18n="legal-due-diligence" class="mt-1 font-serif text-lg text-navy leading-tight">Legal Due Diligence</h3>
+        <h3 data-i18n="legal-due-diligence" class="mt-1 font-serif text-lg text-navy leading-tight font-medium">Legal Due Diligence</h3>
         <p data-i18n="lawyers-verify-title-permits-encumbrances" class="mt-2 text-stone-500 text-[.83rem] leading-relaxed max-w-[11rem]">Lawyers verify title, permits, encumbrances.</p>
       </div>
       <div class="reveal delay-4 relative flex flex-col items-center text-center" style="z-index:1">
@@ -510,7 +543,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7a4 4 0 1 1-3.5 6L4 20H2v-2l7-7A4 4 0 0 1 15 7z"/><path d="M17 7h.01"/></svg>
         </div>
         <div class="mt-4 font-serif text-lg text-gold">04</div>
-        <h3 data-i18n="purchase" class="mt-1 font-serif text-lg text-navy leading-tight">Purchase</h3>
+        <h3 data-i18n="purchase" class="mt-1 font-serif text-lg text-navy leading-tight font-medium">Purchase</h3>
         <p data-i18n="smooth-notary-process-full-legal-support" class="mt-2 text-stone-500 text-[.83rem] leading-relaxed max-w-[11rem]">Smooth notary process, full legal support.</p>
       </div>
       <div class="reveal delay-5 relative flex flex-col items-center text-center" style="z-index:1">
@@ -518,7 +551,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3a5 5 0 0 0-5 7l-6 6a2 2 0 0 0 3 3l6-6a5 5 0 0 0 7-5l-3 3-2-2 3-3a5 5 0 0 0-3-3z"/></svg>
         </div>
         <div class="mt-4 font-serif text-lg text-gold">05</div>
-        <h3 data-i18n="renovation-and-furnishing" class="mt-1 font-serif text-lg text-navy leading-tight">Renovation & Furnishing</h3>
+        <h3 data-i18n="renovation-and-furnishing" class="mt-1 font-serif text-lg text-navy leading-tight font-medium">Renovation & Furnishing</h3>
         <p data-i18n="design-build-furnish-turnkey-on-budget" class="mt-2 text-stone-500 text-[.83rem] leading-relaxed max-w-[11rem]">Design, build, furnish — turnkey, on budget.</p>
       </div>
       <div class="reveal delay-6 relative flex flex-col items-center text-center" style="z-index:1">
@@ -526,7 +559,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
         </div>
         <div class="mt-4 font-serif text-lg text-gold">06</div>
-        <h3 data-i18n="rental-and-management" class="mt-1 font-serif text-lg text-navy leading-tight">Rental & Management</h3>
+        <h3 data-i18n="rental-and-management" class="mt-1 font-serif text-lg text-navy leading-tight font-medium">Rental & Management</h3>
         <p data-i18n="we-find-tenants-and-manage-long" class="mt-2 text-stone-500 text-[.83rem] leading-relaxed max-w-[11rem]">We find tenants and manage long-term.</p>
       </div>
     </div>
@@ -538,7 +571,7 @@
   <div class="max-w-container mx-auto px-6 md:px-10">
     <div class="text-center max-w-2xl mx-auto mb-14">
       <div class="reveal flex items-center justify-center gap-4 eyebrow-lg text-gold-dark">
-        <span>02</span><span class="h-px w-8 bg-gold/60"></span><span data-i18n="full-cycle-service">Full-Cycle Service</span>
+        <span>02</span><span class="hairline"></span><span data-i18n="full-cycle-service">Full-Cycle Service</span>
       </div>
       <h2 data-i18n="from-your-dream-property-to-a" class="reveal delay-1 font-serif display-sm text-navy mt-6 font-normal">From your dream property to a finished home.</h2>
       <p data-i18n="sourcing-purchase-financing-design-and-delivery" class="reveal delay-2 mt-5 text-stone-500 text-[.95rem] leading-relaxed">Sourcing, purchase, financing, design and delivery — one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad.</p>
@@ -652,7 +685,7 @@
   <div class="max-w-container mx-auto px-6 md:px-10 py-16 md:py-20">
     <div class="max-w-2xl mx-auto text-center mb-16">
       <div class="reveal flex items-center justify-center gap-3 eyebrow-lg text-gold-dark">
-        <span class="h-px w-8 bg-gold/60"></span><span data-i18n="three-execution-tiers">Three Execution Tiers</span><span class="h-px w-8 bg-gold/60"></span>
+        <span class="hairline"></span><span data-i18n="three-execution-tiers">Three Execution Tiers</span><span class="hairline"></span>
       </div>
       <h3 data-i18n="every-service-scaled-to-your-budget" class="reveal delay-1 font-serif display-sm text-navy mt-5 font-normal">Every service, scaled to your budget.</h3>
       <p data-i18n="from-efficient-buy-to-let-finishes" class="reveal delay-2 mt-5 text-stone-500 text-[.95rem] leading-relaxed">From efficient buy-to-let finishes to fully bespoke luxury execution — the process is the same, only the finish level changes.</p>
@@ -818,7 +851,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-16 gap-y-10 items-center">
       <div class="lg:col-span-6">
         <div class="reveal flex items-center gap-4 eyebrow-lg text-gold-light">
-          <span class="h-px w-8 bg-gold/60"></span><span data-i18n="by-invitation">By Invitation</span>
+          <span class="hairline"></span><span data-i18n="by-invitation">By Invitation</span>
         </div>
         <h2 data-i18n="come-see-it-before-you-decide" class="reveal delay-1 font-serif display-sm text-ivory mt-6 font-normal">Come see it before you decide.</h2>
         <p data-i18n="a-private-three-day-discovery-tour" class="reveal delay-2 mt-6 text-ivory/70 leading-relaxed max-w-md">A private, three-day discovery tour of Sofia's best off-market and exclusive listings — curated to your brief, guided by our team from the moment you land.</p>
@@ -869,7 +902,7 @@
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-10">
       <div>
         <div class="reveal flex items-center gap-4 eyebrow-lg text-gold-dark">
-          <span>03</span><span class="h-px w-8 bg-gold/60"></span><span data-i18n="listings">Listings</span>
+          <span>03</span><span class="hairline"></span><span data-i18n="listings">Listings</span>
         </div>
         <h2 data-i18n="exclusive-access-flawless-execution" class="reveal delay-1 font-serif display-sm text-navy mt-6 font-normal">Exclusive access. Flawless execution.</h2>
         <p data-i18n="investment-residential-or-vacation-property-every" class="reveal delay-2 mt-6 text-stone-500 leading-relaxed max-w-xl">Investment, residential, or vacation property — every project is sourced through our private network and finished to the same exacting standard.</p>
@@ -978,7 +1011,7 @@
       </div>
       <div class="lg:col-span-7 order-1 lg:order-2">
         <div class="reveal flex items-center gap-4 eyebrow-lg text-gold-dark">
-          <span>04</span><span class="h-px w-8 bg-gold/60"></span><span data-i18n="why-choose-us">Why Choose Us</span>
+          <span>04</span><span class="hairline"></span><span data-i18n="why-choose-us">Why Choose Us</span>
         </div>
         <h2 data-i18n="your-trusted-partner-on-the-ground" class="reveal delay-1 font-serif display-sm text-navy mt-6 font-normal">Your trusted partner on the ground.</h2>
         <p data-i18n="real-estate-experts-project-managers-renovation" class="reveal delay-2 mt-6 text-stone-500 leading-relaxed max-w-xl">Real estate experts, project managers, renovation workers, designers, custom furniture makers — one team of seasoned specialists, accountable to you from search to management.</p>
@@ -1068,7 +1101,7 @@
     <!-- Client quote — lightweight, no rotator, just one real voice backing up the numbers above -->
     <div class="reveal mt-16 lg:mt-20 text-center max-w-2xl mx-auto">
       <div class="font-serif text-5xl text-gold/50 leading-none">"</div>
-      <p data-i18n="a-rare-combination-of-local-access" class="mt-2 font-serif text-2xl md:text-3xl text-navy leading-[1.4] italic font-medium">A rare combination of local access and international professionalism. I now hold four properties through them.</p>
+      <p data-i18n="a-rare-combination-of-local-access" class="mt-2 font-serif text-2xl md:text-3xl text-navy leading-[1.4] italic font-medium">A rare combination of local access and international professionalism. I now hold two properties through them.</p>
       <div data-i18n="nikolaj-b-investor-from-denmark" class="mt-6 eyebrow text-stone-500">Nikolaj B. — Investor from Denmark</div>
     </div>
 
@@ -1081,7 +1114,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-16 gap-y-12">
       <div class="lg:col-span-5">
         <div class="reveal flex items-center gap-4 eyebrow-lg text-gold-dark">
-          <span>05</span><span class="h-px w-8 bg-gold/60"></span><span data-i18n="why-bulgaria">Why Bulgaria</span>
+          <span>05</span><span class="hairline"></span><span data-i18n="why-bulgaria">Why Bulgaria</span>
         </div>
         <h2 data-i18n="the-smart-move-from-abroad-or" class="reveal delay-1 font-serif display-sm text-navy mt-6 font-normal">The smart move — from abroad or at home.</h2>
         <p data-i18n="bulgaria-s-entry-into-the-eurozone" class="reveal delay-2 mt-6 text-stone-500 leading-relaxed max-w-md">
@@ -1176,7 +1209,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-16 gap-y-10">
       <div class="lg:col-span-4">
         <div class="reveal flex items-center gap-4 eyebrow-lg text-gold-dark">
-          <span>06</span><span class="h-px w-8 bg-gold/60"></span><span data-i18n="frequently-asked">Frequently Asked</span>
+          <span>06</span><span class="hairline"></span><span data-i18n="frequently-asked">Frequently Asked</span>
         </div>
         <h2 data-i18n="answers-before-you-ask" class="reveal delay-1 font-serif display-sm text-navy mt-6 font-normal">Answers, before you ask.</h2>
         <div class="reveal delay-2 mt-10 pt-8 border-t border-stone-200 hidden lg:block">
@@ -1224,6 +1257,42 @@
             </summary>
             <div data-i18n="typically-4-5-of-the-purchase" class="pb-7 pr-10 text-stone-500 leading-relaxed">Typically 4–5% of the purchase price covering notary, municipal tax, registration, and legal fees.</div>
           </details>
+          <details class="faq">
+            <summary><span data-i18n="do-you-handle-turnkey-renovation" class="font-serif text-lg md:text-xl text-navy pr-4">Do you handle turnkey renovation, or do I need to hire contractors myself?</span>
+              <span class="plus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+            </summary>
+            <div data-i18n="turnkey-is-the-whole-point-we-manage" class="pb-7 pr-10 text-stone-500 leading-relaxed">Turnkey is the whole point. We manage architects, licensed contractors and site supervision from the first wall opened to the final photo — you approve decisions, we run the work. No separate contractors to hire or manage.</div>
+          </details>
+          <details class="faq">
+            <summary><span data-i18n="whats-the-difference-between-essential-signature" class="font-serif text-lg md:text-xl text-navy pr-4">What's the difference between the Essential, Signature and Bespoke finish levels?</span>
+              <span class="plus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+            </summary>
+            <div data-i18n="essential-is-an-efficient-rental-ready" class="pb-7 pr-10 text-stone-500 leading-relaxed">Essential is an efficient, rental-ready finish for buy-to-let budgets. Signature adds premium materials and a designed interior throughout. Bespoke is fully custom architecture, joinery and furniture for owner-occupiers or luxury lets. The process is identical — only the finish level and cost change.</div>
+          </details>
+          <details class="faq">
+            <summary><span data-i18n="do-you-offer-interior-design-and-furnishing" class="font-serif text-lg md:text-xl text-navy pr-4">Do you offer interior design and furnishing, or only construction?</span>
+              <span class="plus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+            </summary>
+            <div data-i18n="both-as-one-service-every-renovation" class="pb-7 pr-10 text-stone-500 leading-relaxed">Both, as one service. Every renovation includes interior design — layout, materials, lighting and a bespoke furniture package — so the property is delivered styled and ready to list or move into, not just built.</div>
+          </details>
+          <details class="faq">
+            <summary><span data-i18n="can-you-source-premium-or-luxury-properties" class="font-serif text-lg md:text-xl text-navy pr-4">Can you source premium or luxury properties, not just renovate them?</span>
+              <span class="plus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+            </summary>
+            <div data-i18n="yes-property-sourcing-is-the-first-step" class="pb-7 pr-10 text-stone-500 leading-relaxed">Yes. Property sourcing is the first step of the service, and includes premium and luxury listings — as well as off-market opportunities — in Sofia, Plovdiv, Varna, Bansko and Sozopol, matched to your budget and investment goals.</div>
+          </details>
+          <details class="faq">
+            <summary><span data-i18n="how-much-does-a-full-renovation-and-furnishing" class="font-serif text-lg md:text-xl text-navy pr-4">How much does a full renovation and furnishing package cost?</span>
+              <span class="plus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+            </summary>
+            <div data-i18n="renovation-and-furnishing-budgets-typically" class="pb-7 pr-10 text-stone-500 leading-relaxed">Renovation and furnishing budgets typically range from Essential buy-to-let finishes to fully bespoke luxury execution, scoped to the property and finish level after a walkthrough. Every quote is itemized before work begins, with no hidden costs.</div>
+          </details>
+          <details class="faq">
+            <summary><span data-i18n="do-i-need-to-be-in-bulgaria-during-renovation" class="font-serif text-lg md:text-xl text-navy pr-4">Do I need to be in Bulgaria during the renovation or design process?</span>
+              <span class="plus"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg></span>
+            </summary>
+            <div data-i18n="no-most-clients-manage-the-entire" class="pb-7 pr-10 text-stone-500 leading-relaxed">No. Most clients manage the entire process — design approvals, material selections and progress updates — remotely, with photo and video updates at each milestone. Many never visit the property until it's finished.</div>
+          </details>
         </div>
         <div class="reveal mt-8 pt-6 border-t border-stone-200 lg:hidden text-center">
           <p data-i18n="still-have-a-question" class="text-stone-500 text-[.9rem]">Still have a question?</p>
@@ -1242,7 +1311,7 @@
     <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14">
       <div>
         <div class="reveal flex items-center gap-4 eyebrow-lg text-gold-dark">
-          <span>07</span><span class="h-px w-8 bg-gold/60"></span><span data-i18n="journal">Journal</span>
+          <span>07</span><span class="hairline"></span><span data-i18n="journal">Journal</span>
         </div>
         <h2 data-i18n="notes-on-the-bulgarian-market" class="reveal delay-1 font-serif display-sm text-navy mt-6 font-normal">Notes on the Bulgarian market.</h2>
       </div>
@@ -1511,14 +1580,14 @@
   <div class="max-w-container mx-auto px-6 md:px-10 py-20">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
       <div class="md:col-span-4">
-        <div class="flex items-center gap-3">
-          <svg width="34" height="34" viewBox="0 0 40 40" fill="none">
-            <rect x="4" y="12" width="14" height="24" fill="#B8935A"/>
-            <rect x="22" y="6" width="14" height="30" fill="#FAF8F4"/>
-          </svg>
-          <span class="font-serif text-lg tracking-wide leading-none" data-no-i18n>
-            Bulgaria<br/><span class="eyebrow text-gold-light">Property Concierge</span>
-          </span>
+        <div class="brand brand--reversed">
+          <svg class="brand-mark" viewBox="6 6 36 40" aria-hidden="true" focusable="false">
+          <path d="M8 44 V22 Q8 8 24 8 Q40 8 40 22 V44" fill="none" stroke="#FAF8F4" stroke-width="1.7"/>
+          <rect x="17.5" y="27" width="5.4" height="14" fill="#B8935A"/>
+          <rect x="25.1" y="21" width="5.4" height="20" fill="#FAF8F4"/>
+          <line x1="14" y1="41.2" x2="34" y2="41.2" stroke="#D9BE8A" stroke-width="1.7"/>
+            </svg>
+          <span class="brand-word" data-no-i18n><span class="brand-name">Bulgaria Property</span><span class="brand-sub">CONCIERGE</span></span>
         </div>
         <p data-i18n="boutique-investment-and-relocation-for-international" class="mt-6 text-stone-200/60 leading-relaxed max-w-sm text-[.95rem]">
           Boutique investment and relocation for international clients in Bulgaria.
