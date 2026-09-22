@@ -8,6 +8,13 @@
    Logo      arch over two columns; only on ivory, navy or white; the lockup text is fixed (font and tracking).
 */
 
+/* ── Tailwind gap ─────────────────────────────────────────────────────────────
+   The compiled Tailwind CSS is precompiled from the HTML at some earlier point; a utility class
+   used for the first time after that (like .mt-auto below, on the Listings/Properties card stat
+   rows) has no effect until the build is regenerated. Defining the handful actually needed here
+   is simpler and safer than rerunning the full Tailwind build (see CLAUDE.md). */
+.mt-auto { margin-top: auto; }
+
 :root {
   --navy: #0F1B2E;
   --navy-light: #1B2A44;
