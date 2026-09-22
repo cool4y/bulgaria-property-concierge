@@ -1,0 +1,11 @@
+{
+  "name": "bulgaria-property-concierge-web",
+  "private": true,
+  "description": "Static file server for the public site (index.html, properties.html, css/, js/, images/, llms.txt, robots.txt, sitemap.xml), deployed as its own Railway service alongside backend/ (the API). server.js allowlists exactly these paths — it never serves backend/, tools/, or repo metadata.",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
