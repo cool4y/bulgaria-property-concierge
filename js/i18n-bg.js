@@ -401,9 +401,6 @@ window.I18N_BG = {
   // EN: Renovated Apartment in Ivan Vazov — Sofia · Ivan Vazov · 2026
   "renovated-apartment-in-ivan-vazov-sofia": "Ремонтиран апартамент в Иван Вазов — София · Иван Вазов · 2026",
 
-  // EN: Delivered
-  "delivered": "Предаден",
-
   // EN: Sofia · Ivan Vazov · 2026
   "sofia-ivan-vazov-2026": "София · Иван Вазов · 2026",
 
@@ -440,17 +437,17 @@ window.I18N_BG = {
   // EN: Bedrooms
   "bedrooms": "Спални",
 
-  // EN: Hillside Villa in Boyana — living and dining space with marble table and gold chandelier
-  "hillside-villa-in-boyana-living-and": "Вила на склона в Бояна — хол и трапезария с мраморна маса и златен полилей",
+  // EN: Hillside House in Boyana
+  "hillside-villa-in-boyana-living-and": "Къща на склона в Бояна",
 
   // EN: Sofia · Boyana · 2025
   "sofia-boyana-2025": "София · Бояна · 2025",
 
-  // EN: Hillside Villa in Boyana
-  "hillside-villa-in-boyana": "Вила на склона в Бояна",
+  // EN: Hillside House in Boyana
+  "hillside-villa-in-boyana": "Къща на склона в Бояна",
 
-  // EN: A four-bedroom hillside villa at the foot of Vitosha, fully custom-finished for a private client.
-  "a-four-bedroom-hillside-villa-at": "Вила с четири спални на склон в подножието на Витоша, изцяло довършена по индивидуален проект за частен клиент.",
+  // EN: A four-bedroom hillside house at the foot of Vitosha, fully custom-finished for a private client.
+  "a-four-bedroom-hillside-villa-at": "Къща с четири спални на склон в подножието на Витоша, изцяло довършена по индивидуален проект за частен клиент.",
 
   // EN: 5.5 mo
   "5-5-mo": "5,5 мес.",
