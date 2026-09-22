@@ -38,7 +38,7 @@
     var fromUrl = new URLSearchParams(location.search).get('lang');
     if (LANGS.indexOf(fromUrl) !== -1) { remember(fromUrl); return fromUrl; }
     if (LANGS.indexOf(stored()) !== -1) return stored();
-    return /^bg/i.test(navigator.language || '') ? 'bg' : 'en';
+    return 'bg';
   }
 
   // ── translating ──────────────────────────────────────────────────────────

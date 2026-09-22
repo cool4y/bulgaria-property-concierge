@@ -49,8 +49,7 @@
 .hdr-nav .navlink { color: rgb(15 27 46 / .88); }
 
 /* ── Hero eyebrow: a thin Ivory backing, so the label reads over the photo instead of fighting its bright spots ── */
-.hero-eyebrow { display: inline-flex; width: fit-content; background: rgb(250 248 244 / .82); padding: .5rem 1rem .5rem .8rem; }
-.hero-eyebrow .hairline { background: var(--gold-dark); }
+.hero-eyebrow { display: inline-flex; width: fit-content; background: rgb(250 248 244 / .82); padding: .5rem 1rem; }
 
 /* ── Logo: arch over two columns ─────────────────────────────────────────────
    Markup: <a class="brand"> <svg class="brand-mark">…</svg> <span class="brand-word">…</span> </a>

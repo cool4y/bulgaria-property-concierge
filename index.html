@@ -13,7 +13,7 @@
 (function () {
   try {
     var d = document.documentElement, q = new URLSearchParams(location.search).get('lang'), s = localStorage.getItem('bpc_lang');
-    var l = q === 'bg' || q === 'en' ? q : s === 'bg' || s === 'en' ? s : /^bg/i.test(navigator.language || '') ? 'bg' : 'en';
+    var l = q === 'bg' || q === 'en' ? q : s === 'bg' || s === 'en' ? s : 'bg';
     d.setAttribute('data-lang', l);
     if (l === 'bg') { d.classList.add('i18n-loading'); setTimeout(function () { d.classList.remove('i18n-loading'); }, 2500); }
   } catch (e) {}
@@ -449,7 +449,6 @@
   <div class="relative z-10 w-full max-w-container mx-auto px-6 md:px-10 pb-24 md:pb-28 pt-40">
     <div class="max-w-3xl">
       <div class="reveal hero-eyebrow flex items-center gap-4 text-[.85rem] md:text-[.95rem] tracking-[.1em] uppercase font-semibold text-gold-dark mb-6">
-        <span class="hairline"></span>
         <span data-i18n="one-partner-from-sourcing-property-to">One partner. From sourcing property to keys.</span>
       </div>
 

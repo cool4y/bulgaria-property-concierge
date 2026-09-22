@@ -2,8 +2,9 @@
 
 Boutique full-cycle property investment & relocation service, Sofia, Bulgaria. This file exists so Claude Code can pick up this project without re-deriving context that was built up over a long claude.ai session.
 
-**Live site:** https://cool4y.github.io/bulgaria-property-concierge/
-**Repo:** github.com/cool4y/bulgaria-property-concierge (public, GitHub Pages, deploys from `main`)
+**Live site:** https://bulgariapropertyconcierge.com/ (Railway; the real, canonical domain — see Deployment below)
+**Also live (mirror):** https://cool4y.github.io/bulgaria-property-concierge/ — same repo, same `main` branch, deploys automatically alongside Railway. **It serves the entire repo**, including `backend/` source, `CLAUDE.md`, etc. (confirmed: `backend/package.json` is publicly fetchable there). The Railway frontend (`server.js`) does not have this problem — it allowlists only the public files. Do not rely on the GitHub Pages copy as "the" site; it is a side effect of GitHub Pages serving the whole repo root, kept as a free backup mirror. GitHub Pages also stops working outright if the repo is ever made private (GitHub Free has no Pages-from-private-repo) — it needs re-enabling by hand in repo Settings -> Pages afterward, going private/public does not restore it automatically.
+**Repo:** github.com/cool4y/bulgaria-property-concierge (public — keep it public; see above — deploys from `main` to GitHub Pages and to Railway)
 
 ---
 
@@ -59,7 +60,7 @@ images/                 — photos and partner logos (real files; only the hero 
 
 Both pages are bilingual. The English text in the HTML is the source of truth; Bulgarian is applied in the browser, instantly, with no reload.
 
-- **Switcher**: an `EN | BG` segmented control in a hairline gold frame (active language filled navy, no flags), in the header next to the button. `js/i18n.js` remembers the choice (localStorage), honours `?lang=bg` / `?lang=en`, and gives Bulgarian browsers Bulgarian on a first visit. A small inline snippet in each `<head>` hides the page for Bulgarian visitors until the text is swapped, so English never flashes.
+- **Switcher**: an `EN | BG` segmented control in a hairline gold frame (active language filled navy, no flags), in the header next to the button. `js/i18n.js` remembers the choice (localStorage), honours `?lang=bg` / `?lang=en`, and **defaults to Bulgarian for every visitor**, regardless of browser language (`detect()` in `js/i18n.js` and the inline snippet in each `<head>` both just fall through to `'bg'` — deliberate, not browser-language detection). A small inline snippet in each `<head>` hides the page for Bulgarian visitors until the text is swapped, so English never flashes.
 - **Dictionary**: `js/i18n-bg.js`, `"key": "Bulgarian"`, each entry preceded by a `// EN:` comment with the English original. Elements carry `data-i18n="key"` (`data-i18n-html` when the text contains inline markup; `data-i18n-alt` / `-title` / `-placeholder` / `-aria-label` / `-content` for attributes; `data-no-i18n` to opt out, e.g. the logo).
 - **After changing or adding English text** in a page: `python tools/i18n_tool.py tag` (tags the new text and adds empty dictionary entries), translate the empty entries, then `python tools/i18n_tool.py check` (must report 0 untagged / 0 untranslated). `python tools/i18n_tool.py import file.json` bulk-fills translations. The tool never re-serialises the HTML, it only inserts attributes.
 - **Text produced by JavaScript** (form messages, the "N properties" counter, the VIP prefill) goes through `tr('key', 'English')`, declared at the top of each page's inline script. The tool finds these calls too.
@@ -105,16 +106,35 @@ The FAQ section (`#faq` in `index.html`) doubles as a `FAQPage` JSON-LD block in
 
 Node.js + Express + PostgreSQL (via `pg`, not Prisma or `better-sqlite3` — both were tried and abandoned because their native/engine binaries couldn't download in the sandbox this was built in; irrelevant on a normal dev machine, but `pg`/plain SQL is what's actually built and tested).
 
-- **Not yet deployed anywhere.** It's complete, tested code sitting in the repo. See `backend/README.md` for full setup + Railway/Render deployment steps.
+- **Deployed and live on Railway** (see Deployment below). `index.html`'s `API_BASE` already points at `https://bulgaria-property-concierge-production.up.railway.app`; do not set it back to `''`. Verified end-to-end (a real POST to `/api/contact` returned `{"id":2,...}`, i.e. row 2 — there was already a real submission before that test).
 - Schema: `admin_users`, `listings`, `contact_submissions` (`backend/src/db/schema.sql`).
 - `npm run migrate`, `npm run seed:admin`, `npm run seed:listings` — the listings seed has the **real** 15 properties migrated from `properties.html`, not placeholder data.
 - Admin panel at `/admin` (plain HTML/JS, JWT auth via `backend/public/admin/index.html`).
-- Once deployed: set `index.html`'s `API_BASE`, set the backend's `ALLOWED_ORIGINS` to the GitHub Pages origin, and replace the test `JWT_SECRET`/`SEED_ADMIN_PASSWORD`/SMTP credentials with real ones — everything currently in `.env.example` is documented but unset.
+- `emailSent: false` on a real submission — SMTP is still the placeholder from `.env.example`, notification emails do not actually go out yet.
+- Real `JWT_SECRET`/`SEED_ADMIN_PASSWORD`/SMTP credentials: check with the user whether Railway's variables still hold the test values from `.env.example` before treating this as done.
+
+## Deployment (Railway)
+
+`railway status` from anywhere in the repo (CLI is authenticated as epavlov.bg@gmail.com) links to project **pure-commitment**. Three resources, one `production` environment:
+
+- **`bulgaria-property-concierge`** — the API (`/backend`, root directory set to `backend/` in Railway's service settings). Free domain `bulgaria-property-concierge-production.up.railway.app` (this is what `API_BASE` uses — stable, keep using it). No custom domain attached (deliberately — the API does not need one, and Trial/Hobby plans cap custom domains **per service**, so spending the slot here would block the frontend below).
+- **`web`** — the public site. Root directory is the repo root; deploys via `package.json` -> `node server.js`. **`server.js` is a hand-rolled allowlist server**, not a generic static-file server: it only serves `index.html`, `properties.html`, `llms.txt`, `robots.txt`, `sitemap.xml`, and everything under `css/`, `js/`, `images/`. Everything else in the repo (`backend/`, `tools/`, `CLAUDE.md`, `package.json`, `server.js` itself, `.git`) 404s. If you add a new top-level public file or directory, add it to the `ALLOWED_FILES`/`ALLOWED_DIRS` lists in `server.js` or it will not be servable. Custom domain: `bulgariapropertyconcierge.com` (apex; no `www.` — that subdomain has no DNS record and is not set up).
+- **`Postgres`** — the database, used by the backend service. `railway variables --service Postgres` has the connection details; `DATABASE_URL` there is `postgres.railway.internal`, only reachable from inside Railway's network (not from a local machine, and not via `railway run` either — that does not tunnel it). Querying the DB from outside needs `railway connect` with `psql` installed locally, or a public proxy domain added in Railway's Postgres settings.
+
+**Both Railway services and GitHub Pages deploy from the same `main` branch push** — one `git push` updates all three. There is no separate deploy step. If an auto-deploy seems not to have landed, `railway redeploy --service web --from-source --yes` (or `--service bulgaria-property-concierge`) forces a fresh pull and rebuild from the latest commit — useful for confirming what is *actually* live, since Railway can report a service "Online" while it is still serving an older deployment's content for a few seconds after a push.
+
+**Cache gotcha — check this before trusting any "is the fix live" test**: `server.js` sets `Cache-Control: public, max-age=300` on everything under `css/`, `js/`, `images/` (5 minutes — it used to be 24 hours, which once left a fixed bug looking live on the origin but stale for anyone hitting Cloudflare's edge cache for the custom domain; `curl` the direct Railway service domain, e.g. `https://web-production-ce40af.up.railway.app/js/i18n-bg.js`, to bypass Cloudflare and see the real origin content, and check the `cf-cache-status` response header — `HIT` means you are looking at a possibly-stale cached copy, not the origin). If something is confirmed fixed at the origin but still wrong on `bulgariapropertyconcierge.com`, the fix is real — it is a Cloudflare edge cache still holding the old file until its TTL expires; ask the user to purge it (Cloudflare dashboard -> Caching -> Configuration -> Purge Everything, or purge just the affected URLs) rather than re-debugging the deploy.
+
+**DNS**: managed by the user in Cloudflare. The apex `bulgariapropertyconcierge.com` is a CNAME to a Railway-provided target (get the current one with `railway domain status bulgariapropertyconcierge.com --service web`); Railway resolves it internally by which service currently claims that domain name, so the exact CNAME target value matters less than which service owns the domain in Railway. `ALLOWED_ORIGINS` on the backend includes `https://bulgariapropertyconcierge.com`, the Railway-generated `web` domain, and `https://cool4y.github.io` (the GitHub Pages mirror) — keep all three if you touch it.
+
+**Changing DNS, custom domains, or certificates requires the user's explicit permission each time** — Claude Code's auto-mode classifier blocks these `railway domain ...` actions by default, and it does so per-action (an earlier "yes" for one domain command did not cover a later `delete`).
 
 ## Known outstanding items (as of last session)
 
-- [ ] Backend not deployed — contact form has nowhere to actually send data yet
-- [ ] Placeholder contact info still live sitewide: phone `+359 88 234 5678` / `+359881234567`, domain `bulgariapropertyconcierge.com` (canonical URLs, OG tags, JSON-LD)
+- [ ] Placeholder contact info still live sitewide: phone `+359 88 234 5678` / `+359881234567` — the domain itself is now real and fixed (see Deployment), but the phone numbers are not
+- [ ] SMTP not configured for real — contact form submissions save to the DB fine but no notification email goes out (`emailSent: false`)
+- [ ] GitHub Pages mirror exposes the whole repo (`backend/` source, `CLAUDE.md`, ...) — not fixed there, only avoided on the Railway `web` service. Options if this needs closing: stop deploying `backend/` to Pages (e.g. a `.github/workflows` step that publishes only the public subset), or drop the Pages mirror once the Railway domain has been live long enough to trust
+- [ ] `www.bulgariapropertyconcierge.com` has no DNS record — only the apex works. Add a CNAME if `www` traffic needs to resolve
 - [ ] Real photography still needed in a few spots (some Unsplash stock remains — tier-card photos and partner logos are real, uploaded by the client)
 - [ ] No privacy policy / GDPR notice, despite the form collecting name/email/phone/budget from an EU-focused audience
 - [ ] No real Lighthouse/PageSpeed audit has been run against the live deployment

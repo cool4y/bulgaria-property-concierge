@@ -13,7 +13,7 @@
 (function () {
   try {
     var d = document.documentElement, q = new URLSearchParams(location.search).get('lang'), s = localStorage.getItem('bpc_lang');
-    var l = q === 'bg' || q === 'en' ? q : s === 'bg' || s === 'en' ? s : /^bg/i.test(navigator.language || '') ? 'bg' : 'en';
+    var l = q === 'bg' || q === 'en' ? q : s === 'bg' || s === 'en' ? s : 'bg';
     d.setAttribute('data-lang', l);
     if (l === 'bg') { d.classList.add('i18n-loading'); setTimeout(function () { d.classList.remove('i18n-loading'); }, 2500); }
   } catch (e) {}

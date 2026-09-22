@@ -70,7 +70,11 @@ const server = http.createServer((req, res) => {
     const ext = path.extname(filePath).toLowerCase();
     const headers = { 'Content-Type': MIME[ext] || 'application/octet-stream' };
     const topDir = path.relative(ROOT, filePath).split(path.sep)[0];
-    if (ALLOWED_DIRS.includes(topDir)) headers['Cache-Control'] = 'public, max-age=86400';
+    // Short TTL: long caching (e.g. 24h) means an edge cache like Cloudflare can keep serving a
+    // stale css/js file for that whole window after a deploy, even though the origin already has
+    // the fix (bit us once already - see CLAUDE.md). 5 minutes is enough to help repeat page loads
+    // without making the next fix take most of a day to actually reach visitors.
+    if (ALLOWED_DIRS.includes(topDir)) headers['Cache-Control'] = 'public, max-age=300';
     res.writeHead(200, headers);
     res.end(data);
   });
