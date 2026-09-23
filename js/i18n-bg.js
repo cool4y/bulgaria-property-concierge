@@ -68,8 +68,8 @@ window.I18N_BG = {
   // EN: Sofia.
   "sofia": "София.",
 
-  // EN: Whether you're buying from abroad or here at home, we manage every step - from sourcing the property to a fully finished home. <span class="text-navy font-medium">Completely hassle-free.</span>
-  "whether-you-re-buying-from-abroad": "Независимо дали купувате от чужбина, или тук, у дома, ние поемаме всяка стъпка - от намирането на имота до напълно завършен дом. <span class=\"text-navy font-medium\">Без никакви грижи.</span>",
+  // EN: Whether you're buying from abroad or here at home, we manage every step: from sourcing the property to a fully finished home. <span class="text-navy font-medium">Completely hassle-free.</span>
+  "whether-you-re-buying-from-abroad": "Независимо дали купувате от чужбина, или тук, у дома, ние поемаме всяка стъпка: от намирането на имота до напълно завършен дом. <span class=\"text-navy font-medium\">Без никакви грижи.</span>",
 
   // EN: Book a Free Consultation
   "book-a-free-consultation": "Безплатна консултация",

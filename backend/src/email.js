@@ -1,26 +1,14 @@
-const nodemailer = require('nodemailer');
-
-let transporter = null;
-function getTransporter() {
-  if (transporter) return transporter;
-  if (!process.env.SMTP_HOST) return null; // email not configured — see .env.example
-
-  transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT || 587),
-    secure: process.env.SMTP_SECURE === 'true', // true for port 465, false for 587/25
-    auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASS,
-    },
-  });
-  return transporter;
-}
+// Contact-form notifications, sent through ZeptoMail's REST API (not SMTP - ZeptoMail's SMTP
+// password is only ever shown masked in their dashboard, with no way to copy the real value, so
+// the API token (shown in full, under the "API" tab of the Mail Agent) is what this uses instead).
+// Docs: https://www.zoho.com/zeptomail/help/api/email-sending.html
+const ZEPTOMAIL_API = 'https://api.zeptomail.eu/v1.1/email'; // .eu cluster - matches the domain's DNS setup
 
 async function sendContactNotification(submission) {
-  const t = getTransporter();
-  if (!t) {
-    console.warn('SMTP not configured — skipping email notification. See .env.example.');
+  const token = process.env.ZEPTOMAIL_TOKEN;
+  const to = process.env.NOTIFY_TO;
+  if (!token || !to) {
+    console.warn('ZEPTOMAIL_TOKEN / NOTIFY_TO not configured — skipping email notification. See .env.example.');
     return { sent: false, reason: 'not_configured' };
   }
 
@@ -38,13 +26,24 @@ async function sendContactNotification(submission) {
   ].filter(Boolean);
 
   try {
-    await t.sendMail({
-      from: process.env.NOTIFY_FROM || process.env.SMTP_USER,
-      to: process.env.NOTIFY_TO || process.env.SMTP_USER,
-      replyTo: submission.email,
-      subject: `New consultation request — ${submission.name}`,
-      text: lines.join('\n'),
+    const res = await fetch(ZEPTOMAIL_API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Zoho-enczapikey ${token}`,
+      },
+      body: JSON.stringify({
+        from: { address: process.env.NOTIFY_FROM || `noreply@${process.env.NOTIFY_DOMAIN || 'bulgariapropertyconcierge.com'}` },
+        to: [{ email_address: { address: to } }],
+        reply_to: [{ address: submission.email, name: submission.name }],
+        subject: `New consultation request — ${submission.name}`,
+        textbody: lines.join('\n'),
+      }),
     });
+    if (!res.ok) {
+      const body = await res.text().catch(() => '');
+      throw new Error(`ZeptoMail ${res.status}: ${body.slice(0, 300)}`);
+    }
     return { sent: true };
   } catch (err) {
     console.error('Failed to send contact notification email:', err.message);
