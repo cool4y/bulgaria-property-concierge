@@ -41,9 +41,11 @@
 .from-stone-400 { --tw-gradient-from: rgb(15 27 46 / .4) var(--tw-gradient-from-position); }
 
 /* ── Type details from the guidebook ─────────────────────────────────────────
-   Eyebrows / labels: Inter, capitals, tracking 0.14em. The gold hairline (44px) opens sections and labels. */
+   Eyebrows / labels: Inter, capitals, tracking 0.14em. The guidebook's gold hairline (44px) that
+   used to open every section and the hero label was dropped per feedback - read as a stray dash
+   next to the text. Don't reintroduce a <span class="hairline"> anywhere; if this needs to come
+   back, ask first. */
 .eyebrow, .eyebrow-lg { letter-spacing: .14em; }
-.hairline { display: block; flex: none; width: 44px; height: 1px; background: var(--gold); }
 
 /* ── Main nav links: dark enough to read at rest, not only on hover (the compiled text-stone-600 is too pale) ── */
 .hdr-nav .navlink { color: rgb(15 27 46 / .88); }
