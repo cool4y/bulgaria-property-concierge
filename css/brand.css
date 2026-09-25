@@ -109,7 +109,11 @@ picture { display: contents; }
 
 /* ── Hero stat frame ("10 Years Experience"): sits on the photo, not on a solid card, so the usual Beige
    line (too close to the hero's ivory wash there) is swapped for a stronger Navy tint, just for this box. ── */
-.stat-frame { border-color: rgb(15 27 46 / .22); }
+.stat-frame { border-color: rgb(15 27 46 / .45); background: rgb(250 248 244 / .92); }
+.stat-frame .font-serif { font-size: 2.1rem; font-weight: 500; }
+/* "Scroll" cue over the busy bottom of the hero photo: bolder, navy, with a soft ivory halo */
+.hero-scroll .eyebrow { color: rgb(15 27 46); font-weight: 700; text-shadow: 0 0 6px rgb(250 248 244 / .95), 0 0 14px rgb(250 248 244 / .9), 0 0 24px rgb(250 248 244 / .7); }
+.hero-scroll .scroll-line { width: 2px; background: linear-gradient(to bottom, rgb(15 27 46), rgb(15 27 46 / 0)); }
 
 /* ── Header: a solid Ivory bar, so the navigation stays readable over the hero photo ───────────────────────
    Navy text on Ivory, a Beige hairline below. It tightens a little once the page scrolls (.header-scrolled is set by the page script). */
