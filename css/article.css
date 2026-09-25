@@ -38,3 +38,8 @@
 .art-footer nav a:hover, .art-footer .mail:hover { color: var(--ivory); }
 .art-footer .label { font: 500 .72rem/1 Inter, system-ui, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-light); margin: 0 0 1rem; }
 .art-footer .fine { margin: 1.5rem 0 0; font-size: .8rem; color: rgb(250 248 244 / .5); }
+
+/* One reading column: title block, cover photo, body text, tables, call-to-action and related articles all share the
+   same left and right edges (760px + the page gutter). The cover used to sit in a wider column and overhung the text. */
+.wrap, .wrap-wide { max-width: 760px; }
+.cover { aspect-ratio: 16 / 9; margin: 0 0 2.2rem; }
