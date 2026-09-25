@@ -156,12 +156,9 @@ picture { display: contents; }
    eyebrow 11px, excerpt 15px, headline 24px. Same sizes on the homepage preview and the blog page. ── */
 #journal article.lift .eyebrow, #articles article.lift .eyebrow { font-size: .82rem; font-weight: 600; letter-spacing: .14em; }
 #journal article.lift .text-stone-400, #articles article.lift .text-stone-400 { color: rgb(15 27 46 / .62); }
-#journal article.lift h3, #articles article.lift h3 { font-size: clamp(1.6rem, 2.1vw, 1.85rem); line-height: 1.2; }
 #journal article.lift p, #articles article.lift p { font-size: 1.08rem; line-height: 1.65; color: rgb(15 27 46 / .74); }
 .blog-intro .eyebrow { font-size: .9rem; font-weight: 600; letter-spacing: .14em; }
-.blog-title { font-size: clamp(2.6rem, 5.6vw, 4rem); line-height: 1.04; max-width: 20ch; }
 .blog-lead { font-size: clamp(1.2rem, 1.7vw, 1.35rem); line-height: 1.65; color: rgb(15 27 46 / .74); }
-.blog-cta h2 { font-size: clamp(1.9rem, 3.2vw, 2.5rem); }
 .blog-cta p { font-size: 1.15rem; color: rgb(15 27 46 / .74); }
 .blog-cta-btn { font-size: .85rem; }
 
