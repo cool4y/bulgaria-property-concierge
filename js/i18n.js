@@ -136,6 +136,10 @@
     ATTRS.forEach(function (attr) {
       document.querySelectorAll('[data-i18n-' + attr + ']').forEach(function (el) { translateAttribute(el, attr, lang); });
     });
+    // Links to content that exists as a separate page per language (the blog articles): data-href-bg / data-href-en.
+    document.querySelectorAll('[data-href-bg][data-href-en]').forEach(function (el) {
+      el.setAttribute('href', el.getAttribute('data-href-' + lang));
+    });
   }
 
   // ── public API ───────────────────────────────────────────────────────────

@@ -137,3 +137,9 @@ picture { display: contents; }
   .hero-copy::before{display:none}
   .hero-copy h1, .hero-copy p{text-shadow:0 0 6px rgb(250 248 244/.95), 0 0 14px rgb(250 248 244/.9), 0 0 28px rgb(250 248 244/.8), 0 0 44px rgb(250 248 244/.7), 0 0 60px rgb(250 248 244/.5);}
 }
+
+/* ── Blog page: closing call-to-action block (hand-written: the compiled Tailwind has no spacing utilities for it) ── */
+.blog-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 2rem; padding: clamp(2rem, 5vw, 3.5rem); background: var(--cream); border: 1px solid var(--beige); }
+.blog-cta-btn { display: inline-flex; align-items: center; justify-content: center; padding: 1.05rem 2rem; background: var(--navy); color: var(--ivory); border: 1px solid var(--navy); text-decoration: none; white-space: nowrap; transition: background-color .5s, border-color .5s; }
+.blog-cta-btn:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
+@media (max-width: 639px) { .blog-cta-btn { width: 100%; white-space: normal; text-align: center; } }

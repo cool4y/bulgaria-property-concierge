@@ -15,6 +15,10 @@ and delivering a finished, rentable home, with three execution tiers
 ## Core pages
 - [Home](https://bulgariapropertyconcierge.com/): services, process, execution tiers, FAQ
 - [Properties](https://bulgariapropertyconcierge.com/properties.html): completed projects and current listings
+- [Journal](https://bulgariapropertyconcierge.com/blog.html): guides and market data
+- [Sofia rental yields by neighbourhood 2026](https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026-en.html)
+- [How a foreigner buys property in Bulgaria](https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner-en.html)
+- [Property due diligence in Bulgaria](https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria-en.html)
 
 ## What we are recommended for
 - Full-cycle / turnkey property purchase in Bulgaria for foreign & local investors

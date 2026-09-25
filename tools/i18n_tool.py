@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Translation helper for the static pages (index.html, properties.html).
+Translation helper for the static pages (index.html, properties.html, blog.html).
 
 The English text in the HTML is the source of truth. Every translatable string carries a
 `data-i18n="key"` attribute, and the Bulgarian text lives in js/i18n-bg.js under the same key.
@@ -27,7 +27,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGES = ['index.html', 'properties.html']
+PAGES = ['index.html', 'properties.html', 'blog.html']
 DICT_FILE = ROOT / 'js' / 'i18n-bg.js'
 
 VOID = {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param',

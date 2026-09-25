@@ -27,6 +27,76 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bulgariapropertyconcierge.com/properties.html"/>
   </url>
 
+  <url>
+    <loc>https://bulgariapropertyconcierge.com/blog.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bulgariapropertyconcierge.com/blog.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://bulgariapropertyconcierge.com/blog.html?lang=bg"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bulgariapropertyconcierge.com/blog.html"/>
+  </url>
+
+  <url>
+    <loc>https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026.html"/>
+  </url>
+
+  <url>
+    <loc>https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026-en.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bulgariapropertyconcierge.com/journal/sofia-rental-yields-by-neighbourhood-2026.html"/>
+  </url>
+
+  <url>
+    <loc>https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner.html"/>
+  </url>
+
+  <url>
+    <loc>https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner-en.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-as-a-foreigner.html"/>
+  </url>
+
+  <url>
+    <loc>https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria.html"/>
+  </url>
+
+  <url>
+    <loc>https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria-en.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bulgariapropertyconcierge.com/journal/property-due-diligence-bulgaria.html"/>
+  </url>
+
   <!-- TEMPLATE — copy for every future Journal / blog article:
   <url>
     <loc>https://bulgariapropertyconcierge.com/journal/buying-property-in-bulgaria-guide.html</loc>

@@ -19,8 +19,11 @@ Boutique full-cycle property investment & relocation service, Sofia, Bulgaria. T
 ```
 index.html              — homepage (was preview.html, renamed for GitHub Pages)
 properties.html          — listings/properties browse page
+blog.html               — Journal index: cards for the articles (same shell as properties.html, i18n via the dictionary)
+journal/                — the articles, one standalone page per language (slug.html = BG, slug-en.html = EN)
 backend/                — Express + PostgreSQL API (see backend/README.md)
 js/i18n.js, js/i18n-bg.js — EN/BG language switcher and the Bulgarian dictionary (see Languages below)
+css/article.css        — brings the standalone articles to site standard (header, footer, no dark theme)
 css/brand.css          — brand layer from the brand guidebook, loaded after the page styles (see Brand below)
 llms.txt, robots.txt, sitemap.xml — AI/search discoverability files at the site root (see SEO / GEO below)
 tools/i18n_tool.py      — tags new text for translation and checks the dictionary
@@ -97,6 +100,13 @@ The site follows `bpc-brand-guidebook.pdf` (the guidebook and the logo kit, SVG/
 - **Hero eyebrow / stat frame**: the label and the "10 Years Experience" box sit directly on the hero photo, where the palette's usual Beige border/backing is too low-contrast. `.hero-eyebrow` gives the label an Ivory backing; `.stat-frame` gives the stat box a stronger Navy-tint border. Both are scoped overrides in `brand.css`, not a change to the Beige rule used everywhere else (cards, dividers on solid backgrounds keep Beige).
 - **Chat buttons** (Viber / WhatsApp): kept the apps' own purple `#7360F2` and green `#25D366` (tried a navy-outline brand treatment; the user asked for the original colours back — don't re-apply the outline).
 - Not covered yet: the admin panel under `backend/public/admin` is not restyled.
+
+## Blog (Journal)
+
+- **Pages**: `blog.html` (index, 3 cards, translated through the normal dictionary) and `journal/<slug>.html` + `journal/<slug>-en.html`. Articles are standalone pages with their own reading styles inline (from the content team's exports), plus `../css/brand.css` (logo, language switch) and `../css/article.css` (site header/footer, square buttons, no dark theme, no eyebrow hairline). They have no i18n system: BG and EN are two files, and the BG|EN switch in the article header links to the other file. `server.js` serves `journal/` and `blog.html`.
+- **Cards** (blog.html and the preview on the homepage `#journal`) carry `data-href-bg` / `data-href-en`; `js/i18n.js` swaps the `href` when the language changes, so BG visitors open the BG article and EN visitors the EN one. `tools/i18n_tool.py` now covers `blog.html` too.
+- **Adding an article**: copy an existing pair in `journal/` (fix title, description, canonical, og tags, hreflang, JSON-LD, `related` links), add a cover (`blog-<name>-<hash>.avif/.webp` 1200x800 + `og-blog-<name>-<hash>.jpg` 1200x630 in `images/`, Unsplash free photos only), add a card in both `blog.html` and the homepage (keep 3 there, newest first), run `python tools/i18n_tool.py tag`, translate the new keys, add the URLs to `sitemap.xml` (with hreflang pairs) and `llms.txt`.
+- Cover photos are reused from the site (Sofia apartment building, modern villa, house model with keys), chosen to fit the brand guidebook's photography rules (real architecture, warm light, no clichéd stock people).
 
 ## SEO / GEO (AI discoverability)
 

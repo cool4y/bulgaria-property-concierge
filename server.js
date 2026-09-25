@@ -16,13 +16,14 @@ const PORT = process.env.PORT || 3000;
 const ALLOWED_FILES = new Set([
   'index.html',
   'properties.html',
+  'blog.html',
   'llms.txt',
   'robots.txt',
   'sitemap.xml',
   'googleaca0568054ff53c5.html', // Google Search Console ownership verification - must stay reachable at the site root
 ]);
 // Top-level directories whose entire contents may be served.
-const ALLOWED_DIRS = ['css', 'js', 'images'];
+const ALLOWED_DIRS = ['css', 'js', 'images', 'journal'];
 // Photos written by tools/localize_images.py end in a content hash (photo-1f0594d2b5d9-1400-08ffeeca.avif), so a changed
 // photo gets a new name and can be cached for a year. Everything else in these folders keeps the short TTL below.
 const HASHED_IMAGE = /-[0-9a-f]{8}\.(?:avif|webp|jpg)$/;

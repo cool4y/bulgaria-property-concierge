@@ -59,7 +59,7 @@ window.I18N_BG = {
   // EN: Mobile navigation
   "mobile-navigation": "Мобилна навигация",
 
-  // EN: Sofia skyline at sunset with Capital Fort tower and South Park
+  // EN: Alexander Nevsky Cathedral in Sofia at dusk with Vitosha mountain behind the city
   "alexander-nevsky-cathedral-in-sofia-at-dusk": "Катедралата „Александър Невски“ в София по здрач, с Витоша зад града",
 
   // EN: One partner. From sourcing property to keys.
@@ -665,50 +665,11 @@ window.I18N_BG = {
   // EN: View all articles
   "view-all-articles": "Всички статии",
 
-  // EN: Sofia skyline representing Bulgaria's Eurozone accession and its impact on property investment
-  "sofia-skyline-representing-bulgaria-s-eurozone": "Панорама на София, илюстрираща присъединяването на България към еврозоната и влиянието му върху инвестициите в имоти",
-
-  // EN: Investment
-  "investment": "Инвестиции",
-
-  // EN: 15 October 2025
-  "15-october-2025": "15 октомври 2025 г.",
-
-  // EN: Bulgaria's Eurozone accession and what it means for property.
-  "bulgaria-s-eurozone-accession-and-what": "Присъединяването на България към еврозоната и какво означава то за имотите.",
-
-  // EN: A brief look at how currency stability could reshape investor demand in Sofia and beyond.
-  "a-brief-look-at-how-currency": "Кратък поглед към това как валутната стабилност може да промени инвеститорското търсене в София и извън нея.",
-
-  // EN: Residential street in Sofia illustrating neighbourhood rental yield comparison
-  "residential-street-in-sofia-illustrating-neighbourhood": "Жилищна улица в София, илюстрираща сравнение на наемната доходност по квартали",
-
   // EN: Market
   "market": "Пазар",
 
-  // EN: 3 October 2025
-  "3-october-2025": "3 октомври 2025 г.",
-
-  // EN: Which Sofia neighbourhoods deliver the best rental yields?
-  "which-sofia-neighbourhoods-deliver-the-best": "Кои софийски квартали носят най-висока наемна доходност?",
-
-  // EN: Data from the last twelve months across Lozenets, Iztok, and Studentski grad.
-  "data-from-the-last-twelve-months": "Данни за последните дванадесет месеца от Лозенец, Изток и Студентски град.",
-
-  // EN: Entrepreneur working remotely, illustrating relocation to Bulgaria for business owners
-  "entrepreneur-working-remotely-illustrating-relocation-to": "Предприемач, работещ дистанционно, илюстриращ преместването в България на собственици на бизнес",
-
   // EN: Guides
   "guides": "Ръководства",
-
-  // EN: 22 September 2025
-  "22-september-2025": "22 септември 2025 г.",
-
-  // EN: Relocation to Bulgaria: a checklist for entrepreneurs.
-  "relocation-to-bulgaria-a-checklist-for": "Преместване в България: контролен списък за предприемачи.",
-
-  // EN: Residency, banking, tax registration, healthcare, and schools - everything you need to plan.
-  "residency-banking-tax-registration-healthcare-and": "Пребиваване, банкиране, данъчна регистрация, здравеопазване и училища - всичко, което трябва да планирате.",
 
   // EN: Modern furnished apartment interior delivered by Bulgaria Property Concierge
   "modern-furnished-apartment-interior-delivered-by": "Модерен обзаведен апартамент, предаден от Bulgaria Property Concierge",
@@ -1222,5 +1183,53 @@ window.I18N_BG = {
 
   // EN: No. Most clients manage the entire process - design approvals, material selections and progress updates - remotely, with photo and video updates at each milestone. Many never visit the property until it's finished.
   "no-most-clients-manage-the-entire": "Не. Повечето клиенти управляват целия процес - одобрения на дизайна, избор на материали и напредъка - дистанционно, с актуализации със снимки и видео при всеки етап. Много клиенти виждат имота за първи път едва след завършването му.",
+
+  // EN: Elegant apartment building with curved balconies in a Sofia-style neighbourhood
+  "sofia-rental-yields-by-neighbourhood-2026-photo": "Елегантна жилищна сграда с извити балкони в квартал на София",
+
+  // EN: Modern white villa with a swimming pool
+  "buying-property-in-bulgaria-as-a-foreigner-photo": "Модерна бяла вила с басейн",
+
+  // EN: Miniature house with keys on a wooden table
+  "property-due-diligence-bulgaria-photo": "Умалена къща с ключове върху дървена маса",
+
+  // EN: 25 September 2026
+  "25-september-2026": "25 септември 2026",
+
+  // EN: Sofia rental yields by neighbourhood: the full 2026 map.
+  "sofia-rental-yields-by-neighbourhood-the": "Наемна доходност в София по квартали: пълна карта за 2026.",
+
+  // EN: The national average hides a gap of more than 2 percentage points between Sofia's strongest and weakest districts.
+  "the-national-average-hides-a-gap": "Средното число за страната крие разлика от над 2 процентни пункта между най-силните и най-слабите квартали на София.",
+
+  // EN: How a foreigner buys property in Bulgaria: 7 steps, no surprises.
+  "how-a-foreigner-buys-property-in": "Как чужденец купува имот в България: 7 стъпки без изненади.",
+
+  // EN: Your rights depend on your citizenship, and the land under a house is treated differently from the building itself.
+  "your-rights-depend-on-your-citizenship": "Правата зависят от гражданството, а земята под къщата се третира различно от самата сграда.",
+
+  // EN: The due diligence that saves the deal.
+  "the-due-diligence-that-saves-the": "Правната проверка, която спасява сделката.",
+
+  // EN: The notary checks the registered owner and registered encumbrances. That's it. Here's what falls outside that check.
+  "the-notary-checks-the-registered-owner": "Нотариусът проверява вписания собственик и регистрираните тежести. Това е всичко. Ето какво остава извън проверката.",
+
+  // EN: Journal | Guides & Market Insights on Bulgarian Property | Bulgaria Property Concierge
+  "meta-title-blog": "Блог | Ръководства и пазарни анализи за имоти в България | Bulgaria Property Concierge",
+
+  // EN: Practical guides and market data for buying, renovating and renting out property in Bulgaria: rental yields in Sofia, how foreigners buy, and legal due diligence.
+  "meta-description-blog": "Практични ръководства и пазарни данни за покупка, ремонт и отдаване под наем на имот в България: доходност в София, как купуват чужденци и правна проверка.",
+
+  // EN: Practical guides and market data for buying, renovating and renting out property in Bulgaria.
+  "practical-guides-and-market-data-for": "Практични ръководства и пазарни данни за покупка, ремонт и отдаване под наем на имот в България.",
+
+  // EN: Want to talk it through?
+  "want-to-talk-it-through": "Искате да го обсъдим?",
+
+  // EN: Tell us what you are looking for and we will show you what it takes, step by step.
+  "tell-us-what-you-are-looking": "Кажете ни какво търсите и ще ви покажем какво е нужно, стъпка по стъпка.",
+
+  // EN: Book a free consultation
+  "book-a-free-consultation-2": "Запазете безплатна консултация",
 
 };
