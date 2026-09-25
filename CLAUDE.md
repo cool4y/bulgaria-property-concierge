@@ -24,7 +24,9 @@ js/i18n.js, js/i18n-bg.js — EN/BG language switcher and the Bulgarian dictiona
 css/brand.css          — brand layer from the brand guidebook, loaded after the page styles (see Brand below)
 llms.txt, robots.txt, sitemap.xml — AI/search discoverability files at the site root (see SEO / GEO below)
 tools/i18n_tool.py      — tags new text for translation and checks the dictionary
-images/                 — photos and partner logos (real files; only the hero photo is inline base64)
+tools/localize_images.py — self-hosts photos as AVIF + WebP and rewrites the HTML (see Images below)
+images/                 — served photos and logos; photos are content-hashed AVIF/WebP pairs; only the hero photo is inline base64
+images-src/             — originals of re-encoded photos (NOT served: not on server.js's allowlist)
 ```
 
 ## Frontend architecture
@@ -48,7 +50,17 @@ images/                 — photos and partner logos (real files; only the hero 
 
 - **Verifying a class actually compiled**: don't trust naive `grep`/`in` checks — Tailwind CSS-escapes special characters in class selectors (e.g. `text-[.72rem]` → `.text-\[\.72rem\]`, commas inside arbitrary values → `\2c`). Parse the compiled CSS properly or check for the underlying property value (e.g. search for `rgba(15,27,46,.35)` rather than the escaped class name) before concluding a class is "missing."
 
-- **Images**: mix of base64-embedded (hero, site-visit, 7 tier photos, 5 partner logos — all as separate `<img>` `src="data:image/...;base64,..."`) and hotlinked Unsplash URLs (most of `properties.html`, some homepage sections). Relative file paths do **not** work when previewing this HTML as a standalone file — only base64 or absolute URLs render correctly in that context. Once actually deployed via GitHub Pages, relative paths *would* work (real server), but nothing currently relies on that.
+- **Images**: no photo is hotlinked any more (Unsplash/Pexels are gone from the HTML, og:image included). Every photo is a self-hosted
+  `<picture><source srcset="images/X.avif" type="image/avif"><img src="images/X.webp" ...></picture>` (`picture{display:contents}` in
+  `brand.css` keeps layout identical to a bare `<img>`). File names end in a content hash, so `server.js` caches them for a year (`immutable`);
+  a changed photo gets a new name. **To add or swap a photo**: put a `https://images.unsplash.com/photo-...?auto=format&fit=crop&w=800&q=70` URL,
+  or a local `images/name.jpg` over 100 KB, in an `<img src>`, then run `python tools/localize_images.py` (needs `pip install pillow`); it
+  downloads/encodes, rewrites the tag, and moves local originals to `images-src/`. Small local files (logos, the tier photos) are left alone.
+  **Why AVIF, not just WebP**: Unsplash already served AVIF to Chrome, so plain WebP would have been ~47% *heavier* (measured: 2065 KB vs
+  3039 KB for the same 15 photos). Full-bleed decorative backdrops (requested wider than 1200px, e.g. the 25%-opacity call-to-action image)
+  are re-encoded at 1400px/q35: 1074 KB -> 197 KB. og:image / twitter:image are 1200x630 JPEGs at absolute URLs (crawlers want JPEG).
+  The hero photo is still inline base64 in `index.html` (the reason it is ~460 KB); moving it out to an AVIF + `<link rel="preload">` is the
+  next big page-weight win. Only Unsplash (free) photos, never Unsplash+ (`plus.unsplash.com`, paid), belong here.
 
 - **Icon system**: Services, Why Bulgaria, and Why Choose Us sections all share one icon language — a filled gold-tint circle badge (`bg-gold/10`) that inverts to solid gold + ivory icon on `group-hover`, plus a thin gold underline beneath each heading that grows on hover. Process section uses distinct navy numbered circles (numbered steps). Execution Tiers uses distinct gold check-badges (it's a checklist, not a feature list). Keep these visually distinct — they're different UI patterns, not inconsistency to fix. All headings in this family (`h3`, e.g. "Strategy Call", "Residential Property") share the same weight, `font-medium` — keep new ones consistent.
 
@@ -123,7 +135,7 @@ Node.js + Express + PostgreSQL (via `pg`, not Prisma or `better-sqlite3` — bot
 
 **Both Railway services and GitHub Pages deploy from the same `main` branch push** — one `git push` updates all three. There is no separate deploy step. If an auto-deploy seems not to have landed, `railway redeploy --service web --from-source --yes` (or `--service bulgaria-property-concierge`) forces a fresh pull and rebuild from the latest commit — useful for confirming what is *actually* live, since Railway can report a service "Online" while it is still serving an older deployment's content for a few seconds after a push.
 
-**Cache gotcha — check this before trusting any "is the fix live" test**: `server.js` sets `Cache-Control: public, max-age=300` on everything under `css/`, `js/`, `images/` (5 minutes — it used to be 24 hours, which once left a fixed bug looking live on the origin but stale for anyone hitting Cloudflare's edge cache for the custom domain; `curl` the direct Railway service domain, e.g. `https://web-production-ce40af.up.railway.app/js/i18n-bg.js`, to bypass Cloudflare and see the real origin content, and check the `cf-cache-status` response header — `HIT` means you are looking at a possibly-stale cached copy, not the origin). If something is confirmed fixed at the origin but still wrong on `bulgariapropertyconcierge.com`, the fix is real — it is a Cloudflare edge cache still holding the old file until its TTL expires; ask the user to purge it (Cloudflare dashboard -> Caching -> Configuration -> Purge Everything, or purge just the affected URLs) rather than re-debugging the deploy.
+**Cache gotcha — check this before trusting any "is the fix live" test**: `server.js` sets `Cache-Control: public, max-age=300` on everything under `css/`, `js/`, `images/` except content-hashed photos (`...-<8 hex>.avif/.webp/.jpg`: one year, immutable) (5 minutes — it used to be 24 hours, which once left a fixed bug looking live on the origin but stale for anyone hitting Cloudflare's edge cache for the custom domain; `curl` the direct Railway service domain, e.g. `https://web-production-ce40af.up.railway.app/js/i18n-bg.js`, to bypass Cloudflare and see the real origin content, and check the `cf-cache-status` response header — `HIT` means you are looking at a possibly-stale cached copy, not the origin). If something is confirmed fixed at the origin but still wrong on `bulgariapropertyconcierge.com`, the fix is real — it is a Cloudflare edge cache still holding the old file until its TTL expires; ask the user to purge it (Cloudflare dashboard -> Caching -> Configuration -> Purge Everything, or purge just the affected URLs) rather than re-debugging the deploy.
 
 **DNS**: managed by the user in Cloudflare. The apex `bulgariapropertyconcierge.com` is a CNAME to a Railway-provided target (get the current one with `railway domain status bulgariapropertyconcierge.com --service web`); Railway resolves it internally by which service currently claims that domain name, so the exact CNAME target value matters less than which service owns the domain in Railway. `ALLOWED_ORIGINS` on the backend includes `https://bulgariapropertyconcierge.com`, the Railway-generated `web` domain, and `https://cool4y.github.io` (the GitHub Pages mirror) — keep all three if you touch it.
 

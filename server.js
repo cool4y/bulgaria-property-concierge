@@ -23,6 +23,9 @@ const ALLOWED_FILES = new Set([
 ]);
 // Top-level directories whose entire contents may be served.
 const ALLOWED_DIRS = ['css', 'js', 'images'];
+// Photos written by tools/localize_images.py end in a content hash (photo-1f0594d2b5d9-1400-08ffeeca.avif), so a changed
+// photo gets a new name and can be cached for a year. Everything else in these folders keeps the short TTL below.
+const HASHED_IMAGE = /-[0-9a-f]{8}\.(?:avif|webp|jpg)$/;
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',
@@ -36,6 +39,7 @@ const MIME = {
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
   '.webp': 'image/webp',
+  '.avif': 'image/avif',
   '.gif': 'image/gif',
   '.ico': 'image/x-icon',
 };
@@ -75,7 +79,8 @@ const server = http.createServer((req, res) => {
     // stale css/js file for that whole window after a deploy, even though the origin already has
     // the fix (bit us once already - see CLAUDE.md). 5 minutes is enough to help repeat page loads
     // without making the next fix take most of a day to actually reach visitors.
-    if (ALLOWED_DIRS.includes(topDir)) headers['Cache-Control'] = 'public, max-age=300';
+    if (HASHED_IMAGE.test(filePath)) headers['Cache-Control'] = 'public, max-age=31536000, immutable';
+    else if (ALLOWED_DIRS.includes(topDir)) headers['Cache-Control'] = 'public, max-age=300';
     res.writeHead(200, headers);
     res.end(data);
   });

@@ -15,6 +15,10 @@
    is simpler and safer than rerunning the full Tailwind build (see CLAUDE.md). */
 .mt-auto { margin-top: auto; }
 
+/* Photos are <picture><source avif><img webp></picture> (see tools/localize_images.py). display:contents makes the
+   <picture> generate no box of its own, so the <img> lays out exactly as when it was a direct child of its wrapper. */
+picture { display: contents; }
+
 :root {
   --navy: #0F1B2E;
   --navy-light: #1B2A44;
