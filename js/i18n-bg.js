@@ -9,10 +9,10 @@
  */
 window.I18N_BG = {
   // EN: Bulgaria Property Concierge | Property Investment & Homes in Sofia, Bulgaria
-  "meta-title-home": "Bulgaria Property Concierge | Инвестиции в имоти и домове в София, България",
+  "meta-title-home": "Луксозни и бутикови имоти, пентхауси в София | Bulgaria Property Concierge",
 
   // EN: Sofia-based full-cycle property service for local and international buyers: sourcing, legal, renovation, furnishing and rental management under one roof. Book a free consultation.
-  "meta-description-home": "Цялостна услуга за имоти със седалище в София за местни и международни купувачи: търсене, правни услуги, ремонт, обзавеждане и управление на наеми под един покрив. Запазете безплатна консултация.",
+  "meta-description-home": "Луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас в София и България. Цялостна услуга: търсене, правна проверка, ремонт, обзавеждане и управление на наем. Запазете безплатна консултация.",
 
   // EN: Language
   "language": "Език",
@@ -135,7 +135,7 @@ window.I18N_BG = {
   "from-your-dream-property-to-a": "От мечтания имот до готов дом.",
 
   // EN: Sourcing, purchase, financing, design and delivery - one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad.
-  "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване - един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина.",
+  "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване - един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина. От луксозни къщи и бутикови имоти до пентхауси и апартаменти от висок клас в премиум сегмента.",
 
   // EN: Residential Property
   "residential-property": "Жилищни имоти",
@@ -1218,7 +1218,7 @@ window.I18N_BG = {
   "meta-title-blog": "Блог | Ръководства и пазарни анализи за имоти в България | Bulgaria Property Concierge",
 
   // EN: Guides and market data on luxury property, the premium segment and high-end homes in Bulgaria: penthouses, rental yields in Sofia, how foreigners buy, and legal due diligence.
-  "meta-description-blog": "Ръководства и пазарни данни за луксозни имоти, премиум сегмента и имоти от висок клас в България: пентхауси, наемна доходност в София, как купуват чужденци и правна проверка.",
+  "meta-description-blog": "Ръководства и пазарни данни за луксозни и бутикови имоти, премиум сегмента и имоти от висок клас в България: пентхауси, наемна доходност в София, как купуват чужденци и правна проверка.",
 
   // EN: Practical guides and market data for buying, renovating and renting out property in Bulgaria.
   "practical-guides-and-market-data-for": "Практични ръководства и пазарни данни за покупка, ремонт и отдаване под наем на имот в България.",
@@ -1236,10 +1236,10 @@ window.I18N_BG = {
   "do-you-work-with-luxury-property": "Работите ли с луксозни имоти и пентхауси?",
 
   // EN: Yes. We source and deliver premium-segment property in Sofia and beyond: high-end apartments, penthouses and villas, from search and legal due diligence to design, furnishing and rental management. Every property goes through the same full-cycle process, at a standard suited to the segment.
-  "yes-we-source-and-deliver-premium": "Да. Намираме и доставяме имоти от премиум сегмента в София и страната: апартаменти от висок клас, пентхауси и вили, от търсенето и правната проверка до дизайна, обзавеждането и управлението на наема. Всеки имот минава през същия процес от край до край, на стандарт, съобразен със сегмента.",
+  "yes-we-source-and-deliver-premium": "Да. Намираме и доставяме имоти от премиум сегмента в София и страната: луксозни къщи, бутикови имоти, вили, пентхауси и апартаменти от висок клас, от търсенето и правната проверка до дизайна, обзавеждането и управлението на наема. Всеки имот минава през същия процес от край до край, на стандарт, съобразен със сегмента.",
 
   // EN: Which areas of Sofia are best for luxury and high-end property?
-  "which-areas-of-sofia-are-best": "Кои са най-добрите райони на София за луксозни имоти и имоти от висок клас?",
+  "which-areas-of-sofia-are-best": "Кои са най-добрите райони на София за луксозни къщи, пентхауси и имоти от висок клас?",
 
   // EN: Lozenets, Boyana, Dragalevtsi, Oborishte and the area around the Doctors' Garden are the districts most associated with the premium segment. Which one suits you depends on whether you want capital growth, rental income or a home to live in.
   "lozenets-boyana-dragalevtsi-oborishte-and-the": "Лозенец, Бояна, Драгалевци, Оборище и районът около Докторската градина са районите, най-тясно свързани с премиум сегмента. Кой е подходящ за вас зависи от това дали искате растеж на капитала, наемен доход или дом, в който да живеете.",
