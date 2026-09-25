@@ -25,7 +25,7 @@ css/brand.css          — brand layer from the brand guidebook, loaded after th
 llms.txt, robots.txt, sitemap.xml — AI/search discoverability files at the site root (see SEO / GEO below)
 tools/i18n_tool.py      — tags new text for translation and checks the dictionary
 tools/localize_images.py — self-hosts photos as AVIF + WebP and rewrites the HTML (see Images below)
-images/                 — served photos and logos; photos are content-hashed AVIF/WebP pairs; only the hero photo is inline base64
+images/                 — served photos and logos; photos are content-hashed AVIF/WebP pairs; the hero is hero-*.avif + .jpg fallback
 images-src/             — originals of re-encoded photos (NOT served: not on server.js's allowlist)
 ```
 
@@ -59,8 +59,10 @@ images-src/             — originals of re-encoded photos (NOT served: not on s
   **Why AVIF, not just WebP**: Unsplash already served AVIF to Chrome, so plain WebP would have been ~47% *heavier* (measured: 2065 KB vs
   3039 KB for the same 15 photos). Full-bleed decorative backdrops (requested wider than 1200px, e.g. the 25%-opacity call-to-action image)
   are re-encoded at 1400px/q35: 1074 KB -> 197 KB. og:image / twitter:image are 1200x630 JPEGs at absolute URLs (crawlers want JPEG).
-  The hero photo is still inline base64 in `index.html` (the reason it is ~460 KB); moving it out to an AVIF + `<link rel="preload">` is the
-  next big page-weight win. Only Unsplash (free) photos, never Unsplash+ (`plus.unsplash.com`, paid), belong here.
+  **The hero photo** used to be inline base64 in `index.html` (~270 KB of the file); the tool now moves any inline `data:image/jpeg` <img> out to
+  `images/hero-<w>-<hash>.avif` (native 1145x1280, q65, ~40 dB PSNR, visually identical) with the *original* JPEG bytes as the fallback
+  (never re-compressed), and adds `<link rel="preload" as="image" type="image/avif" fetchpriority="high">` in `<head>`. To change the hero, put a
+  new base64 JPEG (or just an `images/name.jpg`) back in that `<img>` and re-run the tool. Only Unsplash (free) photos, never Unsplash+ (`plus.unsplash.com`, paid), belong here.
 
 - **Icon system**: Services, Why Bulgaria, and Why Choose Us sections all share one icon language — a filled gold-tint circle badge (`bg-gold/10`) that inverts to solid gold + ivory icon on `group-hover`, plus a thin gold underline beneath each heading that grows on hover. Process section uses distinct navy numbered circles (numbered steps). Execution Tiers uses distinct gold check-badges (it's a checklist, not a feature list). Keep these visually distinct — they're different UI patterns, not inconsistency to fix. All headings in this family (`h3`, e.g. "Strategy Call", "Residential Property") share the same weight, `font-medium` — keep new ones consistent.
 

@@ -12,6 +12,9 @@ What it does to index.html and properties.html:
   3. og:image / twitter:image on another host       ->  saved as a 1200x630 JPEG (social crawlers want a plain
      JPEG at an absolute URL, not AVIF/WebP)
   4. <link rel="preconnect"> to those hosts         ->  removed, nothing connects to them any more.
+  5. <img src="data:image/jpeg;base64,...">          ->  (the hero) moved out of the HTML into images/hero-*.avif at full
+     native resolution, the original JPEG kept as the fallback, plus a <link rel="preload"> in <head> when the
+     tag has fetchpriority="high".
 
 Why AVIF and not just WebP: Unsplash already serves AVIF to browsers that accept it. Hosting plain WebP would
 have made the pages ~47% heavier, so a WebP-only self-host would have been slower, not faster. What
@@ -21,9 +24,11 @@ a third party that can move or delete a photo.
 File names carry a content hash (photo-<id>-<width>-<hash>.avif) so server.js can cache them for a year;
 changing a photo changes its name. Safe to re-run: once a URL is localized it is no longer in the HTML.
 """
+import base64
 import hashlib
 import html
 import io
+import math
 import re
 import shutil
 import sys
@@ -32,7 +37,7 @@ import urllib.request
 from pathlib import Path
 from urllib.parse import parse_qsl
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageChops, ImageOps, ImageStat
 
 ROOT = Path(__file__).resolve().parent.parent
 IMAGES = ROOT / 'images'
@@ -48,6 +53,9 @@ LOCAL_AVIF_Q, LOCAL_WEBP_Q = 55, 74
 # behind the contact form, shown at 25% opacity): no need for photo quality there.
 WIDE_FROM, WIDE_WIDTH, WIDE_AVIF_Q, WIDE_WEBP_Q = 1200, 1400, 35, 40
 OG_SIZE = (1200, 630)
+# Inline base64 <img> (the hero): kept at native size. q65 measured ~40 dB PSNR vs the source JPEG at ~93% of its size.
+INLINE_MIN_BYTES = 20 * 1024
+INLINE_AVIF_Q = 65
 
 IMG_TAG = re.compile(r'<img\b[^>]*>')
 META_IMAGE = re.compile(r'(<meta\b[^>]*\bcontent=")(https://' + REMOTE_HOSTS + r'/[^"]+)(")')
@@ -55,6 +63,7 @@ PRECONNECT = re.compile(r'[ \t]*<link rel="(?:preconnect|dns-prefetch)" href="ht
 
 _done = {}                              # source URL or path -> file stem, so a photo used twice is encoded once
 report = []                             # (stem, avif bytes, webp bytes)
+preloads = []                           # hero stems that need a <link rel="preload"> in the current page's <head>
 
 
 def download(url):
@@ -137,8 +146,31 @@ def localize_social(url):
     return _done[url]
 
 
-def picture(tag, old_src, stem):
-    img = tag.replace(old_src, 'images/%s.webp' % stem)
+def localize_inline(data_uri):
+    """An inline base64 JPEG (the hero): AVIF at full native resolution, plus the ORIGINAL JPEG bytes as the
+    fallback. Nothing is downscaled and the JPEG is never re-compressed, so the only lossy step is one
+    AVIF encode, printed with its PSNR against the original so the quality claim is checkable."""
+    key = hashlib.sha1(data_uri.encode()).hexdigest()
+    if key in _done:
+        return _done[key]
+    jpeg = base64.b64decode(data_uri.partition(',')[2])
+    im = Image.open(io.BytesIO(jpeg)).convert('RGB')
+    avif = encode(im, 'AVIF', INLINE_AVIF_Q)
+    back = Image.open(io.BytesIO(avif)).convert('RGB')
+    mse = sum(ImageStat.Stat(ImageChops.difference(im, back).point(lambda v: v * v)).mean) / 3
+    stem = 'hero-%d-%s' % (im.width, hashlib.sha1(jpeg + avif).hexdigest()[:8])
+    IMAGES.mkdir(exist_ok=True)
+    (IMAGES / (stem + '.avif')).write_bytes(avif)
+    (IMAGES / (stem + '.jpg')).write_bytes(jpeg)
+    print('  %s  inline %d KB base64 -> AVIF %d KB (+ JPEG fallback %d KB), %dx%d, PSNR %.1f dB'
+          % (stem, len(data_uri) // 1024, len(avif) // 1024, len(jpeg) // 1024, im.width, im.height,
+             10 * math.log10(255 * 255 / mse) if mse else 99))
+    _done[key] = stem
+    return stem
+
+
+def picture(tag, old_src, stem, ext='webp'):
+    img = tag.replace(old_src, 'images/%s.%s' % (stem, ext))
     return '<picture><source srcset="images/%s.avif" type="image/avif">%s</picture>' % (stem, img)
 
 
@@ -148,6 +180,11 @@ def rewrite_img(m):
     if not src:
         return tag
     src = src.group(1)
+    if src.startswith('data:image/jpeg;base64,') and len(src) > INLINE_MIN_BYTES:
+        stem = localize_inline(src)
+        if 'fetchpriority="high"' in tag:
+            preloads.append(stem)           # the above-the-fold photo: start fetching it from <head>
+        return picture(tag, src, stem, 'jpg')
     if re.match(r'https://images\.unsplash\.com/', src):
         return picture(tag, src, localize_remote(src))
     local = ROOT / src
@@ -166,6 +203,11 @@ def main():
         text = IMG_TAG.sub(rewrite_img, text)
         text = META_IMAGE.sub(lambda m: m.group(1) + localize_social(m.group(2)) + m.group(3), text)
         text = PRECONNECT.sub('', text)
+        for stem in preloads:
+            nl = '\r\n' if '\r\n' in text else '\n'
+            link = '  <link rel="preload" as="image" href="images/%s.avif" type="image/avif" fetchpriority="high">%s' % (stem, nl)
+            text = text.replace('</head>', link + '</head>', 1)
+        del preloads[:]
         path.write_text(text, encoding='utf-8', newline='')
         originals |= {k for k in _done if k not in before and isinstance(k, Path)}
     for original in originals:
