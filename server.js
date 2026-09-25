@@ -19,6 +19,7 @@ const ALLOWED_FILES = new Set([
   'llms.txt',
   'robots.txt',
   'sitemap.xml',
+  'googleaca0568054ff53c5.html', // Google Search Console ownership verification - must stay reachable at the site root
 ]);
 // Top-level directories whose entire contents may be served.
 const ALLOWED_DIRS = ['css', 'js', 'images'];
