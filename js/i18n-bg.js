@@ -8,10 +8,10 @@
  *   then translate the empty entries here, and finish with:  python tools/i18n_tool.py check
  */
 window.I18N_BG = {
-  // EN: Luxury & Boutique Property in Sofia, Full-Cycle A-to-Z Service | Bulgaria Property Concierge
+  // EN: Luxury & Boutique Property in Sofia: From Property Search to Keys | Bulgaria Property Concierge
   "meta-title-home": "Луксозни и бутикови имоти в София: от търсене на имот до ключ | Bulgaria Property Concierge",
 
-  // EN: One partner from A to Z for foreigners and foreign investors: luxury houses, boutique properties, penthouses and high-end apartments in Sofia and Bulgaria. Sourcing, legal checks, renovation, furnishing and rental management under one roof. Book a free consultation.
+  // EN: One partner from property search to keys for foreigners and foreign investors: luxury houses, boutique properties, penthouses and high-end apartments in Sofia and Bulgaria. Sourcing, legal checks, renovation, furnishing and rental management under one roof. Book a free consultation.
   "meta-description-home": "Един партньор от търсене на имот до ключ за чужденци и чуждестранни инвеститори: луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас в София и България. Правна проверка, ремонт, обзавеждане и управление на наем под един покрив. Запазете безплатна консултация.",
 
   // EN: Language
@@ -20,11 +20,11 @@ window.I18N_BG = {
   // EN: Bulgaria's only full-cycle property service.
   "hero-headline": "Единствената в България услуга за имоти от А до Я.",
 
-  // EN: Luxury & Boutique Properties in Bulgaria, Full-Cycle A-to-Z Service | Bulgaria Property Concierge
+  // EN: Luxury & Boutique Properties in Bulgaria: From Property Search to Keys | Bulgaria Property Concierge
   "meta-title-properties": "Луксозни и бутикови имоти в България: от търсене на имот до ключ | Bulgaria Property Concierge",
 
-  // EN: A-to-Z service for foreign investors and buyers: luxury houses, boutique properties, penthouses and high-end apartments: see our completed projects and browse move-in ready and off-plan properties for sale in Sofia, Varna, Plovdiv, Bansko and Sozopol.
-  "meta-description-properties": "Услуга от търсене на имот до ключ за чуждестранни инвеститори и купувачи - луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас: вижте завършените ни проекти и имоти за продажба - готови за нанасяне и на зелено - в София, Варна, Пловдив, Банско и Созопол.",
+  // EN: A service from property search to keys for foreign investors and buyers: luxury houses, estates, boutique houses and properties, penthouses and high-end apartments: see our completed projects and browse move-in ready and off-plan properties for sale in Sofia, Varna, Plovdiv, Bansko and Sozopol.
+  "meta-description-properties": "Услуга от търсене на имот до ключ за чуждестранни инвеститори и купувачи - луксозни къщи, имения, бутикови къщи и имоти, пентхауси и апартаменти от висок клас: вижте завършените ни проекти и имоти за продажба - готови за нанасяне и на зелено - в София, Варна, Пловдив, Банско и Созопол.",
 
   // EN: Main navigation
   "main-navigation": "Основна навигация",
@@ -134,7 +134,7 @@ window.I18N_BG = {
   // EN: From your dream property to a finished home.
   "from-your-dream-property-to-a": "От мечтания имот до готов дом.",
 
-  // EN: Sourcing, purchase, financing, design and delivery - one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad. From luxury houses and boutique properties to penthouses and high-end apartments in the premium segment, for foreigners and foreign investors buying from abroad.
+  // EN: Sourcing, purchase, financing, design and delivery - one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad.
   "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване - един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина.",
 
   // EN: Residential Property
@@ -395,7 +395,7 @@ window.I18N_BG = {
   // EN: Exclusive access. Flawless execution.
   "exclusive-access-flawless-execution": "Ексклузивен достъп. Безупречно изпълнение.",
 
-  // EN: Investment, residential, or vacation property - every project is sourced through our private network and finished to the same exacting standard. Boutique properties, luxury houses and penthouses in the premium segment.
+  // EN: Investment, residential, or vacation property - every project is sourced through our private network and finished to the same exacting standard.
   "investment-residential-or-vacation-property-every": "Инвестиционен, жилищен или ваканционен имот - всеки проект се намира чрез нашата частна мрежа и се довършва по един и същ висок стандарт.",
 
   // EN: Renovated Apartment in Ivan Vazov - Sofia · Ivan Vazov · 2026
@@ -425,10 +425,10 @@ window.I18N_BG = {
   // EN: Sofia · Lozenets · 2026
   "sofia-lozenets-2026": "София · Лозенец · 2026",
 
-  // EN: Premium Furnished Duplex in Lozenets
+  // EN: Furnished Duplex in Lozenets
   "furnished-duplex-in-lozenets": "Обзаведен дуплекс в Лозенец",
 
-  // EN: A two-bedroom duplex in Sofia's most sought-after premium residential district, delivered turnkey for a relocating family.
+  // EN: A two-bedroom duplex in Sofia's most sought-after residential district, delivered turnkey for a relocating family.
   "a-two-bedroom-duplex-in-sofia": "Дуплекс с две спални в най-търсения жилищен район на София, предаден под ключ на семейство, което се премества.",
 
   // EN: 4 mo
@@ -443,10 +443,10 @@ window.I18N_BG = {
   // EN: Sofia · Boyana · 2025
   "sofia-boyana-2025": "София · Бояна · 2025",
 
-  // EN: Luxury Hillside House in Boyana
+  // EN: Hillside House in Boyana
   "hillside-villa-in-boyana": "Къща на склона в Бояна",
 
-  // EN: A four-bedroom luxury hillside house at the foot of Vitosha, fully custom-finished for a private client.
+  // EN: A four-bedroom hillside house at the foot of Vitosha, fully custom-finished for a private client.
   "a-four-bedroom-hillside-villa-at": "Къща с четири спални на склон в подножието на Витоша, изцяло довършена по индивидуален проект за частен клиент.",
 
   // EN: 5.5 mo
@@ -472,11 +472,13 @@ window.I18N_BG = {
 
   // EN: Luxury Black Sea Villa
   "black-sea-villa": "Луксозна вила на Черно море",
+
   // EN: Black Sea Villa
   "black-sea-villa-home": "Вила на Черно море",
 
   // EN: A four-bedroom luxury seafront house, restored and furnished as a private family retreat.
   "a-four-bedroom-seafront-villa-restored": "Луксозна къща с четири спални на брега на морето, реставрирана и обзаведена като частно семейно убежище.",
+
   // EN: A four-bedroom seafront villa, restored and furnished as a private family retreat.
   "a-four-bedroom-seafront-villa-restored-home": "Вила с четири спални на брега на морето, реставрирана и обзаведена като частно семейно убежище.",
 
@@ -870,8 +872,8 @@ window.I18N_BG = {
   // EN: Chat on Viber: +359 88 234 5678
   "chat-on-viber-359-88-234": "Чат във Viber: +359 88 234 5678",
 
-  // EN: Browse completed projects with real results, or properties currently available to purchase - investment, residential, or vacation, every one delivered to the same exacting standard. Boutique properties, luxury houses, penthouses and high-end apartments in the premium segment, for foreigners and foreign investors.
-  "browse-completed-projects-with-real-results": "Разгледайте завършени проекти с реални резултати или имоти, които в момента са налични за покупка - инвестиционни, жилищни или ваканционни, всеки от тях изпълнен по един и същ висок стандарт. Бутикови имоти, луксозни къщи, пентхауси и апартаменти от висок клас в премиум сегмента, за чужденци и чуждестранни инвеститори.",
+  // EN: Browse completed projects with real results, or properties currently available to purchase - investment, residential, or vacation, every one delivered to the same exacting standard. Boutique houses and properties, luxury houses, estates, penthouses and high-end apartments in the premium segment, for foreigners and foreign investors, from property search to keys.
+  "browse-completed-projects-with-real-results": "Разгледайте завършени проекти с реални резултати или имоти, които в момента са налични за покупка - инвестиционни, жилищни или ваканционни, всеки от тях изпълнен по един и същ висок стандарт. Бутикови къщи и имоти, луксозни къщи, имения, пентхауси и апартаменти от висок клас в премиум сегмента, за чужденци и чуждестранни инвеститори, от търсене на имот до ключ.",
 
   // EN: All Properties
   "all-properties": "Всички имоти",
@@ -1253,5 +1255,41 @@ window.I18N_BG = {
 
   // EN: Yes. Foreigners and foreign investors are a core part of our clients. We handle sourcing, legal due diligence, the purchase, renovation, furnishing and rental management remotely, with clear communication in your language, so you do not need to be on site.
   "yes-foreigners-and-foreign-investors-are": "Да. Чужденците и чуждестранните инвеститори са основна част от клиентите ни. Поемаме търсенето, правната проверка, покупката, ремонта, обзавеждането и управлението на наема от разстояние, с ясна комуникация на вашия език, така че не е нужно да сте на място.",
+
+  // EN: Premium segment
+  "premium-segment": "Премиум сегмент",
+
+  // EN: Luxury houses, estates and boutique houses for foreign investors.
+  "luxury-houses-estates-and-boutique-property": "Луксозни къщи, имения и бутикови къщи за чуждестранни инвеститори.",
+
+  // EN: Foreigners and foreign investors buy in Bulgaria with the same rights as locals for apartments, penthouses and other property in buildings; land held directly is the only restriction for non-EU citizens. We handle everything from property search to keys: sourcing, legal due diligence, purchase, renovation, furnishing and rental management, so you can invest in premium property from abroad without coordinating anyone yourself.
+  "foreigners-and-foreign-investors-buy-in": "Чужденците и чуждестранните инвеститори купуват в България с еднакви права с местните за апартаменти, пентхауси и друг имот в сгради; единственото ограничение за граждани извън ЕС е пряката собственост върху земя. Поемаме всичко от търсене на имот до ключ: търсене, правна проверка, покупка, ремонт, обзавеждане и управление на наем, така че да инвестирате в премиум имот от чужбина, без да координирате никого.",
+
+  // EN: Our listings and completed projects cover luxury houses and villas, estates, boutique houses and properties, penthouses and high-end apartments in Sofia, on the Black Sea coast and in the mountains.
+  "our-listings-and-completed-projects-cover": "Обявите и завършените ни проекти включват луксозни къщи и вили, имения, бутикови къщи и имоти, пентхауси и апартаменти от висок клас в София, на Черно море и в планината.",
+
+  // EN: Can foreign investors buy luxury houses and estates in Bulgaria?
+  "can-foreign-investors-buy-luxury-houses": "Могат ли чуждестранни инвеститори да купуват луксозни къщи и имения в България?",
+
+  // EN: Yes. EU citizens buy directly. Non-EU citizens can buy apartments and buildings freely, and acquire the land under a luxury house or estate through a Bulgarian company, which we can set up on their behalf.
+  "yes-eu-citizens-buy-directly-non-2": "Да. Гражданите на ЕС купуват директно. Гражданите извън ЕС могат свободно да купуват апартаменти и сгради, а земята под луксозна къща или имение придобиват чрез българско дружество, което можем да учредим от тяхно име.",
+
+  // EN: What does the service from property search to keys include?
+  "what-does-the-service-from-property": "Какво включва услугата от търсене на имот до ключ?",
+
+  // EN: One team handles sourcing, legal due diligence, the purchase, renovation, interior design, furnishing and, if you wish, rental management. You receive a finished property, whether it is a penthouse, a boutique house or a luxury house.
+  "one-team-handles-sourcing-legal-due": "Един екип поема търсенето, правната проверка, покупката, ремонта, интериорния дизайн, обзавеждането и, ако желаете, управлението на наема. Получавате завършен имот, независимо дали е пентхаус, бутикова къща или луксозна къща.",
+
+  // EN: Which properties belong to the premium segment?
+  "which-properties-belong-to-the-premium": "Кои имоти принадлежат към премиум сегмента?",
+
+  // EN: Luxury houses and villas, estates, boutique houses and properties, penthouses and high-end apartments, typically in prestigious districts such as Lozenets and Boyana in Sofia and in sought-after coastal and mountain locations.
+  "luxury-houses-and-villas-estates-penthouses": "Луксозни къщи и вили, имения, бутикови къщи и имоти, пентхауси и апартаменти от висок клас, обикновено в престижни райони като Лозенец и Бояна в София и в търсени крайморски и планински места.",
+
+  // EN: Can I buy a luxury property in Bulgaria without travelling there?
+  "can-i-buy-a-luxury-property": "Мога ли да купя луксозен имот в България, без да пътувам дотам?",
+
+  // EN: Yes. Many foreign investors buy remotely. We coordinate viewings, legal checks and the transaction on your behalf, with clear communication in your language.
+  "yes-many-foreign-investors-buy-remotely": "Да. Много чуждестранни инвеститори купуват от разстояние. Координираме огледите, правните проверки и сделката от ваше име, с ясна комуникация на вашия език.",
 
 };

@@ -183,3 +183,13 @@ label.eyebrow { font-size: .82rem; font-weight: 600; letter-spacing: .14em; }
 .purpose-pill { font-size: .9rem; }
 select.lux { font-size: 1rem; }
 #listingCount { font-size: 1rem; color: rgb(15 27 46 / .64); }
+
+/* FAQ accordion on the Properties page (same look as the homepage FAQ, whose rules live in index.html) */
+#premium-foreign details.faq { border-bottom: 1px solid var(--beige); }
+#premium-foreign details.faq > summary { list-style: none; cursor: pointer; padding: 1.5rem 0; display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+#premium-foreign details.faq > summary::-webkit-details-marker { display: none; }
+#premium-foreign details.faq .plus { color: var(--gold); transition: transform .5s cubic-bezier(.22, 1, .36, 1); }
+#premium-foreign details.faq[open] .plus { transform: rotate(45deg); }
+#premium-foreign p { font-size: 1.08rem; line-height: 1.65; }
+#premium-foreign details.faq .pb-7 { font-size: 1.08rem; }
+#premium-foreign h2 { font-size: clamp(1.9rem, 3vw, 2.4rem); line-height: 1.15; }
