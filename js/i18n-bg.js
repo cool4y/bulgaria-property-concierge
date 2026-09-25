@@ -135,7 +135,7 @@ window.I18N_BG = {
   "from-your-dream-property-to-a": "От мечтания имот до готов дом.",
 
   // EN: Sourcing, purchase, financing, design and delivery - one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad. From luxury houses and boutique properties to penthouses and high-end apartments in the premium segment, for foreigners and foreign investors buying from abroad.
-  "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване - един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина. От луксозни къщи и бутикови имоти до пентхауси и апартаменти от висок клас в премиум сегмента, за чужденци и чуждестранни инвеститори, които купуват от чужбина.",
+  "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване - един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина.",
 
   // EN: Residential Property
   "residential-property": "Жилищни имоти",
@@ -396,7 +396,7 @@ window.I18N_BG = {
   "exclusive-access-flawless-execution": "Ексклузивен достъп. Безупречно изпълнение.",
 
   // EN: Investment, residential, or vacation property - every project is sourced through our private network and finished to the same exacting standard. Boutique properties, luxury houses and penthouses in the premium segment.
-  "investment-residential-or-vacation-property-every": "Инвестиционен, жилищен или ваканционен имот - всеки проект се намира чрез нашата частна мрежа и се довършва по един и същ висок стандарт. Бутикови имоти, луксозни къщи и пентхауси в премиум сегмента.",
+  "investment-residential-or-vacation-property-every": "Инвестиционен, жилищен или ваканционен имот - всеки проект се намира чрез нашата частна мрежа и се довършва по един и същ висок стандарт.",
 
   // EN: Renovated Apartment in Ivan Vazov - Sofia · Ivan Vazov · 2026
   "renovated-apartment-in-ivan-vazov-sofia": "Ремонтиран апартамент в Иван Вазов - София · Иван Вазов · 2026",
@@ -426,10 +426,10 @@ window.I18N_BG = {
   "sofia-lozenets-2026": "София · Лозенец · 2026",
 
   // EN: Premium Furnished Duplex in Lozenets
-  "furnished-duplex-in-lozenets": "Обзаведен дуплекс от премиум сегмента в Лозенец",
+  "furnished-duplex-in-lozenets": "Обзаведен дуплекс в Лозенец",
 
   // EN: A two-bedroom duplex in Sofia's most sought-after premium residential district, delivered turnkey for a relocating family.
-  "a-two-bedroom-duplex-in-sofia": "Дуплекс с две спални в най-търсения жилищен район от премиум сегмента на София, предаден под ключ на семейство, което се премества.",
+  "a-two-bedroom-duplex-in-sofia": "Дуплекс с две спални в най-търсения жилищен район на София, предаден под ключ на семейство, което се премества.",
 
   // EN: 4 mo
   "4-mo": "4 мес.",
@@ -444,10 +444,10 @@ window.I18N_BG = {
   "sofia-boyana-2025": "София · Бояна · 2025",
 
   // EN: Luxury Hillside House in Boyana
-  "hillside-villa-in-boyana": "Луксозна къща на склона в Бояна",
+  "hillside-villa-in-boyana": "Къща на склона в Бояна",
 
   // EN: A four-bedroom luxury hillside house at the foot of Vitosha, fully custom-finished for a private client.
-  "a-four-bedroom-hillside-villa-at": "Луксозна къща с четири спални на склон в подножието на Витоша, изцяло довършена по индивидуален проект за частен клиент.",
+  "a-four-bedroom-hillside-villa-at": "Къща с четири спални на склон в подножието на Витоша, изцяло довършена по индивидуален проект за частен клиент.",
 
   // EN: 5.5 mo
   "5-5-mo": "5,5 мес.",
@@ -472,9 +472,13 @@ window.I18N_BG = {
 
   // EN: Luxury Black Sea Villa
   "black-sea-villa": "Луксозна вила на Черно море",
+  // EN: Black Sea Villa
+  "black-sea-villa-home": "Вила на Черно море",
 
   // EN: A four-bedroom luxury seafront house, restored and furnished as a private family retreat.
   "a-four-bedroom-seafront-villa-restored": "Луксозна къща с четири спални на брега на морето, реставрирана и обзаведена като частно семейно убежище.",
+  // EN: A four-bedroom seafront villa, restored and furnished as a private family retreat.
+  "a-four-bedroom-seafront-villa-restored-home": "Вила с четири спални на брега на морето, реставрирана и обзаведена като частно семейно убежище.",
 
   // EN: 7 mo
   "7-mo": "7 мес.",
