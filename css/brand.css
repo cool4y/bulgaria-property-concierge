@@ -143,3 +143,11 @@ picture { display: contents; }
 .blog-cta-btn { display: inline-flex; align-items: center; justify-content: center; padding: 1.05rem 2rem; background: var(--navy); color: var(--ivory); border: 1px solid var(--navy); text-decoration: none; white-space: nowrap; transition: background-color .5s, border-color .5s; }
 .blog-cta-btn:hover { background: var(--gold-dark); border-color: var(--gold-dark); }
 @media (max-width: 639px) { .blog-cta-btn { width: 100%; white-space: normal; text-align: center; } }
+
+/* ── Journal cards (homepage preview + blog page): one card standard ───────────────────────────────────────────
+   A white panel with a Beige frame, photo flush at the top, text inset 1.4rem from every edge. The hover lift then
+   raises a panel whose edge never touches the text. */
+#journal article.lift, #articles article.lift { background: #fff; border: 1px solid var(--beige); }
+#journal article.lift > a > :not(:first-child), #articles article.lift > a > :not(:first-child) { margin-left: 1.4rem; margin-right: 1.4rem; }
+#journal article.lift > a > div:first-child, #articles article.lift > a > div:first-child { margin-bottom: 1.4rem; }
+#journal article.lift > a > p:last-child, #articles article.lift > a > p:last-child { margin-bottom: 1.6rem; }

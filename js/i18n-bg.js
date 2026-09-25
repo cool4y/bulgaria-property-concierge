@@ -1184,8 +1184,8 @@ window.I18N_BG = {
   // EN: No. Most clients manage the entire process - design approvals, material selections and progress updates - remotely, with photo and video updates at each milestone. Many never visit the property until it's finished.
   "no-most-clients-manage-the-entire": "Не. Повечето клиенти управляват целия процес - одобрения на дизайна, избор на материали и напредъка - дистанционно, с актуализации със снимки и видео при всеки етап. Много клиенти виждат имота за първи път едва след завършването му.",
 
-  // EN: Sofia at sunset seen from above: residential districts with Vitosha mountain on the horizon
-  "sofia-rental-yields-by-neighbourhood-2026-photo": "София по залез отгоре: жилищни квартали с планината Витоша на хоризонта",
+  // EN: A Sofia house covered in autumn ivy among the rooftops of a residential district at sunset
+  "sofia-rental-yields-by-neighbourhood-2026-photo": "Къща в София, обвита в есенен бръшлян, сред покривите на жилищен квартал по залез",
 
   // EN: Sofia at sunset: domes, historic buildings and a tree-lined street
   "buying-property-in-bulgaria-as-a-foreigner-photo": "София по залез: куполи, исторически сгради и улица със зеленина",
