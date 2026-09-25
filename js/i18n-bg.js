@@ -9,10 +9,10 @@
  */
 window.I18N_BG = {
   // EN: Luxury & Boutique Property in Sofia, Full-Cycle A-to-Z Service | Bulgaria Property Concierge
-  "meta-title-home": "Луксозни и бутикови имоти в София, услуга от А до Я | Bulgaria Property Concierge",
+  "meta-title-home": "Луксозни и бутикови имоти в София: от търсене на имот до ключ | Bulgaria Property Concierge",
 
   // EN: One partner from A to Z for foreigners and foreign investors: luxury houses, boutique properties, penthouses and high-end apartments in Sofia and Bulgaria. Sourcing, legal checks, renovation, furnishing and rental management under one roof. Book a free consultation.
-  "meta-description-home": "Един партньор от А до Я за чужденци и чуждестранни инвеститори: луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас в София и България. Търсене, правна проверка, ремонт, обзавеждане и управление на наем под един покрив. Запазете безплатна консултация.",
+  "meta-description-home": "Един партньор от търсене на имот до ключ за чужденци и чуждестранни инвеститори: луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас в София и България. Правна проверка, ремонт, обзавеждане и управление на наем под един покрив. Запазете безплатна консултация.",
 
   // EN: Language
   "language": "Език",
@@ -21,10 +21,10 @@ window.I18N_BG = {
   "hero-headline": "Единствената в България услуга за имоти от А до Я.",
 
   // EN: Luxury & Boutique Properties in Bulgaria, Full-Cycle A-to-Z Service | Bulgaria Property Concierge
-  "meta-title-properties": "Луксозни и бутикови имоти в България, услуга от А до Я | Bulgaria Property Concierge",
+  "meta-title-properties": "Луксозни и бутикови имоти в България: от търсене на имот до ключ | Bulgaria Property Concierge",
 
   // EN: A-to-Z service for foreign investors and buyers: luxury houses, boutique properties, penthouses and high-end apartments: see our completed projects and browse move-in ready and off-plan properties for sale in Sofia, Varna, Plovdiv, Bansko and Sozopol.
-  "meta-description-properties": "Услуга от А до Я за чуждестранни инвеститори и купувачи - луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас: вижте завършените ни проекти и имоти за продажба - готови за нанасяне и на зелено - в София, Варна, Пловдив, Банско и Созопол.",
+  "meta-description-properties": "Услуга от търсене на имот до ключ за чуждестранни инвеститори и купувачи - луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас: вижте завършените ни проекти и имоти за продажба - готови за нанасяне и на зелено - в София, Варна, Пловдив, Банско и Созопол.",
 
   // EN: Main navigation
   "main-navigation": "Основна навигация",
