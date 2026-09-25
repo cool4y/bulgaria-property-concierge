@@ -173,8 +173,3 @@ picture { display: contents; }
   #journal article.lift .eyebrow .h-px, #articles article.lift .eyebrow .h-px { display: none; }
 }
 
-/* ── Gold hairline above the label (guidebook: "44px hairline, opens sections and labels") ──────────────────────────
-   Blog page and articles only for now. It is stacked ABOVE the label; the inline version (beside the text) was dropped
-   from the site earlier because it read as a stray dash. To use it on other sections add the same three rules. */
-.blog-intro .eyebrow { flex-direction: column; align-items: flex-start; gap: .9rem; }
-.blog-intro .eyebrow::before { content: ""; display: block; width: 44px; height: 1px; background: var(--gold); }
