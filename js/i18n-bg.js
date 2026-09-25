@@ -8,11 +8,11 @@
  *   then translate the empty entries here, and finish with:  python tools/i18n_tool.py check
  */
 window.I18N_BG = {
-  // EN: Bulgaria Property Concierge | Property Investment & Homes in Sofia, Bulgaria
-  "meta-title-home": "Луксозни и бутикови имоти, пентхауси в София | Bulgaria Property Concierge",
+  // EN: Luxury & Boutique Property in Sofia, Full-Cycle A-to-Z Service | Bulgaria Property Concierge
+  "meta-title-home": "Луксозни и бутикови имоти в София, услуга от А до Я | Bulgaria Property Concierge",
 
-  // EN: Sofia-based full-cycle property service for local and international buyers: sourcing, legal, renovation, furnishing and rental management under one roof. Book a free consultation.
-  "meta-description-home": "Луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас в София и България. Цялостна услуга: търсене, правна проверка, ремонт, обзавеждане и управление на наем. Запазете безплатна консултация.",
+  // EN: One partner from A to Z for foreigners and foreign investors: luxury houses, boutique properties, penthouses and high-end apartments in Sofia and Bulgaria. Sourcing, legal checks, renovation, furnishing and rental management under one roof. Book a free consultation.
+  "meta-description-home": "Един партньор от А до Я за чужденци и чуждестранни инвеститори: луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас в София и България. Търсене, правна проверка, ремонт, обзавеждане и управление на наем под един покрив. Запазете безплатна консултация.",
 
   // EN: Language
   "language": "Език",
@@ -20,11 +20,11 @@ window.I18N_BG = {
   // EN: Bulgaria's only full-cycle property service.
   "hero-headline": "Единствената в България услуга за имоти от А до Я.",
 
-  // EN: Properties in Bulgaria | Completed Projects & Listings | Bulgaria Property Concierge
-  "meta-title-properties": "Имоти в България | Завършени проекти и обяви | Bulgaria Property Concierge",
+  // EN: Luxury & Boutique Properties in Bulgaria, Full-Cycle A-to-Z Service | Bulgaria Property Concierge
+  "meta-title-properties": "Луксозни и бутикови имоти в България, услуга от А до Я | Bulgaria Property Concierge",
 
-  // EN: See our completed projects with real results, and browse move-in ready and off-plan properties for sale in Sofia, Varna, Plovdiv, Bansko and Sozopol.
-  "meta-description-properties": "Вижте нашите завършени проекти с реални резултати и разгледайте имоти за продажба - готови за нанасяне и на зелено - в София, Варна, Пловдив, Банско и Созопол.",
+  // EN: A-to-Z service for foreign investors and buyers: luxury houses, boutique properties, penthouses and high-end apartments: see our completed projects and browse move-in ready and off-plan properties for sale in Sofia, Varna, Plovdiv, Bansko and Sozopol.
+  "meta-description-properties": "Услуга от А до Я за чуждестранни инвеститори и купувачи - луксозни къщи, бутикови имоти, пентхауси и апартаменти от висок клас: вижте завършените ни проекти и имоти за продажба - готови за нанасяне и на зелено - в София, Варна, Пловдив, Банско и Созопол.",
 
   // EN: Main navigation
   "main-navigation": "Основна навигация",
@@ -134,8 +134,8 @@ window.I18N_BG = {
   // EN: From your dream property to a finished home.
   "from-your-dream-property-to-a": "От мечтания имот до готов дом.",
 
-  // EN: Sourcing, purchase, financing, design and delivery - one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad.
-  "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване - един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина. От луксозни къщи и бутикови имоти до пентхауси и апартаменти от висок клас в премиум сегмента.",
+  // EN: Sourcing, purchase, financing, design and delivery - one dedicated team manages every step, so you never coordinate contractors, lawyers or agencies from abroad. From luxury houses and boutique properties to penthouses and high-end apartments in the premium segment, for foreigners and foreign investors buying from abroad.
+  "sourcing-purchase-financing-design-and-delivery": "Търсене, покупка, финансиране, дизайн и предаване - един отдаден екип управлява всяка стъпка, така че никога не се налага да координирате изпълнители, адвокати или агенции от чужбина. От луксозни къщи и бутикови имоти до пентхауси и апартаменти от висок клас в премиум сегмента, за чужденци и чуждестранни инвеститори, които купуват от чужбина.",
 
   // EN: Residential Property
   "residential-property": "Жилищни имоти",
@@ -395,8 +395,8 @@ window.I18N_BG = {
   // EN: Exclusive access. Flawless execution.
   "exclusive-access-flawless-execution": "Ексклузивен достъп. Безупречно изпълнение.",
 
-  // EN: Investment, residential, or vacation property - every project is sourced through our private network and finished to the same exacting standard.
-  "investment-residential-or-vacation-property-every": "Инвестиционен, жилищен или ваканционен имот - всеки проект се намира чрез нашата частна мрежа и се довършва по един и същ висок стандарт.",
+  // EN: Investment, residential, or vacation property - every project is sourced through our private network and finished to the same exacting standard. Boutique properties, luxury houses and penthouses in the premium segment.
+  "investment-residential-or-vacation-property-every": "Инвестиционен, жилищен или ваканционен имот - всеки проект се намира чрез нашата частна мрежа и се довършва по един и същ висок стандарт. Бутикови имоти, луксозни къщи и пентхауси в премиум сегмента.",
 
   // EN: Renovated Apartment in Ivan Vazov - Sofia · Ivan Vazov · 2026
   "renovated-apartment-in-ivan-vazov-sofia": "Ремонтиран апартамент в Иван Вазов - София · Иван Вазов · 2026",
@@ -425,11 +425,11 @@ window.I18N_BG = {
   // EN: Sofia · Lozenets · 2026
   "sofia-lozenets-2026": "София · Лозенец · 2026",
 
-  // EN: Furnished Duplex in Lozenets
-  "furnished-duplex-in-lozenets": "Обзаведен дуплекс в Лозенец",
+  // EN: Premium Furnished Duplex in Lozenets
+  "furnished-duplex-in-lozenets": "Обзаведен дуплекс от премиум сегмента в Лозенец",
 
-  // EN: A two-bedroom duplex in Sofia's most sought-after residential district, delivered turnkey for a relocating family.
-  "a-two-bedroom-duplex-in-sofia": "Дуплекс с две спални в най-търсения жилищен район на София, предаден под ключ на семейство, което се премества.",
+  // EN: A two-bedroom duplex in Sofia's most sought-after premium residential district, delivered turnkey for a relocating family.
+  "a-two-bedroom-duplex-in-sofia": "Дуплекс с две спални в най-търсения жилищен район от премиум сегмента на София, предаден под ключ на семейство, което се премества.",
 
   // EN: 4 mo
   "4-mo": "4 мес.",
@@ -443,11 +443,11 @@ window.I18N_BG = {
   // EN: Sofia · Boyana · 2025
   "sofia-boyana-2025": "София · Бояна · 2025",
 
-  // EN: Hillside House in Boyana
-  "hillside-villa-in-boyana": "Къща на склона в Бояна",
+  // EN: Luxury Hillside House in Boyana
+  "hillside-villa-in-boyana": "Луксозна къща на склона в Бояна",
 
-  // EN: A four-bedroom hillside house at the foot of Vitosha, fully custom-finished for a private client.
-  "a-four-bedroom-hillside-villa-at": "Къща с четири спални на склон в подножието на Витоша, изцяло довършена по индивидуален проект за частен клиент.",
+  // EN: A four-bedroom luxury hillside house at the foot of Vitosha, fully custom-finished for a private client.
+  "a-four-bedroom-hillside-villa-at": "Луксозна къща с четири спални на склон в подножието на Витоша, изцяло довършена по индивидуален проект за частен клиент.",
 
   // EN: 5.5 mo
   "5-5-mo": "5,5 мес.",
@@ -470,11 +470,11 @@ window.I18N_BG = {
   // EN: Sozopol · Coastal · 2024
   "sozopol-coastal-2024": "Созопол · Крайбрежие · 2024",
 
-  // EN: Black Sea Villa
-  "black-sea-villa": "Вила на Черно море",
+  // EN: Luxury Black Sea Villa
+  "black-sea-villa": "Луксозна вила на Черно море",
 
-  // EN: A four-bedroom seafront villa, restored and furnished as a private family retreat.
-  "a-four-bedroom-seafront-villa-restored": "Вила с четири спални на брега на морето, реставрирана и обзаведена като частно семейно убежище.",
+  // EN: A four-bedroom luxury seafront house, restored and furnished as a private family retreat.
+  "a-four-bedroom-seafront-villa-restored": "Луксозна къща с четири спални на брега на морето, реставрирана и обзаведена като частно семейно убежище.",
 
   // EN: 7 mo
   "7-mo": "7 мес.",
@@ -866,8 +866,8 @@ window.I18N_BG = {
   // EN: Chat on Viber: +359 88 234 5678
   "chat-on-viber-359-88-234": "Чат във Viber: +359 88 234 5678",
 
-  // EN: Browse completed projects with real results, or properties currently available to purchase - investment, residential, or vacation, every one delivered to the same exacting standard.
-  "browse-completed-projects-with-real-results": "Разгледайте завършени проекти с реални резултати или имоти, които в момента са налични за покупка - инвестиционни, жилищни или ваканционни, всеки от тях изпълнен по един и същ висок стандарт.",
+  // EN: Browse completed projects with real results, or properties currently available to purchase - investment, residential, or vacation, every one delivered to the same exacting standard. Boutique properties, luxury houses, penthouses and high-end apartments in the premium segment, for foreigners and foreign investors.
+  "browse-completed-projects-with-real-results": "Разгледайте завършени проекти с реални резултати или имоти, които в момента са налични за покупка - инвестиционни, жилищни или ваканционни, всеки от тях изпълнен по един и същ висок стандарт. Бутикови имоти, луксозни къщи, пентхауси и апартаменти от висок клас в премиум сегмента, за чужденци и чуждестранни инвеститори.",
 
   // EN: All Properties
   "all-properties": "Всички имоти",
@@ -998,8 +998,8 @@ window.I18N_BG = {
   // EN: Sofia · Lozenets
   "sofia-lozenets": "София · Лозенец",
 
-  // EN: Two-Bed New-Build
-  "two-bed-new-build": "Ново строителство с две спални",
+  // EN: High-End Two-Bed New-Build
+  "two-bed-new-build": "Ново строителство с две спални от висок клас",
 
   // EN: 2 Bed · 78 m²
   "2-bed-78-m": "2 спални · 78 кв.м",
@@ -1055,8 +1055,8 @@ window.I18N_BG = {
   // EN: Plovdiv · Old Town
   "plovdiv-old-town": "Пловдив · Старият град",
 
-  // EN: Old Town Family Townhouse
-  "old-town-family-townhouse": "Семейна къща в Стария град",
+  // EN: Boutique Old Town Family Townhouse
+  "old-town-family-townhouse": "Бутикова семейна къща в Стария град",
 
   // EN: 3 Bed · 140 m²
   "3-bed-140-m": "3 спални · 140 кв.м",
@@ -1067,8 +1067,8 @@ window.I18N_BG = {
   // EN: Sozopol · Coastal
   "sozopol-coastal": "Созопол · Крайбрежие",
 
-  // EN: Coastal Villa, Off-Plan
-  "coastal-villa-off-plan": "Крайбрежна вила на зелено",
+  // EN: Luxury Coastal Villa, Off-Plan
+  "coastal-villa-off-plan": "Луксозна крайбрежна вила на зелено",
 
   // EN: 4 Bed · 220 m²
   "4-bed-220-m": "4 спални · 220 кв.м",
@@ -1091,8 +1091,8 @@ window.I18N_BG = {
   // EN: Sofia · Ivan Vazov
   "sofia-ivan-vazov": "София · Иван Вазов",
 
-  // EN: New-Build Penthouse
-  "new-build-penthouse": "Пентхаус в нова сграда",
+  // EN: Premium New-Build Penthouse
+  "new-build-penthouse": "Пентхаус от премиум сегмента в нова сграда",
 
   // EN: 3 Bed · 130 m²
   "3-bed-130-m": "3 спални · 130 кв.м",
@@ -1217,8 +1217,8 @@ window.I18N_BG = {
   // EN: Journal | Guides & Market Insights on Bulgarian Property | Bulgaria Property Concierge
   "meta-title-blog": "Блог | Ръководства и пазарни анализи за имоти в България | Bulgaria Property Concierge",
 
-  // EN: Guides and market data on luxury property, the premium segment and high-end homes in Bulgaria: penthouses, rental yields in Sofia, how foreigners buy, and legal due diligence.
-  "meta-description-blog": "Ръководства и пазарни данни за луксозни и бутикови имоти, премиум сегмента и имоти от висок клас в България: пентхауси, наемна доходност в София, как купуват чужденци и правна проверка.",
+  // EN: Guides for foreigners and foreign investors, with market data on luxury and boutique property, the premium segment and high-end homes in Bulgaria: penthouses, rental yields in Sofia, how foreigners buy, and legal due diligence.
+  "meta-description-blog": "Ръководства за чужденци и чуждестранни инвеститори и пазарни данни за луксозни и бутикови имоти, премиум сегмента и имоти от висок клас в България: пентхауси, наемна доходност в София, как купуват чужденци и правна проверка.",
 
   // EN: Practical guides and market data for buying, renovating and renting out property in Bulgaria.
   "practical-guides-and-market-data-for": "Практични ръководства и пазарни данни за покупка, ремонт и отдаване под наем на имот в България.",
@@ -1235,13 +1235,19 @@ window.I18N_BG = {
   // EN: Do you work with luxury property and penthouses?
   "do-you-work-with-luxury-property": "Работите ли с луксозни имоти и пентхауси?",
 
-  // EN: Yes. We source and deliver premium-segment property in Sofia and beyond: high-end apartments, penthouses and villas, from search and legal due diligence to design, furnishing and rental management. Every property goes through the same full-cycle process, at a standard suited to the segment.
+  // EN: Yes. We source and deliver premium-segment property in Sofia and beyond: luxury houses, boutique properties, villas, penthouses and high-end apartments, from search and legal due diligence to design, furnishing and rental management. Every property goes through the same full-cycle process, at a standard suited to the segment.
   "yes-we-source-and-deliver-premium": "Да. Намираме и доставяме имоти от премиум сегмента в София и страната: луксозни къщи, бутикови имоти, вили, пентхауси и апартаменти от висок клас, от търсенето и правната проверка до дизайна, обзавеждането и управлението на наема. Всеки имот минава през същия процес от край до край, на стандарт, съобразен със сегмента.",
 
-  // EN: Which areas of Sofia are best for luxury and high-end property?
+  // EN: Which areas of Sofia are best for luxury houses, penthouses and high-end property?
   "which-areas-of-sofia-are-best": "Кои са най-добрите райони на София за луксозни къщи, пентхауси и имоти от висок клас?",
 
   // EN: Lozenets, Boyana, Dragalevtsi, Oborishte and the area around the Doctors' Garden are the districts most associated with the premium segment. Which one suits you depends on whether you want capital growth, rental income or a home to live in.
   "lozenets-boyana-dragalevtsi-oborishte-and-the": "Лозенец, Бояна, Драгалевци, Оборище и районът около Докторската градина са районите, най-тясно свързани с премиум сегмента. Кой е подходящ за вас зависи от това дали искате растеж на капитала, наемен доход или дом, в който да живеете.",
+
+  // EN: Do you help foreign investors and international buyers who purchase from abroad?
+  "do-you-help-foreign-investors-and": "Помагате ли на чуждестранни инвеститори и международни купувачи, които купуват от чужбина?",
+
+  // EN: Yes. Foreigners and foreign investors are a core part of our clients. We handle sourcing, legal due diligence, the purchase, renovation, furnishing and rental management remotely, with clear communication in your language, so you do not need to be on site.
+  "yes-foreigners-and-foreign-investors-are": "Да. Чужденците и чуждестранните инвеститори са основна част от клиентите ни. Поемаме търсенето, правната проверка, покупката, ремонта, обзавеждането и управлението на наема от разстояние, с ясна комуникация на вашия език, така че не е нужно да сте на място.",
 
 };

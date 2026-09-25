@@ -173,3 +173,13 @@ picture { display: contents; }
   #journal article.lift .eyebrow .h-px, #articles article.lift .eyebrow .h-px { display: none; }
 }
 
+/* ── Properties page + homepage listings: the same type sizes as the blog (page intro reuses .blog-intro / .blog-lead above).
+   Headings keep their size (48px page title, 24px card title); text, labels and figures were reading too small. ── */
+#projectGrid > article .eyebrow, #propGrid > article .eyebrow { font-size: .82rem; font-weight: 600; letter-spacing: .14em; }
+#projectGrid > article p, #propGrid > article p { font-size: 1.08rem; line-height: 1.65; color: rgb(15 27 46 / .74); margin-bottom: 1rem; }
+#projectGrid > article dt, #propGrid > article dt { font-size: .78rem; font-weight: 600; }
+#projectGrid > article dd, #propGrid > article dd { font-size: 1.3rem; }
+label.eyebrow { font-size: .82rem; font-weight: 600; letter-spacing: .14em; }
+.purpose-pill { font-size: .9rem; }
+select.lux { font-size: 1rem; }
+#listingCount { font-size: 1rem; color: rgb(15 27 46 / .64); }
