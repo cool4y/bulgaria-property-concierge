@@ -1184,14 +1184,14 @@ window.I18N_BG = {
   // EN: No. Most clients manage the entire process - design approvals, material selections and progress updates - remotely, with photo and video updates at each milestone. Many never visit the property until it's finished.
   "no-most-clients-manage-the-entire": "Не. Повечето клиенти управляват целия процес - одобрения на дизайна, избор на материали и напредъка - дистанционно, с актуализации със снимки и видео при всеки етап. Много клиенти виждат имота за първи път едва след завършването му.",
 
-  // EN: Elegant apartment building with curved balconies in a Sofia-style neighbourhood
-  "sofia-rental-yields-by-neighbourhood-2026-photo": "Елегантна жилищна сграда с извити балкони в квартал на София",
+  // EN: Aerial view of Sofia at sunset with Vitosha mountain and the residential districts
+  "sofia-rental-yields-by-neighbourhood-2026-photo": "Панорама на София отгоре при залез, с планината Витоша и жилищните квартали",
 
-  // EN: Modern white villa with a swimming pool
-  "buying-property-in-bulgaria-as-a-foreigner-photo": "Модерна бяла вила с басейн",
+  // EN: Tree-lined pedestrian boulevard in central Sofia
+  "buying-property-in-bulgaria-as-a-foreigner-photo": "Пешеходен булевард със зеленина в центъра на София",
 
-  // EN: Miniature house with keys on a wooden table
-  "property-due-diligence-bulgaria-photo": "Умалена къща с ключове върху дървена маса",
+  // EN: Two professionals reviewing and signing a property document at a table
+  "property-due-diligence-bulgaria-photo": "Двама професионалисти преглеждат и подписват документ за имот на маса",
 
   // EN: 25 September 2026
   "25-september-2026": "25 септември 2026",
