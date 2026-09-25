@@ -43,3 +43,36 @@
    same left and right edges (760px + the page gutter). The cover used to sit in a wider column and overhung the text. */
 .wrap, .wrap-wide { max-width: 760px; }
 .cover { aspect-ratio: 16 / 9; margin: 0 0 2.2rem; }
+
+/* ── Guidebook type ladder for reading pages ───────────────────────────────────────────────────────────────────
+   The exported pages were set for a dense document (17px body, 11px labels). Sizes below bring them to a comfortable
+   reading size, and the warm greys become Navy tints (the brand has no neutral grey; lines are Beige). */
+:root { --muted: #4C5461; --text-muted: #4C5461; --faint: #6D737D; --line: #E8E1D3; }
+body { font-size: 18px; }
+.eyebrow { font-size: .82rem; }
+.hero h1 { font-size: clamp(2.3rem, 5.8vw, 3.6rem); line-height: 1.08; }
+.hero .dek { font-size: clamp(1.18rem, 2vw, 1.32rem); }
+.meta-row { font-size: .98rem; }
+.answer-box { padding: 1.8rem 2rem; }
+.answer-box p { font-size: 1.18rem; }
+.answer-box .lbl { font-size: .78rem; }
+.article-body { font-size: 1.16rem; }
+.article-body h2 { font-size: clamp(1.85rem, 3.6vw, 2.25rem); }
+.article-body h3 { font-size: 1.45rem; }
+.article-body li { max-width: none; }
+.stat .n { font-size: 2.3rem; }
+.stat .l { font-size: .88rem; }
+table { font-size: 1.02rem; }
+th { font-size: .78rem; }
+details.faq summary .q { font-size: 1.28rem; }
+details.faq .a { font-size: 1.1rem; }
+.sources { font-size: 1rem; }
+.sources .lbl { font-size: .78rem; }
+.cta-band h3 { font-size: clamp(1.7rem, 3.8vw, 2.3rem); }
+.cta-band p { font-size: 1.12rem; }
+.cta-btn { font-size: .85rem; }
+.related h4 { font-size: .82rem; }
+.related-card .cat { font-size: .78rem; }
+.related-card .t { font-size: 1.3rem; }
+.art-footer .tag, .art-footer nav a, .art-footer .mail { font-size: 1rem; }
+.art-footer .fine { font-size: .88rem; }

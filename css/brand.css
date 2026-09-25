@@ -151,3 +151,27 @@ picture { display: contents; }
 #journal article.lift > a > :not(:first-child), #articles article.lift > a > :not(:first-child) { margin-left: 1.4rem; margin-right: 1.4rem; }
 #journal article.lift > a > div:first-child, #articles article.lift > a > div:first-child { margin-bottom: 1.4rem; }
 #journal article.lift > a > p:last-child, #articles article.lift > a > p:last-child { margin-bottom: 1.6rem; }
+
+/* ── Journal type sizes (guidebook ladder: Display/H1 · H3 · Body · Eyebrow). The blog was reading too small:
+   eyebrow 11px, excerpt 15px, headline 24px. Same sizes on the homepage preview and the blog page. ── */
+#journal article.lift .eyebrow, #articles article.lift .eyebrow { font-size: .82rem; font-weight: 600; letter-spacing: .14em; }
+#journal article.lift .text-stone-400, #articles article.lift .text-stone-400 { color: rgb(15 27 46 / .62); }
+#journal article.lift h3, #articles article.lift h3 { font-size: clamp(1.6rem, 2.1vw, 1.85rem); line-height: 1.2; }
+#journal article.lift p, #articles article.lift p { font-size: 1.08rem; line-height: 1.65; color: rgb(15 27 46 / .74); }
+.blog-intro .eyebrow { font-size: .9rem; font-weight: 600; letter-spacing: .14em; }
+.blog-title { font-size: clamp(2.6rem, 5.6vw, 4rem); line-height: 1.04; max-width: 20ch; }
+.blog-lead { font-size: clamp(1.2rem, 1.7vw, 1.35rem); line-height: 1.65; color: rgb(15 27 46 / .74); }
+.blog-cta h2 { font-size: clamp(1.9rem, 3.2vw, 2.5rem); }
+.blog-cta p { font-size: 1.15rem; color: rgb(15 27 46 / .74); }
+.blog-cta-btn { font-size: .85rem; }
+
+/* Card meta row: the date is set in normal case so "РЪКОВОДСТВА ── 25 септември 2026" always fits on one line and the
+   three headlines start at the same height. */
+#journal article.lift .eyebrow, #articles article.lift .eyebrow { flex-wrap: nowrap; white-space: nowrap; gap: .9rem; }
+#journal article.lift .text-stone-400, #articles article.lift .text-stone-400 { text-transform: none; letter-spacing: .02em; font-weight: 400; font-size: .95rem; }
+#journal article.lift .eyebrow .h-px, #articles article.lift .eyebrow .h-px { flex: none; }
+/* narrower cards (tablet, phone): category above the date, always two short lines, so nothing overflows and the cards stay level */
+@media (max-width: 1279px) {
+  #journal article.lift .eyebrow, #articles article.lift .eyebrow { flex-direction: column; align-items: flex-start; gap: .3rem; }
+  #journal article.lift .eyebrow .h-px, #articles article.lift .eyebrow .h-px { display: none; }
+}
