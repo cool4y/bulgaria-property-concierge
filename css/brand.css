@@ -115,3 +115,21 @@ picture { display: contents; }
    Navy text on Ivory, a Beige hairline below. It tightens a little once the page scrolls (.header-scrolled is set by the page script). */
 #site-header { background: var(--ivory); border-bottom: 1px solid var(--beige); backdrop-filter: none; padding-top: 1rem; padding-bottom: 1rem; }
 #site-header.header-scrolled { padding-top: .75rem; padding-bottom: .75rem; }
+
+/* ── Hero photo veil: lets the photo keep its colour and contrast. Ivory is concentrated where the text sits
+   (left side and the bottom) and fades out toward the right/top; on phones the text spans the width, so the veil is stronger. ── */
+.hero-veil{background:
+  linear-gradient(to bottom, rgb(250 248 244/.55) 0, rgb(250 248 244/0) 7rem),
+  linear-gradient(to top, rgb(250 248 244/.85) 0, rgb(250 248 244/.4) 20%, rgb(250 248 244/0) 45%);}
+/* the readable patch sits behind the text block itself, so it follows the text on any screen width */
+.hero-copy{position:relative}
+.hero-copy::before{content:"";position:absolute;z-index:-1;inset:-6rem -11rem -5rem -13rem;pointer-events:none;
+  background:radial-gradient(ellipse closest-side at 50% 50%, rgb(250 248 244/.78) 0, rgb(250 248 244/.7) 55%, rgb(250 248 244/.4) 82%, rgb(250 248 244/0) 100%);}
+/* desktop: a touch more punch on the photo itself, since the veil is lighter there */
+@media (min-width:768px){#heroParallaxImg{filter:contrast(1.1) saturate(1.12)}}
+@media (max-width:767px){
+  /* text spans the full width here, so instead of a solid veil each letter gets its own ivory halo: the photo shows through between the lines */
+  .hero-veil{background:linear-gradient(to bottom, rgb(250 248 244/.5) 0, rgb(250 248 244/0) 6rem), linear-gradient(to top, rgb(250 248 244/.85) 0, rgb(250 248 244/.62) 45%, rgb(250 248 244/.38) 75%, rgb(250 248 244/.25) 100%);}
+  .hero-copy::before{display:none}
+  .hero-copy h1, .hero-copy p{text-shadow:0 0 6px rgb(250 248 244/.95), 0 0 14px rgb(250 248 244/.9), 0 0 28px rgb(250 248 244/.8), 0 0 44px rgb(250 248 244/.7), 0 0 60px rgb(250 248 244/.5);}
+}

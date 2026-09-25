@@ -60,7 +60,7 @@ window.I18N_BG = {
   "mobile-navigation": "Мобилна навигация",
 
   // EN: Sofia skyline at sunset with Capital Fort tower and South Park
-  "sofia-skyline-at-sunset-with-capital": "Панорама на София по залез с кулата Капитал Форт и Южния парк",
+  "alexander-nevsky-cathedral-in-sofia-at-dusk": "Катедралата „Александър Невски“ в София по здрач, с Витоша зад града",
 
   // EN: One partner. From sourcing property to keys.
   "one-partner-from-sourcing-property-to": "Един партньор. От търсенето на имот до ключовете.",
