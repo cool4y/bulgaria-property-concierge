@@ -1,8 +1,8 @@
 /* Bulgaria Property Concierge: blog article layer.
    The articles in /journal are standalone pages (their own inline reading styles). This file, loaded AFTER those
    styles and together with css/brand.css (logo + language switch), brings them to the same standard as the site:
-   the site's header and footer, square edges, Gold accent, no dark theme (the site has none), and no hairline
-   before the eyebrow (dropped site-wide, see brand.css). Source: bpc-brand-guidebook.pdf. */
+   the site's header and footer, square edges, Gold accent, no dark theme (the site has none), and the guidebook's
+   44px Gold hairline above the eyebrow. Source: bpc-brand-guidebook.pdf. */
 
 /* Header: solid Ivory bar with a Beige line, same lockup, nav, language switch and Gold button as the site */
 .art-header { position: sticky; top: 0; z-index: 50; background: var(--ivory); border-bottom: 1px solid var(--beige); }
@@ -21,7 +21,9 @@
 @media (max-width: 479px) { .art-header-in { padding-left: 1rem; padding-right: 1rem; } }
 
 /* Reading page details */
-.eyebrow::before { display: none; }                       /* no hairline before labels (site rule) */
+/* Guidebook hairline: 44px Gold line ABOVE the label (stacked), not beside it, so it never reads as a stray dash next to the text */
+.eyebrow { flex-direction: column; align-items: flex-start; gap: .9rem; }
+.eyebrow::before { display: block; width: 44px; height: 1px; background: var(--gold); }
 .cover { display: block; border: 0; }
 .cta-btn { border-radius: 0; font-family: Inter, system-ui, sans-serif; font-weight: 500; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; padding: 1rem 1.8rem; border: 1px solid var(--gold); transition: background-color .5s, color .5s; }
 .cta-btn:hover { background: var(--gold-dark); color: var(--ivory); }
